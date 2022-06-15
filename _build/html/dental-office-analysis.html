@@ -1,0 +1,2083 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dental Office 🦷🪥 &#8212; Daniel&#39;s Portfolio</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Vinho Verde Analysis🚀🪜" href="eda-wines-template.html" />
+    <link rel="prev" title="Welcome to my portfolio" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Daniel's Portfolio</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to my portfolio
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Dental Office 🦷🪥
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eda-wines-template.html">
+   Vinho Verde Analysis🚀🪜
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/dental-office-analysis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/danielnmuner/danielnmuner.github.io"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/danielnmuner/danielnmuner.github.io/issues/new?title=Issue%20on%20page%20%2Fdental-office-analysis.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/danielnmuner/danielnmuner.github.io/main?urlpath=tree/portfolio/_build/html/dental-office-analysis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-source">
+   Data source📔
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connect-database-python">
+   Connect DataBase/Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#database-query">
+   Database Query
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-exploration">
+   Data Exploration 👨‍💻🔍
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#procedures-performed-on-patients-grouped-by-gender-with-the-highest-cost">
+     Procedures performed on patients grouped by gender with the highest cost.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#descriptive-income-statistics-regarding-gender-and-occupation">
+     Descriptive Income Statistics regarding gender and occupation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analysis-of-essential-aspects-in-oral-care">
+     Analysis of essential aspects in oral care
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#revenue-analysis-over-time-series">
+   Revenue analysis over time series
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusions">
+   Conclusions
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Dental Office 🦷🪥</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-source">
+   Data source📔
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#connect-database-python">
+   Connect DataBase/Python
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#database-query">
+   Database Query
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-exploration">
+   Data Exploration 👨‍💻🔍
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#procedures-performed-on-patients-grouped-by-gender-with-the-highest-cost">
+     Procedures performed on patients grouped by gender with the highest cost.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#descriptive-income-statistics-regarding-gender-and-occupation">
+     Descriptive Income Statistics regarding gender and occupation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analysis-of-essential-aspects-in-oral-care">
+     Analysis of essential aspects in oral care
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#revenue-analysis-over-time-series">
+   Revenue analysis over time series
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusions">
+   Conclusions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <p><a class="reference external" href="https://kind-stone-04621511e.1.azurestaticapps.net/"><img alt="resume" src="_images/logo.png" /></a></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="dental-office">
+<h1>Dental Office 🦷🪥<a class="headerlink" href="#dental-office" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>Business Analysis 📈</p>
+</div></blockquote>
+<p>I’d like to say that for the last two years, I’ve been freelance working in a dental office. I really didn’t study any similar to it. I have no practical knowledge on, notwithstanding I have taken part in <code class="docutils literal notranslate"><span class="pre">managing</span> <span class="pre">data</span></code>. In other words, I know we should take care of patients data and manipulate it wisely. Process, understand and interpret data is important in the <code class="docutils literal notranslate"><span class="pre">decision-making</span> <span class="pre">process</span></code> so we can know who is visiting us and measure the impact it generates on business profits.</p>
+<div class="section" id="data-source">
+<h2>Data source📔<a class="headerlink" href="#data-source" title="Permalink to this headline">¶</a></h2>
+<p>The database that we query in this analysis is temporarily hosted on an Azure IaaS service, specifically Azure Data Base for PostgreSQL, so if you try to connect to it, you won’t have access given that the information is sensitive and must be protected.</p>
+<p><img alt="img" src="https://i.ibb.co/7phWSrF/Recurso-2.png" /></p>
+</div>
+<div class="section" id="connect-database-python">
+<h2>Connect DataBase/Python<a class="headerlink" href="#connect-database-python" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Psycopg</span></code> is the most popular PostgreSQL database adapter for python and all we need to do is <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">psycopg2</span></code> instantiate <code class="docutils literal notranslate"><span class="pre">connect</span></code> and indicate server-general information easily obtained from azure.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#We&#39;ll use pandas and numpy for data manipulation</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="c1">#We use seaborn and matplotlib to plot the data</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="c1">#Library to connect with postgresql</span>
+<span class="kn">import</span> <span class="nn">psycopg2</span>
+
+<span class="c1">#Establish connection with server adminsql@az-postgresql-server host on azure as IaaS</span>
+<span class="n">conn_sql</span> <span class="o">=</span> <span class="n">psycopg2</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">user</span> <span class="o">=</span> <span class="s2">&quot;adminsql@az-postgresql-server&quot;</span><span class="p">,</span>
+                            <span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;CEdndm1246&quot;</span><span class="p">,</span>
+                            <span class="n">host</span> <span class="o">=</span> <span class="s2">&quot;az-postgresql-server.postgres.database.azure.com&quot;</span><span class="p">,</span>
+                            <span class="n">port</span> <span class="o">=</span> <span class="s2">&quot;5432&quot;</span><span class="p">,</span>
+                            <span class="n">database</span> <span class="o">=</span> <span class="s2">&quot;postgres&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="database-query">
+<h2>Database Query<a class="headerlink" href="#database-query" title="Permalink to this headline">¶</a></h2>
+<p>The database is made up of eleven tables, however, only three are dependent and the remaining eight are independent, which means that it is a low-complexity database where the patient table is connected to the treatment table through the transition table patient_treatment and that’s it, as shown below the query indicates the type of <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> and the aliases given to each column.## Database Query
+The database is made up of eleven tables, however, only three are dependent and the remaining eight are independent, which means that it is a low-complexity database where the patient table is connected to the treatment table through the transition table patient_treatment and that’s it, as shown below the query indicates the type of <code class="docutils literal notranslate"><span class="pre">JOIN</span></code> and the aliases given to each column.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query_sql</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">SELECT date AS &quot;appointment day&quot;, hour AS &quot;appointment hour&quot;, </span>
+<span class="s1">LOWER(f_name) AS &quot;patient name&quot;, LOWER(type_of_id) AS &quot;type of id&quot;,</span>
+<span class="s1">LOWER(place_of_issuance) AS &quot;id-document-issuance&quot;,  date_of_birth AS birthday,</span>
+<span class="s1">LOWER(genre) AS genre, LOWER(health_care_facility) AS &quot;healthcare facility&quot;, </span>
+<span class="s1">LOWER(occupation) AS occupation, LOWER(oral_hygiene) AS &quot;oral hygiene&quot;, </span>
+<span class="s1">brushed_per_day AS brushing , LOWER(smoke) AS smoker, dental_floss AS &quot;floss usage&quot;, </span>
+<span class="s1">LOWER(alcohol) AS alcoholic, LOWER(proceed) AS &quot;dental-procedure&quot;,</span>
+<span class="s1">LOWER(method_of_payment) AS &quot;payment method&quot;, cost, material_expense AS &quot;dental-materials-cost&quot;,</span>
+<span class="s1">LOWER(procedure_status) AS &quot;procedure-status&quot;, extract(year from AGE(date_of_birth)) as age</span>
+
+<span class="s1">-- INNER JOIN is better than LEFT JOIN given raw data is quite incomple</span>
+<span class="s1">FROM patient</span>
+<span class="s1">INNER JOIN type_of_id USING (type_of_id_id)</span>
+<span class="s1">INNER JOIN genre USING (genre_id)</span>
+<span class="s1">INNER JOIN health_care_facility USING (health_care_facility_id)</span>
+<span class="s1">INNER JOIN occupation USING (occupation_id)</span>
+<span class="s1">INNER JOIN neighborhood USING (neighborhood_id)</span>
+<span class="s1">INNER JOIN patient_treatment USING (patient_id)</span>
+<span class="s1">INNER JOIN treatment USING (treatment_id)</span>
+<span class="s1">INNER JOIN proceed USING (proceed_id)</span>
+<span class="s1">INNER JOIN business_reference USING (business_reference_id)</span>
+<span class="s1">INNER JOIN method_of_payment USING (method_of_payment_id)</span>
+<span class="s1">&#39;&#39;&#39;</span>
+<span class="c1">#Using pd.read_sql we read the data and store it in dental_office_raw or raw data.</span>
+<span class="n">dental_office_raw</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">query_sql</span><span class="p">,</span> <span class="n">conn_sql</span><span class="p">)</span>
+<span class="c1">#Create a copy() in case we need to get back to it.</span>
+<span class="n">dental_office</span> <span class="o">=</span> <span class="n">dental_office_raw</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">#Extract a sample from it making sure it&#39;s been query properly.</span>
+<span class="n">dental_office</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/danmuner/packages/anaconda3/lib/python3.9/site-packages/pandas/io/sql.py:761: UserWarning: pandas only support SQLAlchemy connectable(engine/connection) ordatabase string URI or sqlite3 DBAPI2 connectionother DBAPI2 objects are not tested, please consider using SQLAlchemy
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>appointment day</th>
+      <th>appointment hour</th>
+      <th>patient name</th>
+      <th>type of id</th>
+      <th>id-document-issuance</th>
+      <th>birthday</th>
+      <th>genre</th>
+      <th>healthcare facility</th>
+      <th>occupation</th>
+      <th>oral hygiene</th>
+      <th>brushing</th>
+      <th>smoker</th>
+      <th>floss usage</th>
+      <th>alcoholic</th>
+      <th>dental-procedure</th>
+      <th>payment method</th>
+      <th>cost</th>
+      <th>dental-materials-cost</th>
+      <th>procedure-status</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>100</th>
+      <td>2021-07-26</td>
+      <td>16:14:00</td>
+      <td>olga</td>
+      <td>cc</td>
+      <td>bogota</td>
+      <td>1977-03-19</td>
+      <td>femenino</td>
+      <td>famisanar</td>
+      <td>empleado</td>
+      <td>beuna</td>
+      <td>2.0</td>
+      <td>non</td>
+      <td>None</td>
+      <td>None</td>
+      <td>resina u obturacion ii sup</td>
+      <td>efectivo</td>
+      <td>130000.0</td>
+      <td>11161.0</td>
+      <td>t</td>
+      <td>45.0</td>
+    </tr>
+    <tr>
+      <th>205</th>
+      <td>2021-10-30</td>
+      <td>12:00:00</td>
+      <td>ibeth</td>
+      <td>cc</td>
+      <td>bolivar</td>
+      <td>1967-12-08</td>
+      <td>femenino</td>
+      <td>compensar</td>
+      <td>ama de casa</td>
+      <td>buena</td>
+      <td>2.0</td>
+      <td>no</td>
+      <td>NO</td>
+      <td>no</td>
+      <td>protesis convensional biodent parcial</td>
+      <td>efectivo</td>
+      <td>140000.0</td>
+      <td>8012.0</td>
+      <td>t</td>
+      <td>54.0</td>
+    </tr>
+    <tr>
+      <th>423</th>
+      <td>2022-02-25</td>
+      <td>07:42:00</td>
+      <td>claudia</td>
+      <td>cc</td>
+      <td>gachala</td>
+      <td>1978-05-01</td>
+      <td>femenino</td>
+      <td>compensar</td>
+      <td>empleado</td>
+      <td>buena</td>
+      <td>NaN</td>
+      <td>no</td>
+      <td>SI</td>
+      <td>no</td>
+      <td>resina de angulo</td>
+      <td>efectivo</td>
+      <td>100000.0</td>
+      <td>11161.0</td>
+      <td>t</td>
+      <td>44.0</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>2021-06-23</td>
+      <td>11:34:00</td>
+      <td>sergio</td>
+      <td>cc</td>
+      <td>bogota</td>
+      <td>1991-07-04</td>
+      <td>masculino</td>
+      <td>no</td>
+      <td>empleado</td>
+      <td>mala</td>
+      <td>1.0</td>
+      <td>no</td>
+      <td>SI</td>
+      <td>no</td>
+      <td>resina u obturacion i sup</td>
+      <td>efectivo</td>
+      <td>200000.0</td>
+      <td>11161.0</td>
+      <td>t</td>
+      <td>30.0</td>
+    </tr>
+    <tr>
+      <th>590</th>
+      <td>2022-05-07</td>
+      <td>15:02:00</td>
+      <td>ana</td>
+      <td>cc</td>
+      <td>bogota</td>
+      <td>1978-12-16</td>
+      <td>femenino</td>
+      <td>sanitas</td>
+      <td>independiente</td>
+      <td>buena</td>
+      <td>NaN</td>
+      <td>si</td>
+      <td>NO</td>
+      <td>si</td>
+      <td>retratamiento multiradicular</td>
+      <td>efectivo</td>
+      <td>210000.0</td>
+      <td>NaN</td>
+      <td>t</td>
+      <td>43.0</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>2021-07-30</td>
+      <td>11:36:00</td>
+      <td>devid</td>
+      <td>cc</td>
+      <td>bogota</td>
+      <td>1992-07-24</td>
+      <td>masculino</td>
+      <td>famisanar</td>
+      <td>empleado</td>
+      <td>regualr</td>
+      <td>2.0</td>
+      <td>no</td>
+      <td>NO</td>
+      <td>no</td>
+      <td>endodoncia multiradicular</td>
+      <td>efectivo</td>
+      <td>50000.0</td>
+      <td>NaN</td>
+      <td>t</td>
+      <td>29.0</td>
+    </tr>
+    <tr>
+      <th>466</th>
+      <td>2022-03-16</td>
+      <td>11:11:00</td>
+      <td>sacaria</td>
+      <td>cc</td>
+      <td>bogota</td>
+      <td>1957-06-10</td>
+      <td>masculino</td>
+      <td>compensar</td>
+      <td>ama de casa</td>
+      <td>buena</td>
+      <td>3.0</td>
+      <td>si</td>
+      <td>NO</td>
+      <td>si</td>
+      <td>detartraje</td>
+      <td>efectivo</td>
+      <td>90000.0</td>
+      <td>907.0</td>
+      <td>t</td>
+      <td>65.0</td>
+    </tr>
+    <tr>
+      <th>219</th>
+      <td>2021-11-08</td>
+      <td>14:46:00</td>
+      <td>margarita</td>
+      <td>cc</td>
+      <td>bucaramanga</td>
+      <td>1954-10-01</td>
+      <td>femenino</td>
+      <td>famisanar</td>
+      <td>ama de casa</td>
+      <td>buena</td>
+      <td>NaN</td>
+      <td>si</td>
+      <td>SI</td>
+      <td>no</td>
+      <td>protesis convensional biodent total</td>
+      <td>efectivo</td>
+      <td>100000.0</td>
+      <td>NaN</td>
+      <td>p</td>
+      <td>67.0</td>
+    </tr>
+    <tr>
+      <th>411</th>
+      <td>2022-02-18</td>
+      <td>14:48:00</td>
+      <td>ramiro</td>
+      <td>cc</td>
+      <td>bogota</td>
+      <td>1979-01-12</td>
+      <td>masculino</td>
+      <td>nueva eps</td>
+      <td>independiente</td>
+      <td>buena</td>
+      <td>NaN</td>
+      <td>no</td>
+      <td>NO</td>
+      <td>no</td>
+      <td>exo perm cerrado ogeneral</td>
+      <td>nequi</td>
+      <td>90000.0</td>
+      <td>6289.0</td>
+      <td>t</td>
+      <td>43.0</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>2021-05-25</td>
+      <td>00:00:00</td>
+      <td>nathalie</td>
+      <td>cc</td>
+      <td>bogota</td>
+      <td>1987-07-29</td>
+      <td>femenino</td>
+      <td>sanitas</td>
+      <td>independiente</td>
+      <td>buena</td>
+      <td>2.0</td>
+      <td>no</td>
+      <td>NO</td>
+      <td>no</td>
+      <td>nucleo</td>
+      <td>efectivo</td>
+      <td>190000.0</td>
+      <td>12090.0</td>
+      <td>t</td>
+      <td>34.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Identify how many columns and rows has the DataFrame </span>
+<span class="n">dental_office</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(625, 20)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-exploration">
+<h2>Data Exploration 👨‍💻🔍<a class="headerlink" href="#data-exploration" title="Permalink to this headline">¶</a></h2>
+<p>`info () besides indicating the data type shows us null values, so here is were we can decide, whether to cast or not data to their respective types and even categorize it for further analysis.</p>
+<ul class="simple">
+<li><p>Identify data types and null data</p></li>
+<li><p>Casting <code class="docutils literal notranslate"><span class="pre">birthday</span></code> and <code class="docutils literal notranslate"><span class="pre">appointment</span> <span class="pre">day</span></code> to date type.</p></li>
+<li><p>Identify unique values within the next columns, <code class="docutils literal notranslate"><span class="pre">smoker</span></code>, <code class="docutils literal notranslate"><span class="pre">floss</span> <span class="pre">usage</span></code>, <code class="docutils literal notranslate"><span class="pre">alcoholic</span></code>, <code class="docutils literal notranslate"><span class="pre">oral</span> <span class="pre">hygiene</span></code>, correct semantic errors and remove blanks.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Data types and missing values</span>
+<span class="n">dental_office</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 625 entries, 0 to 624
+Data columns (total 20 columns):
+ #   Column                 Non-Null Count  Dtype  
+---  ------                 --------------  -----  
+ 0   appointment day        624 non-null    object 
+ 1   appointment hour       625 non-null    object 
+ 2   patient name           624 non-null    object 
+ 3   type of id             625 non-null    object 
+ 4   id-document-issuance   625 non-null    object 
+ 5   birthday               617 non-null    object 
+ 6   genre                  625 non-null    object 
+ 7   healthcare facility    625 non-null    object 
+ 8   occupation             625 non-null    object 
+ 9   oral hygiene           624 non-null    object 
+ 10  brushing               397 non-null    float64
+ 11  smoker                 624 non-null    object 
+ 12  floss usage            621 non-null    object 
+ 13  alcoholic              620 non-null    object 
+ 14  dental-procedure       625 non-null    object 
+ 15  payment method         625 non-null    object 
+ 16  cost                   590 non-null    float64
+ 17  dental-materials-cost  343 non-null    float64
+ 18  procedure-status       609 non-null    object 
+ 19  age                    617 non-null    float64
+dtypes: float64(4), object(16)
+memory usage: 97.8+ KB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Turning object type to datetime64</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;appointment day&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;appointment day&#39;</span><span class="p">])</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;birthday&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;birthday&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Semantic errors identified in smoker column</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;smoker&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()[</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;no &#39;, &#39;si &#39;, &#39;non &#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;smoker&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="s1">&#39;no &#39;</span><span class="p">:</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;non &#39;</span><span class="p">:</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span><span class="s1">&#39;si &#39;</span><span class="p">:</span><span class="s1">&#39;si&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;smoker&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;no&#39;, &#39;si&#39;, None], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Semantic errors identified in floss usage column</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;floss usage&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;SI&#39;, &#39;NO &#39;, &#39;NO&#39;, &#39;SI &#39;, None, &#39; NO &#39;, &#39;MNO &#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;floss usage&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="s1">&#39;NO &#39;</span><span class="p">:</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span><span class="s1">&#39;NO&#39;</span><span class="p">:</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span><span class="s1">&#39;MNO &#39;</span><span class="p">:</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span><span class="s1">&#39; NO &#39;</span><span class="p">:</span> <span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;SI &#39;</span><span class="p">:</span> <span class="s1">&#39;si&#39;</span><span class="p">,</span><span class="s1">&#39;SI&#39;</span><span class="p">:</span><span class="s1">&#39;si&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;floss usage&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;si&#39;, &#39;no&#39;, None], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Semantic errors identified in alcoholic column</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;alcoholic&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;no&#39;, &#39;si&#39;, &#39;no &#39;, None, &#39;nio&#39;, &#39;si &#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;alcoholic&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="s1">&#39;no &#39;</span><span class="p">:</span><span class="s1">&#39;no&#39;</span><span class="p">,</span><span class="s1">&#39;nio&#39;</span><span class="p">:</span><span class="s1">&#39;no&#39;</span><span class="p">,</span><span class="s1">&#39;si &#39;</span><span class="p">:</span><span class="s1">&#39;si&#39;</span><span class="p">},</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;alcoholic&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;no&#39;, &#39;si&#39;, None], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Semantic errors identified in oral hygeine column</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;oral hygiene&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span><span class="s1">&#39;buena &#39;</span><span class="p">:</span><span class="s1">&#39;buena&#39;</span><span class="p">,</span><span class="s1">&#39;mala &#39;</span><span class="p">:</span><span class="s1">&#39;mala&#39;</span><span class="p">,</span><span class="s1">&#39;regular &#39;</span><span class="p">:</span><span class="s1">&#39;regular&#39;</span><span class="p">,</span><span class="s1">&#39;regualr&#39;</span><span class="p">:</span><span class="s1">&#39;regular&#39;</span><span class="p">,</span><span class="s1">&#39;bueno &#39;</span><span class="p">:</span><span class="s1">&#39;buena&#39;</span><span class="p">,</span><span class="s1">&#39;buena 2&#39;</span><span class="p">:</span><span class="s1">&#39;buena&#39;</span><span class="p">,</span><span class="s1">&#39;bueno&#39;</span><span class="p">:</span><span class="s1">&#39;buena&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;oral hygiene&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;buena&#39;, &#39;regular&#39;, &#39;mala&#39;, &#39;beuna &#39;, None], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Below we indicate the number of missing values per column</span>
+<span class="n">null_values</span> <span class="o">=</span> <span class="n">dental_office</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">null_values</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;index&#39;</span><span class="p">:</span><span class="s1">&#39;col_name&#39;</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;null_val&#39;</span><span class="p">},</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">null_values</span> <span class="o">=</span> <span class="n">null_values</span><span class="p">[</span><span class="n">null_values</span><span class="p">[</span><span class="s1">&#39;null_val&#39;</span><span class="p">]</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">null_values</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>col_name</th>
+      <th>null_val</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>appointment day</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>patient name</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>birthday</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>oral hygiene</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>brushing</td>
+      <td>228</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>smoker</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>floss usage</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>alcoholic</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>cost</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>dental-materials-cost</td>
+      <td>282</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>procedure-status</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>age</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>There are control or follow-up dental visits, which do not have any associated cost, so we’ll replace all the missing values in the <code class="docutils literal notranslate"><span class="pre">cost</span></code> column with 0. This does not happen with other columns such as <code class="docutils literal notranslate"><span class="pre">brushing</span></code>, which we will discard from the analysis given the missing values; in doing so, we’ll proceed to remove duplicates based on the remaining columns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;cost&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;dental-materials-cost&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">dental_office</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">how</span><span class="o">=</span><span class="s1">&#39;any&#39;</span><span class="p">,</span> <span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;patient name&#39;</span><span class="p">,</span><span class="s1">&#39;birthday&#39;</span><span class="p">,</span><span class="s1">&#39;smoker&#39;</span><span class="p">,</span><span class="s1">&#39;floss usage&#39;</span><span class="p">,</span><span class="s1">&#39;alcoholic&#39;</span><span class="p">,</span><span class="s1">&#39;procedure-status&#39;</span><span class="p">,</span><span class="s1">&#39;appointment day&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">dental_office</span> <span class="o">=</span> <span class="n">dental_office</span><span class="p">[[</span><span class="s1">&#39;appointment day&#39;</span><span class="p">,</span> <span class="s1">&#39;appointment hour&#39;</span><span class="p">,</span> <span class="s1">&#39;patient name&#39;</span><span class="p">,</span> <span class="s1">&#39;type of id&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;id-document-issuance&#39;</span><span class="p">,</span> <span class="s1">&#39;birthday&#39;</span><span class="p">,</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;genre&#39;</span><span class="p">,</span> <span class="s1">&#39;healthcare facility&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;occupation&#39;</span><span class="p">,</span> <span class="s1">&#39;oral hygiene&#39;</span><span class="p">,</span> <span class="s1">&#39;smoker&#39;</span><span class="p">,</span> <span class="s1">&#39;floss usage&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;alcoholic&#39;</span><span class="p">,</span> <span class="s1">&#39;dental-procedure&#39;</span><span class="p">,</span> <span class="s1">&#39;payment method&#39;</span><span class="p">,</span> <span class="s1">&#39;cost&#39;</span><span class="p">,</span><span class="s1">&#39;dental-materials-cost&#39;</span><span class="p">,</span> <span class="s1">&#39;procedure-status&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Turning object type into categorical </span>
+<span class="n">dental_office</span> <span class="o">=</span> <span class="n">dental_office</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;type of id&quot;</span><span class="p">:</span><span class="s2">&quot;category&quot;</span><span class="p">,</span> <span class="s2">&quot;id-document-issuance&quot;</span><span class="p">:</span><span class="s1">&#39;category&#39;</span><span class="p">,</span><span class="s2">&quot;genre&quot;</span><span class="p">:</span><span class="s1">&#39;category&#39;</span><span class="p">,</span>
+                                      <span class="s2">&quot;healthcare facility&quot;</span><span class="p">:</span><span class="s1">&#39;category&#39;</span><span class="p">,</span><span class="s2">&quot;occupation&quot;</span><span class="p">:</span><span class="s1">&#39;category&#39;</span><span class="p">,</span><span class="s2">&quot;oral hygiene&quot;</span><span class="p">:</span><span class="s1">&#39;category&#39;</span><span class="p">,</span>
+                                      <span class="s2">&quot;smoker&quot;</span><span class="p">:</span><span class="s1">&#39;category&#39;</span><span class="p">,</span><span class="s2">&quot;floss usage&quot;</span><span class="p">:</span><span class="s1">&#39;category&#39;</span><span class="p">,</span><span class="s2">&quot;alcoholic&quot;</span><span class="p">:</span><span class="s1">&#39;category&#39;</span><span class="p">,</span>
+                                      <span class="s2">&quot;dental-procedure&quot;</span><span class="p">:</span><span class="s1">&#39;category&#39;</span><span class="p">,</span><span class="s2">&quot;payment method&quot;</span><span class="p">:</span><span class="s1">&#39;category&#39;</span><span class="p">,</span>
+                                      <span class="s2">&quot;procedure-status&quot;</span><span class="p">:</span><span class="s1">&#39;category&#39;</span><span class="p">,</span><span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="s1">&#39;int&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="procedures-performed-on-patients-grouped-by-gender-with-the-highest-cost">
+<h3>Procedures performed on patients grouped by gender with the highest cost.<a class="headerlink" href="#procedures-performed-on-patients-grouped-by-gender-with-the-highest-cost" title="Permalink to this headline">¶</a></h3>
+<p>This information compiles the procedures in which both men and women invested more money. We create a grouped table for each gender, then we do an append.</p>
+<ul class="simple">
+<li><p>The most expensive procedure accessed by patients grouped by gender and most frequently used are flexible prostheses.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Set up display options for floating format</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:.0f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span>
+<span class="c1">#Add to columns filtered by gender</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;counts&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">women_top_proc</span> <span class="o">=</span> <span class="n">dental_office</span><span class="p">[</span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;genre&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;femenino&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;genre&#39;</span><span class="p">,</span><span class="s1">&#39;dental-procedure&#39;</span><span class="p">])[</span><span class="s1">&#39;cost&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">men_top_proc</span> <span class="o">=</span> <span class="n">dental_office</span><span class="p">[</span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;genre&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;masculino&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;genre&#39;</span><span class="p">,</span><span class="s1">&#39;dental-procedure&#39;</span><span class="p">])[</span><span class="s1">&#39;cost&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">men_top_proc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">women_top_proc</span><span class="p">)</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1605/732345006.py:7: FutureWarning: The series.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  men_top_proc.append(women_top_proc).to_frame()
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>cost</th>
+    </tr>
+    <tr>
+      <th>genre</th>
+      <th>dental-procedure</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">masculino</th>
+      <th>protesis flexible isosit parcial</th>
+      <td>1000000</td>
+    </tr>
+    <tr>
+      <th>protesis alto impacto duratone total</th>
+      <td>500000</td>
+    </tr>
+    <tr>
+      <th>protesis flexible duratone parcial</th>
+      <td>380000</td>
+    </tr>
+    <tr>
+      <th>protesisflexible biodent parcial</th>
+      <td>335000</td>
+    </tr>
+    <tr>
+      <th>recubrimiento multiradicular</th>
+      <td>315000</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">femenino</th>
+      <th>protesis flexible superc parcial</th>
+      <td>700000</td>
+    </tr>
+    <tr>
+      <th>protesis alto impacto biodent parcial</th>
+      <td>330000</td>
+    </tr>
+    <tr>
+      <th>recubrimiento multiradicular</th>
+      <td>325000</td>
+    </tr>
+    <tr>
+      <th>exo caninos cirujano</th>
+      <td>320000</td>
+    </tr>
+    <tr>
+      <th>protesis flexible duratone parcial</th>
+      <td>300000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="descriptive-income-statistics-regarding-gender-and-occupation">
+<h3>Descriptive Income Statistics regarding gender and occupation<a class="headerlink" href="#descriptive-income-statistics-regarding-gender-and-occupation" title="Permalink to this headline">¶</a></h3>
+<p><strong>Note</strong>: Errors are evident in the male gender with respect to the occupation <code class="docutils literal notranslate"><span class="pre">housewife</span></code> which does not usually apply to this gender and was applied by mistake.</p>
+<ul class="simple">
+<li><p>The median is the same for self-employed and employees regardless of gender.</p></li>
+<li><p>Unemployed men have the highest standard deviation, which could be due to an error when entering the type of patient. In addition, there is no agreement that the unemployed present the second highest income. Opposed to what happens with women.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Income grouped by genre and occupation</span>
+<span class="n">dental_office</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;genre&#39;</span><span class="p">,</span><span class="s1">&#39;occupation&#39;</span><span class="p">])[</span><span class="s1">&#39;cost&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>count</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+    <tr>
+      <th>genre</th>
+      <th>occupation</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">femenino</th>
+      <th>ama de casa</th>
+      <td>57</td>
+      <td>149333</td>
+      <td>221572</td>
+      <td>0</td>
+      <td>40000</td>
+      <td>80000</td>
+      <td>140000</td>
+      <td>1200000</td>
+    </tr>
+    <tr>
+      <th>desempleado</th>
+      <td>11</td>
+      <td>64455</td>
+      <td>87363</td>
+      <td>0</td>
+      <td>14500</td>
+      <td>50000</td>
+      <td>55000</td>
+      <td>300000</td>
+    </tr>
+    <tr>
+      <th>empleado</th>
+      <td>121</td>
+      <td>145117</td>
+      <td>235849</td>
+      <td>0</td>
+      <td>50000</td>
+      <td>90000</td>
+      <td>130000</td>
+      <td>2123123</td>
+    </tr>
+    <tr>
+      <th>estudiante</th>
+      <td>54</td>
+      <td>87278</td>
+      <td>93164</td>
+      <td>0</td>
+      <td>50000</td>
+      <td>61000</td>
+      <td>98750</td>
+      <td>600000</td>
+    </tr>
+    <tr>
+      <th>independiente</th>
+      <td>122</td>
+      <td>113713</td>
+      <td>104347</td>
+      <td>0</td>
+      <td>56250</td>
+      <td>90000</td>
+      <td>147500</td>
+      <td>740000</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">masculino</th>
+      <th>ama de casa</th>
+      <td>4</td>
+      <td>72500</td>
+      <td>26300</td>
+      <td>50000</td>
+      <td>50000</td>
+      <td>70000</td>
+      <td>92500</td>
+      <td>100000</td>
+    </tr>
+    <tr>
+      <th>desempleado</th>
+      <td>12</td>
+      <td>326667</td>
+      <td>596659</td>
+      <td>10000</td>
+      <td>15000</td>
+      <td>85000</td>
+      <td>207500</td>
+      <td>2000000</td>
+    </tr>
+    <tr>
+      <th>empleado</th>
+      <td>73</td>
+      <td>108274</td>
+      <td>102846</td>
+      <td>0</td>
+      <td>55000</td>
+      <td>90000</td>
+      <td>110000</td>
+      <td>650000</td>
+    </tr>
+    <tr>
+      <th>estudiante</th>
+      <td>18</td>
+      <td>47778</td>
+      <td>36146</td>
+      <td>0</td>
+      <td>15000</td>
+      <td>50000</td>
+      <td>70000</td>
+      <td>140000</td>
+    </tr>
+    <tr>
+      <th>independiente</th>
+      <td>122</td>
+      <td>112574</td>
+      <td>101579</td>
+      <td>0</td>
+      <td>50000</td>
+      <td>90000</td>
+      <td>140000</td>
+      <td>620000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="analysis-of-essential-aspects-in-oral-care">
+<h3>Analysis of essential aspects in oral care<a class="headerlink" href="#analysis-of-essential-aspects-in-oral-care" title="Permalink to this headline">¶</a></h3>
+<p>There are bad habits that affect teeth health,  such as <code class="docutils literal notranslate"><span class="pre">smoking</span> <span class="pre">',</span></code> drinking alcohol`,  or not brushing  properly. They can cause either short- or long-term problems depending on each patient.  Focusing health and prevention campaigns on populations with higher incidences of bad habits can help.</p>
+<p><strong>Smokers</strong></p>
+<ul class="simple">
+<li><p>In terms of occupation, employees and self-employed have the most significant percentage or a higher tendency to smoke. It should be noted that the amount of data for categories other than employees and self-employed is not significant, which increases the bias in the given conclusion.</p></li>
+</ul>
+<p><strong>Oral hygiene</strong></p>
+<ul class="simple">
+<li><p>Oral hygiene is related to the number of times we brush our teeth per day, where 3 is good, 2 is regular and 1 is bad.
+-More than 50%of patients, both men and women, have good hygiene, which makes sense in patients who are attentive to their oral health. Usually patients who have bad habits in their oral health do not usually visit the dentist.</p></li>
+</ul>
+<p><strong>Dental Floss</strong></p>
+<ul class="simple">
+<li><p>Dental floss is a very important habit, but just a few 4 out of 10 people use it.</p></li>
+</ul>
+<p><strong>Alcohol</strong></p>
+<ul class="simple">
+<li><p>The question, Do you consume alcoholic beverages?. Well,  patients don’t know what to answer, or they associate it with people who abuse alcoholic beverages, so we should reword the question and make the patient feel more comfortable instead of being attacked with the question.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Smokers percentage</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span>
+<span class="n">p_smoker</span> <span class="o">=</span> <span class="n">dental_office</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;genre&#39;</span><span class="p">,</span><span class="s1">&#39;smoker&#39;</span><span class="p">,</span><span class="s1">&#39;occupation&#39;</span><span class="p">])[[</span><span class="s1">&#39;counts&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">p_smoker</span> <span class="o">=</span> <span class="n">p_smoker</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span>  <span class="n">x</span> <span class="o">/</span><span class="n">x</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">unstack</span><span class="p">(</span><span class="s1">&#39;occupation&#39;</span><span class="p">)</span>
+<span class="n">p_smoker</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="s1">&#39;si&#39;</span><span class="p">,</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="5" halign="left">counts</th>
+    </tr>
+    <tr>
+      <th>occupation</th>
+      <th>ama de casa</th>
+      <th>desempleado</th>
+      <th>empleado</th>
+      <th>estudiante</th>
+      <th>independiente</th>
+    </tr>
+    <tr>
+      <th>genre</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>femenino</th>
+      <td>2.19%</td>
+      <td>0.00%</td>
+      <td>10.68%</td>
+      <td>4.66%</td>
+      <td>9.32%</td>
+    </tr>
+    <tr>
+      <th>masculino</th>
+      <td>1.31%</td>
+      <td>0.44%</td>
+      <td>11.79%</td>
+      <td>2.62%</td>
+      <td>19.21%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Oral hygeine percentage grouped by gender</span>
+<span class="n">p_hygiene</span> <span class="o">=</span> <span class="n">dental_office</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;genre&#39;</span><span class="p">,</span><span class="s1">&#39;oral hygiene&#39;</span><span class="p">])[[</span><span class="s1">&#39;counts&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">p_hygiene</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">x</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>counts</th>
+    </tr>
+    <tr>
+      <th>genre</th>
+      <th>oral hygiene</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" valign="top">femenino</th>
+      <th>buena</th>
+      <td>63.84%</td>
+    </tr>
+    <tr>
+      <th>mala</th>
+      <td>0.55%</td>
+    </tr>
+    <tr>
+      <th>regular</th>
+      <td>35.62%</td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">masculino</th>
+      <th>buena</th>
+      <td>50.22%</td>
+    </tr>
+    <tr>
+      <th>mala</th>
+      <td>9.17%</td>
+    </tr>
+    <tr>
+      <th>regular</th>
+      <td>40.61%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Dental floss usage grouped by gender</span>
+<span class="n">p_floss</span> <span class="o">=</span> <span class="n">dental_office</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;genre&#39;</span><span class="p">,</span><span class="s1">&#39;floss usage&#39;</span><span class="p">])[[</span><span class="s1">&#39;counts&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">p_floss</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">x</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>counts</th>
+    </tr>
+    <tr>
+      <th>genre</th>
+      <th>floss usage</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">femenino</th>
+      <th>no</th>
+      <td>58.90%</td>
+    </tr>
+    <tr>
+      <th>si</th>
+      <td>41.10%</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">masculino</th>
+      <th>no</th>
+      <td>68.56%</td>
+    </tr>
+    <tr>
+      <th>si</th>
+      <td>31.44%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Alcohol consumption grouped by gender</span>
+<span class="n">p_alcoholic</span> <span class="o">=</span> <span class="n">dental_office</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;genre&#39;</span><span class="p">,</span><span class="s1">&#39;alcoholic&#39;</span><span class="p">,</span><span class="s1">&#39;occupation&#39;</span><span class="p">])[[</span><span class="s1">&#39;counts&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">p_alcoholic</span> <span class="o">=</span> <span class="n">p_alcoholic</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">x</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">p_alcoholic</span><span class="o">.</span><span class="n">unstack</span><span class="p">(</span><span class="s1">&#39;occupation&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="s1">&#39;si&#39;</span><span class="p">,</span><span class="n">level</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="5" halign="left">counts</th>
+    </tr>
+    <tr>
+      <th>occupation</th>
+      <th>ama de casa</th>
+      <th>desempleado</th>
+      <th>empleado</th>
+      <th>estudiante</th>
+      <th>independiente</th>
+    </tr>
+    <tr>
+      <th>genre</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>femenino</th>
+      <td>0.82%</td>
+      <td>0.00%</td>
+      <td>8.49%</td>
+      <td>4.11%</td>
+      <td>7.67%</td>
+    </tr>
+    <tr>
+      <th>masculino</th>
+      <td>1.31%</td>
+      <td>0.00%</td>
+      <td>5.68%</td>
+      <td>2.62%</td>
+      <td>14.41%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>###Patients Preferred Payment Methods</p>
+<p>Payment options are increasingly diverse to make it easier for patients to access dental treatment. We could analyze payment methods with regard to different population groups. but for this analysis we will focus on relating them in regard to the occupation and the generation each patient belongs to.</p>
+<p><strong>Generation/Occupation</strong></p>
+<p>Despite the convenience of bank or mobile transfers, they aren’t as representative as cash, or traditional payment methods. Creditcart transfers in some cases involve tax payments and have also not been adopted by all generations or age ranges. The graph <code class="docutils literal notranslate"><span class="pre">percentage</span> <span class="pre">by</span> <span class="pre">generation</span></code> shows the segment of patients that belongs to each generation.</p>
+<ul class="simple">
+<li><p>Approximately 45% of patients are <code class="docutils literal notranslate"><span class="pre">Gen</span> <span class="pre">Z</span></code> and <code class="docutils literal notranslate"><span class="pre">Millennials</span></code> i.e., a population made up of youth and young adults whose use of EFT’s is likely to be greater than older adults.</p></li>
+<li><p>When we cross  generations data regarding payment methods, we observe that a higher percentage of electronic payments are in <code class="docutils literal notranslate"><span class="pre">Millennials</span></code> compared to other generations. Despite being a representative population of the total number of patients, the preferred payment method is the traditional one by far.</p></li>
+<li><p><strong>Note</strong>: Create a table that allows validating whether the <code class="docutils literal notranslate"><span class="pre">Millennials</span></code> generation that has access to dental treatments are actually the most active at work so they can afford them. <strong>Answer</strong>: The <code class="docutils literal notranslate"><span class="pre">Millennials</span></code> generation are the most active at work. Most of them are self-employed.</p></li>
+<li><p>People whose occupation is self-employed are the population that uses the most electronic payment methods, with more than 20% of the total.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#This func allow us to categorize patient age group by generations </span>
+<span class="k">def</span> <span class="nf">patient_gen</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">10</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">25</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s1">&#39;Gen Z&#39;</span>
+  <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">26</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">41</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s1">&#39;Millennials&#39;</span>
+  <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">42</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">57</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s1">&#39;Gen X&#39;</span>
+  <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">58</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">67</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s1">&#39;Boomers II&#39;</span>
+  <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">68</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">76</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s1">&#39;Boomers I&#39;</span>
+  <span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">77</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">94</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s1">&#39;Post War Gen&#39;</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="s1">&#39;None&#39;</span>
+
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;patient_gen&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">patient_gen</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Patients bar chart according to the generational group to which they belong.</span>
+
+<span class="n">patient_gens</span> <span class="o">=</span> <span class="n">dental_office</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;patient_gen&#39;</span><span class="p">)[[</span><span class="s1">&#39;counts&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">total_patient_gen</span> <span class="o">=</span> <span class="n">patient_gens</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;counts&#39;</span><span class="p">:</span><span class="s1">&#39;total&#39;</span><span class="p">})</span>
+<span class="n">percent_patient_gen</span> <span class="o">=</span> <span class="n">patient_gens</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">/</span><span class="n">patient_gens</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;counts&#39;</span><span class="p">:</span><span class="s1">&#39;percentage&#39;</span><span class="p">})</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Total Patients per Generation&#39;</span><span class="p">)</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">data</span><span class="o">=</span><span class="n">total_patient_gen</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;patient_gen&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;total&#39;</span><span class="p">,</span><span class="n">palette</span><span class="o">=</span><span class="s1">&#39;magma&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Generations&#39;</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Freq Total&#39;</span><span class="p">)</span>
+<span class="n">t</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s1">&#39;Boomers I&#39;</span><span class="p">,</span> <span class="s1">&#39;Boomers II&#39;</span><span class="p">,</span> <span class="s1">&#39;Gen X&#39;</span><span class="p">,</span> <span class="s1">&#39;Gen Z&#39;</span><span class="p">,</span> <span class="s1">&#39;Millennials&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Post War Gen&#39;</span><span class="p">],</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Percentage per Generation&#39;</span><span class="p">)</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">data</span><span class="o">=</span><span class="n">percent_patient_gen</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;patient_gen&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;percentage&#39;</span><span class="p">,</span><span class="n">palette</span><span class="o">=</span><span class="s1">&#39;magma&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Generations&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Percentage&quot;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s1">&#39;Boomers I&#39;</span><span class="p">,</span> <span class="s1">&#39;Boomers II&#39;</span><span class="p">,</span> <span class="s1">&#39;Gen X&#39;</span><span class="p">,</span> <span class="s1">&#39;Gen Z&#39;</span><span class="p">,</span> <span class="s1">&#39;Millennials&#39;</span><span class="p">,</span> <span class="s1">&#39;None&#39;</span><span class="p">,</span>
+       <span class="s1">&#39;Post War Gen&#39;</span><span class="p">],</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">percent_patient_gen</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/dental-office-analysis_32_0.png" src="_images/dental-office-analysis_32_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Tabulate crossed data between generation and payment method</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span>
+<span class="n">non_common_methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;trans_bancolombia&#39;</span><span class="p">,</span><span class="s1">&#39;trans_davivienda&#39;</span><span class="p">,</span><span class="s1">&#39;otro&#39;</span><span class="p">]</span>
+<span class="n">prefer_payment</span> <span class="o">=</span> <span class="n">dental_office</span><span class="p">[</span><span class="o">~</span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;payment method&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">non_common_methods</span><span class="p">)]</span>
+<span class="n">prefer_payment</span> <span class="o">=</span> <span class="n">prefer_payment</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;patient_gen&#39;</span><span class="p">,</span><span class="s1">&#39;payment method&#39;</span><span class="p">])[[</span><span class="s1">&#39;counts&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">prefer_payment</span> <span class="o">=</span> <span class="n">prefer_payment</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">/</span><span class="n">x</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">prefer_payment</span><span class="o">.</span><span class="n">unstack</span><span class="p">(</span><span class="s1">&#39;payment method&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="4" halign="left">counts</th>
+    </tr>
+    <tr>
+      <th>payment method</th>
+      <th>bold</th>
+      <th>daviplata</th>
+      <th>efectivo</th>
+      <th>nequi</th>
+    </tr>
+    <tr>
+      <th>patient_gen</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Boomers I</th>
+      <td>35.56%</td>
+      <td>0.00%</td>
+      <td>64.44%</td>
+      <td>0.00%</td>
+    </tr>
+    <tr>
+      <th>Boomers II</th>
+      <td>14.04%</td>
+      <td>0.00%</td>
+      <td>82.46%</td>
+      <td>3.51%</td>
+    </tr>
+    <tr>
+      <th>Gen X</th>
+      <td>8.72%</td>
+      <td>1.16%</td>
+      <td>85.47%</td>
+      <td>4.65%</td>
+    </tr>
+    <tr>
+      <th>Gen Z</th>
+      <td>3.37%</td>
+      <td>5.62%</td>
+      <td>85.39%</td>
+      <td>5.62%</td>
+    </tr>
+    <tr>
+      <th>Millennials</th>
+      <td>12.57%</td>
+      <td>2.73%</td>
+      <td>77.60%</td>
+      <td>7.10%</td>
+    </tr>
+    <tr>
+      <th>None</th>
+      <td>3.85%</td>
+      <td>3.85%</td>
+      <td>88.46%</td>
+      <td>3.85%</td>
+    </tr>
+    <tr>
+      <th>Post War Gen</th>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td>100.00%</td>
+      <td>0.00%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Tabulate crossed data between generation and occupation</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:.2f}</span><span class="s1">%&#39;</span><span class="o">.</span><span class="n">format</span>
+<span class="n">non_common_methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;trans_bancolombia&#39;</span><span class="p">,</span><span class="s1">&#39;trans_davivienda&#39;</span><span class="p">,</span><span class="s1">&#39;otro&#39;</span><span class="p">]</span>
+<span class="n">generation_payment</span> <span class="o">=</span> <span class="n">dental_office</span><span class="p">[</span><span class="o">~</span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;payment method&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">non_common_methods</span><span class="p">)]</span>
+<span class="n">generation_payment</span> <span class="o">=</span> <span class="n">generation_payment</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;patient_gen&#39;</span><span class="p">,</span><span class="s1">&#39;occupation&#39;</span><span class="p">])[</span><span class="s1">&#39;counts&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">generation_payment</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="o">/</span><span class="n">x</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">.</span><span class="n">unstack</span><span class="p">(</span><span class="s1">&#39;occupation&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>occupation</th>
+      <th>ama de casa</th>
+      <th>desempleado</th>
+      <th>empleado</th>
+      <th>estudiante</th>
+      <th>independiente</th>
+    </tr>
+    <tr>
+      <th>patient_gen</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Boomers I</th>
+      <td>40.00%</td>
+      <td>8.89%</td>
+      <td>15.56%</td>
+      <td>2.22%</td>
+      <td>33.33%</td>
+    </tr>
+    <tr>
+      <th>Boomers II</th>
+      <td>24.56%</td>
+      <td>3.51%</td>
+      <td>29.82%</td>
+      <td>1.75%</td>
+      <td>40.35%</td>
+    </tr>
+    <tr>
+      <th>Gen X</th>
+      <td>8.72%</td>
+      <td>2.33%</td>
+      <td>36.05%</td>
+      <td>1.16%</td>
+      <td>51.74%</td>
+    </tr>
+    <tr>
+      <th>Gen Z</th>
+      <td>10.11%</td>
+      <td>2.25%</td>
+      <td>32.58%</td>
+      <td>40.45%</td>
+      <td>14.61%</td>
+    </tr>
+    <tr>
+      <th>Millennials</th>
+      <td>1.64%</td>
+      <td>3.28%</td>
+      <td>38.25%</td>
+      <td>3.83%</td>
+      <td>53.01%</td>
+    </tr>
+    <tr>
+      <th>None</th>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td>11.54%</td>
+      <td>84.62%</td>
+      <td>3.85%</td>
+    </tr>
+    <tr>
+      <th>Post War Gen</th>
+      <td>12.50%</td>
+      <td>62.50%</td>
+      <td>0.00%</td>
+      <td>0.00%</td>
+      <td>25.00%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Prefered payment methods groupped by occupation </span>
+<span class="n">non_common_methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;trans_bancolombia&#39;</span><span class="p">,</span><span class="s1">&#39;trans_davivienda&#39;</span><span class="p">,</span><span class="s1">&#39;otro&#39;</span><span class="p">]</span>
+<span class="n">p_payment</span> <span class="o">=</span> <span class="n">dental_office</span><span class="p">[</span><span class="o">~</span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;payment method&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">non_common_methods</span><span class="p">)]</span>
+<span class="n">p_payment</span> <span class="o">=</span> <span class="n">p_payment</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;occupation&#39;</span><span class="p">,</span><span class="s1">&#39;payment method&#39;</span><span class="p">])[[</span><span class="s1">&#39;counts&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">p_payment</span> <span class="o">=</span> <span class="n">p_payment</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">/</span> <span class="n">x</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">p_payment</span><span class="o">.</span><span class="n">unstack</span><span class="p">(</span><span class="s1">&#39;payment method&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,:</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="4" halign="left">counts</th>
+    </tr>
+    <tr>
+      <th>payment method</th>
+      <th>bold</th>
+      <th>daviplata</th>
+      <th>efectivo</th>
+      <th>nequi</th>
+    </tr>
+    <tr>
+      <th>occupation</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ama de casa</th>
+      <td>15.00%</td>
+      <td>0.00%</td>
+      <td>83.33%</td>
+      <td>1.67%</td>
+    </tr>
+    <tr>
+      <th>desempleado</th>
+      <td>8.70%</td>
+      <td>0.00%</td>
+      <td>82.61%</td>
+      <td>8.70%</td>
+    </tr>
+    <tr>
+      <th>empleado</th>
+      <td>10.64%</td>
+      <td>5.32%</td>
+      <td>82.45%</td>
+      <td>1.60%</td>
+    </tr>
+    <tr>
+      <th>estudiante</th>
+      <td>5.80%</td>
+      <td>2.90%</td>
+      <td>84.06%</td>
+      <td>7.25%</td>
+    </tr>
+    <tr>
+      <th>independiente</th>
+      <td>12.92%</td>
+      <td>0.42%</td>
+      <td>79.17%</td>
+      <td>7.50%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="revenue-analysis-over-time-series">
+<h2>Revenue analysis over time series<a class="headerlink" href="#revenue-analysis-over-time-series" title="Permalink to this headline">¶</a></h2>
+<p>An analysis of an income statement is normally made up of sales income, administrative expenses, operational costs, among others, in order to analyze net profit. However, for this case study we will only consider sales revenue without any deductions.</p>
+<p>-The best way to analyze income regarding series series is from the mobile sock method, as shown in the graphic <code class="docutils literal notranslate"><span class="pre">Expenditure</span> <span class="pre">analysis</span> <span class="pre">per</span> <span class="pre">sex</span></code> the trend is clearer to create 30 -rows windows for a daily frequency for a daily frequency. This makes it possible to avoid negative spikes on days where there was no revenue.</p>
+<ul class="simple">
+<li><p>The categorization of income can be carried out with respect to different population groups. However, it will only be done with respect to gender and occupation.
+-Men are the demographic group that are carried out less dental treatments. The downward trend in the last 2 years is worrisome, so it is suggested to perform a detailed analysis regarding this deficit of men.</p></li>
+<li><p>The categorization by occupation reflects that there is a greater fluctuation in the group of independent workers than in the group of employees, being the employees, the ones who have allowed the growth of the dental practice income.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Business income groupped by gender</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;women_exp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dental_office</span><span class="p">[</span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;genre&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;femenino&#39;</span><span class="p">][</span><span class="s1">&#39;cost&#39;</span><span class="p">]</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;men_exp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dental_office</span><span class="p">[</span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;genre&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;masculino&#39;</span><span class="p">][</span><span class="s1">&#39;cost&#39;</span><span class="p">]</span>
+<span class="n">date_analysis_D</span> <span class="o">=</span> <span class="n">dental_office</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Grouper</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s1">&#39;appointment day&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">))[[</span><span class="s1">&#39;cost&#39;</span><span class="p">,</span><span class="s1">&#39;women_exp&#39;</span><span class="p">,</span><span class="s1">&#39;men_exp&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">sales_total</span> <span class="o">=</span> <span class="n">date_analysis_D</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">sale_to</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">sales_total</span><span class="p">)</span>
+<span class="n">sale_to</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Expenditure Analysis per Sex&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">sale_to</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Period of Time&#39;</span><span class="p">)</span>
+<span class="n">sale_to</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Moving Avg 30 Days(Amount)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/dental-office-analysis_37_0.png" src="_images/dental-office-analysis_37_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Business income groupped by patient occupation</span>
+<span class="kn">from</span> <span class="nn">matplotlib.lines</span> <span class="kn">import</span> <span class="n">Line2D</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
+<span class="n">cmap</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span>
+<span class="n">custom_lines</span> <span class="o">=</span> <span class="p">[</span><span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">1.</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
+                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">.8</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
+                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">0.6</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
+                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">0.2</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
+                <span class="n">Line2D</span><span class="p">([</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="mf">.0</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">4</span><span class="p">)]</span>
+
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">cmap</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)))</span>
+
+
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;student_exp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dental_office</span><span class="p">[</span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;occupation&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;estudiante&#39;</span><span class="p">][</span><span class="s1">&#39;cost&#39;</span><span class="p">]</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;employee_exp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dental_office</span><span class="p">[</span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;occupation&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;empleado&#39;</span><span class="p">][</span><span class="s1">&#39;cost&#39;</span><span class="p">]</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;hkeeper_exp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dental_office</span><span class="p">[</span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;occupation&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;ama de casa&#39;</span><span class="p">][</span><span class="s1">&#39;cost&#39;</span><span class="p">]</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;ind_exp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dental_office</span><span class="p">[</span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;occupation&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;independiente&#39;</span><span class="p">][</span><span class="s1">&#39;cost&#39;</span><span class="p">]</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;unemployee_exp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dental_office</span><span class="p">[</span><span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;occupation&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;desempleado&#39;</span><span class="p">][</span><span class="s1">&#39;cost&#39;</span><span class="p">]</span>
+
+<span class="n">date_analysis_occupation</span> <span class="o">=</span> <span class="n">dental_office</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Grouper</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s1">&#39;appointment day&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">))[[</span><span class="s1">&#39;student_exp&#39;</span><span class="p">,</span><span class="s1">&#39;employee_exp&#39;</span><span class="p">,</span><span class="s1">&#39;hkeeper_exp&#39;</span><span class="p">,</span><span class="s1">&#39;ind_exp&#39;</span><span class="p">,</span><span class="s1">&#39;unemployee_exp&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">sales_occupation</span> <span class="o">=</span> <span class="n">date_analysis_occupation</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">lines</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sales_occupation</span><span class="p">)</span>
+
+<span class="n">sale_to</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Expenditure Analysis per Occupation&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">sale_to</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Period of Time&#39;</span><span class="p">)</span>
+<span class="n">sale_to</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Moving Avg 30 Day(Amount)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">custom_lines</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;student_exp&#39;</span><span class="p">,</span> <span class="s1">&#39;employee_exp&#39;</span><span class="p">,</span> <span class="s1">&#39;hkeeper_exp&#39;</span><span class="p">,</span><span class="s1">&#39;ind_exp&#39;</span><span class="p">,</span><span class="s1">&#39;unemployee_exp&#39;</span><span class="p">]);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/dental-office-analysis_38_0.png" src="_images/dental-office-analysis_38_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Business income groupped by gender time series per year</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">float_format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:.0f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span>
+<span class="n">months</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jan&quot;</span><span class="p">,</span> <span class="s2">&quot;Feb&quot;</span><span class="p">,</span> <span class="s2">&quot;Mar&quot;</span><span class="p">,</span> <span class="s2">&quot;Apr&quot;</span><span class="p">,</span> <span class="s2">&quot;May&quot;</span><span class="p">,</span> <span class="s2">&quot;Jun&quot;</span><span class="p">,</span><span class="s2">&quot;Jul&quot;</span><span class="p">,</span> <span class="s2">&quot;Aug&quot;</span><span class="p">,</span> <span class="s2">&quot;Sep&quot;</span><span class="p">,</span> <span class="s2">&quot;Oct&quot;</span><span class="p">,</span> <span class="s2">&quot;Nov&quot;</span><span class="p">,</span> <span class="s2">&quot;Dec&quot;</span><span class="p">]</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;appointment day&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+<span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dental_office</span><span class="p">[</span><span class="s1">&#39;appointment day&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+<span class="c1">#dental_office[&#39;month&#39;] = pd.to_datetime(dental_office[&#39;appointment day&#39;], format=&#39;%m&#39;).dt.month_name()</span>
+<span class="n">revenue</span> <span class="o">=</span> <span class="n">dental_office</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;year&#39;</span><span class="p">,</span><span class="s1">&#39;month&#39;</span><span class="p">])[[</span><span class="s1">&#39;cost&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">revenue_2021</span> <span class="o">=</span> <span class="n">revenue</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="mi">2021</span><span class="p">,</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cost&#39;</span><span class="p">:</span><span class="s1">&#39;revenue 2021&#39;</span><span class="p">})</span>
+<span class="n">revenue_2022</span> <span class="o">=</span> <span class="n">revenue</span><span class="o">.</span><span class="n">xs</span><span class="p">(</span><span class="mi">2022</span><span class="p">,</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cost&#39;</span><span class="p">:</span><span class="s1">&#39;revenue 2022&#39;</span><span class="p">})</span>
+<span class="n">revenue_year</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">revenue_2021</span><span class="p">,</span><span class="n">revenue_2022</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">revenue_year</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">(</span><span class="n">revenue_year</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">str</span><span class="p">))</span>
+<span class="n">revenue_year</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">stacked</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">),</span><span class="n">months</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/dental-office-analysis_39_0.png" src="_images/dental-office-analysis_39_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="conclusions">
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>The case of study includes real data that contains sensitive information and that compromises the safety of patients, for this reason you will not be able to access the data if you try to access the server later on.</p></li>
+<li><p>Understanding the categorical variables as population groups, it could be interesting to make a cross-union between the largest number of groups to analyze more in detail sales in detailed cases, such as sales income given by self-employed women who belongs to generation X and use dental floss properly.</p></li>
+<li><p>The dental office should look forward to better communication channels that allow us to increase men’s interest in oral health. Identify the possible reasons why this population hardly has access or interest to dental treatments.</p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to my portfolio</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="eda-wines-template.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Vinho Verde Analysis🚀🪜</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By DanielNMuner<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
