@@ -1,7 +1,0 @@
-# Table of contents
-
-format: jb-book
-root: intro
-chapters:
-- file: dental-office-analysis
-- file: eda-wines-template
