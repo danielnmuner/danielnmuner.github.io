@@ -1,0 +1,1637 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transformacion de Datos con Numpy y Pandas - Carlos Alarcon &#8212; Daniel&#39;s Portfolio</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Escalamiento Lineal" href="stat-probability.html" />
+    <link rel="prev" title="Vinho Verde Analysis🚀🪜" href="eda-wines-template.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Daniel's Portfolio</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Portfolio &amp; Resume
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dental-office-analysis.html">
+   Dental Office 🦷🪥
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eda-wines-template.html">
+   Vinho Verde Analysis🚀🪜
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Transformacion de Datos con Numpy y Pandas - Carlos Alarcon
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="stat-probability.html">
+   Escalamiento Lineal
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/personal-notes.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/danielnmuner/danielnmuner.github.io"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/danielnmuner/danielnmuner.github.io/issues/new?title=Issue%20on%20page%20%2Fpersonal-notes.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funciones-pandas">
+   Funciones Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numpy">
+   NumPy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pandas">
+   Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numpy-array">
+   Numpy Array
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-datos">
+   Tipos de datos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dimensiones">
+   Dimensiones
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creando-arrays">
+   Creando arrays
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shape-y-reshape">
+   Shape y Reshape
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funciones-principales-de-numpy">
+   Funciones principales de NumPy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copy">
+   Copy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#condiciones">
+   Condiciones
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operaciones">
+   Operaciones
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#series-y-dataframes-en-pandas">
+   Series y DataFrames en Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#leer-archivos-csv-y-json-con-pandas">
+   Leer archivos CSV y JSON con Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtrado-con-loc-y-iloc">
+   Filtrado con loc y iloc
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#agregar-o-eliminar-datos-con-pandas">
+   Agregar o eliminar datos con Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manejo-de-datos-nulos">
+   Manejo de datos nulos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtrado-por-condiciones">
+   Filtrado por condiciones
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funciones-principales-de-pandas">
+   Funciones principales de Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#groupby">
+   Groupby
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combinando-dataframes">
+   Combinando DataFrames
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#merge-y-concat">
+   Merge y Concat
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pivot-y-melt">
+   Pivot y Melt
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#apply">
+   Apply
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Transformacion de Datos con Numpy y Pandas - Carlos Alarcon</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funciones-pandas">
+   Funciones Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numpy">
+   NumPy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pandas">
+   Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numpy-array">
+   Numpy Array
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-datos">
+   Tipos de datos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dimensiones">
+   Dimensiones
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creando-arrays">
+   Creando arrays
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shape-y-reshape">
+   Shape y Reshape
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funciones-principales-de-numpy">
+   Funciones principales de NumPy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copy">
+   Copy
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#condiciones">
+   Condiciones
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#operaciones">
+   Operaciones
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#series-y-dataframes-en-pandas">
+   Series y DataFrames en Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#leer-archivos-csv-y-json-con-pandas">
+   Leer archivos CSV y JSON con Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtrado-con-loc-y-iloc">
+   Filtrado con loc y iloc
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#agregar-o-eliminar-datos-con-pandas">
+   Agregar o eliminar datos con Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manejo-de-datos-nulos">
+   Manejo de datos nulos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#filtrado-por-condiciones">
+   Filtrado por condiciones
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funciones-principales-de-pandas">
+   Funciones principales de Pandas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#groupby">
+   Groupby
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combinando-dataframes">
+   Combinando DataFrames
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#merge-y-concat">
+   Merge y Concat
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pivot-y-melt">
+   Pivot y Melt
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#apply">
+   Apply
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="transformacion-de-datos-con-numpy-y-pandas-carlos-alarcon">
+<h1>Transformacion de Datos con Numpy y Pandas - Carlos Alarcon<a class="headerlink" href="#transformacion-de-datos-con-numpy-y-pandas-carlos-alarcon" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="funciones-pandas">
+<h2><a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html">Funciones Pandas</a><a class="headerlink" href="#funciones-pandas" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="numpy">
+<h2>NumPy<a class="headerlink" href="#numpy" title="Permalink to this headline">¶</a></h2>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#numpy-array">Numpy Array</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#tipos-de-datos">Tipos de datos</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#dimensiones">Dimensiones</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#creando-arrays">Creando arrays</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#shape-y-reshape">Shape y Reshape</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#funciones-principales-de-numpy">Funciones principales de NumPy</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#copy">Copy</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#condiciones">Condiciones</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#operaciones">Operaciones</a></p></li>
+</ul>
+</div>
+<div class="section" id="pandas">
+<h2>Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h2>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#series-y-dataframes-en-pandas">Series y DataFrames en Pandas</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#leer-archivos-csv-y-json-con-pandas">Leer archivos CSV y JSON con Pandas</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#filtrado-con-loc-y-iloc">Filtrado con loc y iloc</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#agregar-o-eliminar-datos-con-pandas">Agregar o eliminar datos con Pandas</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#manejo-de-datos-nulos">Manejo de datos nulos</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#filtrado-por-condiciones">Filtrado por condiciones</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#funciones-principales-de-pandas">Funciones principales de Pandas</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#groupby">Groupby</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#combinando-dataframes">Combinando DataFrames</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#merge-y-concat">Merge y Concat</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#pivot-y-melt">Pivot y Melt</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#apply">Apply</a></p></li>
+</ul>
+</div>
+<div class="section" id="numpy-array">
+<h2>Numpy Array<a class="headerlink" href="#numpy-array" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://numpy.org/doc/stable/user/absolute_beginners.html#what-is-an-array">Beginners</a></p>
+<p>El array es el principal objeto de la librería. Representa datos de manera estructurada y se puede acceder a ellos a traves del indexado, a un dato específico o un grupo de muchos datos específicos. Las operaciones en Numpy son hasta 50 veces mas rapidas que en Python,  a continuacion se presenta la creacion de arrays de diferetes dimenciones.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>lista = [1,2,3,4,5,10]
+array_lista = np.array(lista)
+matriz = [[1,2,3],[2,3,4],[23,43,1]]
+array_matriz = np.array(matriz)
+
+#Output
+Array List &lt;class &#39;numpy.ndarray&#39;&gt;
+Array Matrix &lt;class &#39;numpy.ndarray&#39;&gt;
+</pre></div>
+</div>
+<p>Si hacemos slicing de matrices simpre colocamos <code class="docutils literal notranslate"><span class="pre">(nrow:mrow,ncol:ncol)</span></code> E.g.:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">matriz</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">23</span><span class="p">,</span><span class="mi">43</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span>
+<span class="n">array_matriz</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:,</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1">#Outuput</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">23</span><span class="p">])</span>
+
+</pre></div>
+</div>
+<p>Si el slicing se realiza sobre un a matriz de 3 dimenciones el orden es diferente como se muestra a continuacion.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Creamos x = 2 rows, y = 4 cols, z = 2</span>
+<span class="n">a_3d_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]],[[</span><span class="mi">43</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">7</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">]]])</span>
+
+<span class="c1">#Slicing a_3d_array</span>
+<span class="c1">#a_3d_array[0] -&gt;[[1,2,3,4],[2,3,4,5]] Profundidad o Eje Z</span>
+<span class="c1">#a_3d_array[0,1] -&gt; [2,3,4,5] Altura Eje Y</span>
+<span class="c1">#a_3d_array[0,1,3] -&gt; 5 Ancho Eje X</span>
+
+<span class="n">a_3d_array</span><span class="p">[</span><span class="mi">0</span><span class="p">:,</span><span class="mi">0</span><span class="p">:,</span><span class="mi">2</span><span class="p">:]</span>
+<span class="c1"># 1. Tomar ambas matrices de 2X4 Eje Z</span>
+<span class="c1"># 2. Tomar tanto rows como cols de ambas matrices Eje Z</span>
+<span class="c1"># 3. Tomar de la col3 a col4 de ambas matrices Eje X</span>
+
+<span class="c1">#Output</span>
+<span class="n">array</span><span class="p">([[[</span> <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">],</span>
+        <span class="p">[</span> <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">]],</span>
+
+       <span class="p">[[</span><span class="mi">56</span><span class="p">,</span>  <span class="mi">7</span><span class="p">],</span>
+        <span class="p">[</span> <span class="mi">3</span><span class="p">,</span>  <span class="mi">5</span><span class="p">]]])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tipos-de-datos">
+<h2>Tipos de datos<a class="headerlink" href="#tipos-de-datos" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://numpy.org/doc/stable/user/basics.types.html">Lista Tipos de Datos</a></p>
+<p>Los arrays de NumPy solo pueden contener un tipo de dato, ya que esto es lo que le confiere las ventajas de la optimización de memoria. Manipulacion de <code class="docutils literal notranslate"><span class="pre">tipos</span> <span class="pre">de</span> <span class="pre">datos</span></code> en Numpy:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Array con dtype para definir el tipo de dato</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">dtype</span> <span class="o">=</span> <span class="s2">&quot;float64&quot;</span><span class="p">)</span>
+<span class="c1"># Astype es una alternativa cuando el array ya ha sido creado.</span>
+
+<span class="n">arr</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span> <span class="c1">#Output: array([0., 1., 2., 4., 5.])</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">bool_</span><span class="p">)</span> <span class="c1">#Output: array([False,  True,  True,  True,  True])</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">string_</span><span class="p">)</span> <span class="c1">#Output: array([b&#39;0.0&#39;, b&#39;1.0&#39;, b&#39;2.0&#39;, b&#39;4.0&#39;, b&#39;5.0&#39;], dtype=&#39;|S32&#39;)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="dimensiones">
+<h2>Dimensiones<a class="headerlink" href="#dimensiones" title="Permalink to this headline">¶</a></h2>
+<p><strong>Tipos de Dimenciones</strong>
+<img alt="image" src="https://user-images.githubusercontent.com/60556632/164954432-a1f245d9-f189-4164-be1b-9233fbe5410a.png" /></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tensor 3 Dimenciones en Series de Tiempo</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="image" src="https://user-images.githubusercontent.com/60556632/164954538-6b5ba6f2-a6c1-4ceb-81c4-462da7ee2132.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Tensor 4 Dimenciones Imagenes</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="image" src="https://user-images.githubusercontent.com/60556632/164954563-d3e90480-e262-4157-94e5-e512f7759b11.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Alto:</strong> Alto de la Imagen,  <strong>Ancho:</strong> Ancho de la Imagen, <strong>Ejemplos:</strong> Cada una de las Imagenes, <strong>Canales:</strong> Composición de Color de Cada Imagen (Grises,RGB, etc)</p></td>
+</tr>
+</tbody>
+</table>
+<p>A traves del comando <code class="docutils literal notranslate"><span class="pre">.ndim</span></code> podremos saber en Numpy con que dimensiones estamos trabajando. El argumento <code class="docutils literal notranslate"><span class="pre">ndmin</span></code> dentro de array establece la cantidad de dimensiones minimas que debe tener nuestro array: <code class="docutils literal notranslate"><span class="pre">np.array([1,2,3],</span> <span class="pre">ndmin=3)</span></code> al momento de crearlo <code class="docutils literal notranslate"><span class="pre">#Output:</span> <span class="pre">[[[1,2,3]]]</span></code> asi no las tenga.</p>
+<p>Una alternativa mas completa a <code class="docutils literal notranslate"><span class="pre">ndmin</span></code> es la funcion <code class="docutils literal notranslate"><span class="pre">np.expand_dims(np.array([1,2,3]),</span> <span class="pre">axis=0</span> <span class="pre">)</span></code> en la cual ademas de expandir la dimension podemos indicar el Eje a expandir. Para eliminar, comprimir o reducir dimensiones donde no hay datos usamos <code class="docutils literal notranslate"><span class="pre">np.squeeze([[[1,2,3]]])</span></code> Output: <code class="docutils literal notranslate"><span class="pre">[1,2,3]</span></code>.</p>
+</div>
+<div class="section" id="creando-arrays">
+<h2>Creando arrays<a class="headerlink" href="#creando-arrays" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Rangos</strong>
+Podemos crear arrays en python con <code class="docutils literal notranslate"><span class="pre">range(start,stop,steps)</span></code> como se muestra a continuacion:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+
+<span class="c1">#Igualmente lo podemos hacer con Numpy np.arange(start,stop,steps: </span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="c1"># Output: array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Crear arrays de <strong>Zeros</strong> <code class="docutils literal notranslate"><span class="pre">np.zeros((rows,cols))</span></code> o <code class="docutils literal notranslate"><span class="pre">np.zeros(n)</span></code> y de <strong>Ones</strong> <code class="docutils literal notranslate"><span class="pre">np.ones((rows,cols))</span></code></p></li>
+<li><p>Rangos definidos con <strong>Linspace</strong>
+<code class="docutils literal notranslate"><span class="pre">np.linspace(start,stop,n)</span></code>
+Donde <strong>start</strong> y <strong>stop</strong> determina el rango digamos de 1 a 100 y <strong>n</strong> se refiere a la cantidad, por ejemplo 10 numeros del 1 al 100.</p></li>
+<li><p>Generar una <strong>Matriz identidad</strong></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="c1">#Para n = 3</span>
+
+<span class="c1">#Output matriz identidad:</span>
+<span class="n">array</span><span class="p">([[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]])</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Generar <strong>Numeros Alatorios</strong>:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#1. General un num aleatorio de 0 a 1</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span>
+<span class="c1">#2. General un array de n aletorios</span>
+<span class="c1">#np.random.rand(n) para n = 4</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([</span><span class="mf">0.75949945</span><span class="p">,</span> <span class="mf">0.73539686</span><span class="p">,</span> <span class="mf">0.27406198</span><span class="p">])</span>
+<span class="c1">#3. General un matriz de n x m aletorios</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">rows</span><span class="p">,</span><span class="n">cols</span><span class="p">)</span>
+<span class="c1">#4. Generar un aleatorio para un rango definido.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">)</span> 
+<span class="c1">#5. Matriz aleatorio con valores enteros definidos n-m.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">,(</span><span class="n">rows</span><span class="p">,</span><span class="n">cols</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="shape-y-reshape">
+<h2>Shape y Reshape<a class="headerlink" href="#shape-y-reshape" title="Permalink to this headline">¶</a></h2>
+<p>Es muy importante saber manipular las formas de los datos.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Shape</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">arr</span><span class="o">.</span><span class="n">shape</span>
+
+<span class="c1">#Output (rows,cols) shape indica incluso las dimensiones de un tensor.</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> 
+
+<span class="c1"># Reshape permite manipular la forma de los datos arr.reshape(rows,cols) a veces las API requieren formas especificas y por esto es muy util.</span>
+<span class="n">arr</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">arr</span><span class="p">,(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+
+<span class="c1">#Reshape + tipo de estructura segun lenguage, donde &#39;C&#39;se refiere al lenguage. </span>
+<span class="n">np</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">arr</span><span class="p">,(</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+
+<span class="c1"># &#39;A&#39; -&gt; Segun mi sistema</span>
+<span class="c1"># &#39;F&#39; -&gt; Segun Fortran</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="funciones-principales-de-numpy">
+<h2>Funciones principales de NumPy<a class="headerlink" href="#funciones-principales-de-numpy" title="Permalink to this headline">¶</a></h2>
+<p>Nos permiten realizar realizar estadisticos sobre arreglos e incluso concatenarlos.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="c1">#Crear vector de 10 numeros con rango de 1 a 20</span>
+<span class="n">matriz</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="c1">#Reshape a matriz de 2 X 5</span>
+<span class="n">matriz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">15</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">8</span><span class="p">],[</span><span class="mi">12</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span>  <span class="mi">4</span><span class="p">]])</span>
+<span class="c1">#Output:</span>
+<span class="c1">#array([[15,  5,  8, 10,  8],</span>
+<span class="c1">#       [12,  8,  7, 10,  4]])</span>
+
+<span class="c1"># .max() o .min() permite hacer las mismas operaciones sobre arrays</span>
+<span class="n">matriz</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="c1">#Numero mas grande del array matricial</span>
+<span class="n">matriz</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="c1"># Numero por eje de rows -&gt; array([15, 12])</span>
+<span class="n">matriz</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="c1"># Numero por eje de cols -&gt; array([15, 8, 8, 10,  8])</span>
+<span class="n">matriz</span><span class="o">.</span><span class="n">argmax</span><span class="p">()</span><span class="c1"># Posicion num mas grande -&gt; 0 donde 0 es 15</span>
+<span class="n">matriz</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="c1"># Posicion num mas grande eje rows -&gt; array([0, 0])</span>
+<span class="n">matriz</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="c1"># Posicion num mas grande eje cols -&gt; array([0, 1, 0, 0, 0])</span>
+
+<span class="c1"># .ptp() calcula la diferencia entre el .max() y .min()</span>
+<span class="n">matriz</span><span class="o">.</span><span class="n">ptp</span><span class="p">()</span> <span class="c1">#Donde max = 15 min = 4 luego ptp() -&gt; 11</span>
+<span class="n">matriz</span><span class="o">.</span><span class="n">ptp</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#Donde eje rows max = 15 min = 5</span>
+              <span class="c1">#Donde eje rows max = 12 min = 4</span>
+              <span class="c1">#Output array([10,  8])</span>
+
+<span class="n">matriz</span><span class="o">.</span><span class="n">ptp</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#Donde eje cols de restan y se obtienen valores absolutos</span>
+              <span class="c1">#Output array([ 3,  3,  1,  0, 4])</span>
+
+
+<span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">matriz</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span><span class="c1">#Es la mediana o percentil 50</span>
+                        <span class="c1">#Output: 8.0</span>
+
+<span class="n">matriz</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span> <span class="c1">#Ordenal los datos de menor a mayor</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">matriz</span><span class="p">)</span><span class="c1">#Output 8.0 es igual al percentil 50</span>
+<span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">matriz</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#Median en Eje cols -&gt; array([ 4.5,  7.5,  8. , 10. , 13.5])</span>
+<span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">matriz</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#Median en Eje rows -&gt; array([8., 8.])</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">matriz</span><span class="p">)</span><span class="c1"># Desviacion estandar de los datos -&gt; 3.067</span>
+<span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">matriz</span><span class="p">)</span><span class="c1"># Varianza -&gt; 9.409</span>
+<span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">matriz</span><span class="p">)</span><span class="c1"># Media -&gt; 8.7</span>
+
+<span class="c1">#Concatenar dos arrays como los que se muestran a continuacion:</span>
+<span class="n">array_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]])</span>
+<span class="n">array_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">array_a</span><span class="p">,</span> <span class="n">array_b</span><span class="p">))</span><span class="c1"># ValueError: all the input arrays </span>
+                                  <span class="c1"># must have same number of dimensions</span>
+
+<span class="c1">#Concatenar al eje de Cols</span>
+<span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">array_a</span><span class="p">,</span> <span class="n">array_b</span><span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span><span class="c1"># ValueError: all the input arrays </span>
+                                  <span class="c1"># must have same number of dimensions    </span>
+
+<span class="c1">#Para solucionarlo modificamos las dimenciones de array_b</span>
+<span class="n">array_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">array_b</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">array_a</span><span class="p">,</span> <span class="n">array_b</span><span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> 
+
+<span class="c1">#Output: array([[1, 2],</span>
+       <span class="c1"># [3, 4],</span>
+       <span class="c1"># [5, 6]])</span>
+
+<span class="c1">#Ahora para hacer la concatenacion en el axis = 1 o rows podemos</span>
+<span class="c1">#transponer array_b.T o hacer un array_b.reshape(2,1) de no ser asi</span>
+<span class="c1"># aparecera ValueError: all the input array dimensions for the concatenation </span>
+<span class="c1">#axis must match exactly</span>
+<span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">array_a</span><span class="p">,</span> <span class="n">array_b</span><span class="o">.</span><span class="n">T</span><span class="p">),</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="section" id="copy">
+<h2>Copy<a class="headerlink" href="#copy" title="Permalink to this headline">¶</a></h2>
+<p>Lo correcto antes de empezar a manipular un objeto array o dataframe es crear una <strong>copia</strong> asi podremos hacer exploracion de datos con seguridad que no estamos deformando los datos originales.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Creamos un array de 1dim</span>
+<span class="n">array_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1">#array_a se asigna a slice_array lo cual es un ERROR! </span>
+<span class="c1">#por que aun es el mismo espacio en memoria en vez de ser uno nuevo.</span>
+<span class="n">slice_array</span> <span class="o">=</span> <span class="n">array_a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">slice_array</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">array([0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5])</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Modificamos una parte del slice creyendo que solo estamos</span>
+<span class="c1">#modificando slice_array lo cual no es verdad.</span>
+<span class="n">slice_array</span><span class="p">[:]</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">slice_array</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">array([0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0])</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Si validamos array_a veremos que tambien fue modificado 😥</span>
+<span class="n">array_a</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">array([0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9])</span></code> Shiit!</p>
+<p>La forma correcta es crear una <strong>copia</strong> como se muestra a continuacion:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">array_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">array_copy</span><span class="o">=</span><span class="n">array_a</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">array_copy</span><span class="p">[:]</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">array_copy</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">array([10,</span> <span class="pre">10,</span> <span class="pre">10,</span> <span class="pre">10,</span> <span class="pre">10,</span> <span class="pre">10,</span> <span class="pre">10,</span> <span class="pre">10,</span> <span class="pre">10,</span> <span class="pre">10])</span></code><br />
+Y si verificamos nuestro array inicial veremos que no ubieron modificaciones 😊</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">array_a</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">array([0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5,</span> <span class="pre">6,</span> <span class="pre">7,</span> <span class="pre">8,</span> <span class="pre">9])</span></code></p>
+</div>
+<div class="section" id="condiciones">
+<h2>Condiciones<a class="headerlink" href="#condiciones" title="Permalink to this headline">¶</a></h2>
+<p>A traves de los condicionales podemos filtrar cualquier estructura de Datos a continuacion crearemos una y realizaremos diferentes condicionales:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="c1">#Creamos un array &#39;arr&#39; de tipo int8</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int8&#39;</span><span class="p">)</span>
+<span class="n">arr</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">array([</span> <span class="pre">1,</span>&#160; <span class="pre">2,</span>&#160; <span class="pre">3,</span>&#160; <span class="pre">4,</span>&#160; <span class="pre">5,</span>&#160; <span class="pre">6,</span>&#160; <span class="pre">7,</span>&#160; <span class="pre">8,</span>&#160; <span class="pre">9,</span> <span class="pre">10],</span> <span class="pre">dtype=int8)</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Entrega una lista booleana si condicionamos el array</span>
+<span class="n">arr</span> <span class="o">&gt;</span> <span class="mi">5</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">array([False,</span> <span class="pre">False,</span> <span class="pre">False,</span> <span class="pre">False,</span> <span class="pre">False,</span>&#160; <span class="pre">True,</span>&#160; <span class="pre">True,</span>&#160; <span class="pre">True,True,True])</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Si colocamos el condicional dentro de [condicional] obtendremos los datos</span>
+<span class="n">indices_cond</span> <span class="o">=</span> <span class="n">arr</span> <span class="o">&gt;</span> <span class="mi">5</span>
+<span class="n">arr</span><span class="p">[</span><span class="n">indices_cond</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">array([</span> <span class="pre">6,</span>&#160; <span class="pre">7,</span>&#160; <span class="pre">8,</span>&#160; <span class="pre">9,</span> <span class="pre">10],</span> <span class="pre">dtype=int8)</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Incluso podemos colocar varios condicionales para un solo array</span>
+<span class="n">arr</span><span class="p">[(</span><span class="n">arr</span><span class="o">&gt;</span><span class="mi">5</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">arr</span><span class="o">&lt;</span><span class="mi">9</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">array([6,</span> <span class="pre">7,</span> <span class="pre">8],</span> <span class="pre">dtype=int8)</span></code></p>
+<p>Se pueden transformar los datos no solo a traves de slices sino tambien usando condicionales:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span><span class="p">[</span><span class="n">arr</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">arr</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">array([</span>&#160; <span class="pre">1,</span>&#160;&#160; <span class="pre">2,</span>&#160;&#160; <span class="pre">3,</span>&#160;&#160; <span class="pre">4,</span>&#160;&#160; <span class="pre">5,</span> <span class="pre">100,</span> <span class="pre">100,</span> <span class="pre">100,</span> <span class="pre">100,</span> <span class="pre">100],</span> <span class="pre">dtype=int8)</span></code></p>
+<p>Luego de modificados podemos hacer nuevas consultas 🤠, esto se trata de creatividad.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">arr</span><span class="p">[</span><span class="n">arr</span> <span class="o">==</span> <span class="mi">100</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">array([100,</span> <span class="pre">100,</span> <span class="pre">100,</span> <span class="pre">100,</span> <span class="pre">100],</span> <span class="pre">dtype=int8)</span></code></p>
+</div>
+<div class="section" id="operaciones">
+<h2>Operaciones<a class="headerlink" href="#operaciones" title="Permalink to this headline">¶</a></h2>
+<p>A diferencia de las listas en python, los arrays en Numpy nos permiten hacer todo tipo de operaciones matematicas. Por ejemplo si tratamos de hacer una operacion matematica con una lista es probale que no logremos el resultado esperado como se muestra a continuacion:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#Creamos una lista con python</span>
+<span class="n">lista</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="c1">#Python no entiende la operacion que quiero aplicar</span>
+<span class="n">lista</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">1,</span> <span class="pre">2]</span></code></p>
+<p>Si realizamos operaciones con numpy el resultado sera diferente.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Creamos un array con numpy y realizamos una copia🚀.</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">arr_cp</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">arr_cp</span> <span class="o">*</span> <span class="mi">2</span> <span class="c1"># Puede ser cualquier tipo de Operacion Aritmetica</span>
+<span class="c1">#y si hay un MathError no detiene el programa.</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">array([</span> <span class="pre">0,</span>&#160; <span class="pre">2,</span>&#160; <span class="pre">4,</span>&#160; <span class="pre">6,</span>&#160; <span class="pre">8,</span> <span class="pre">10,</span> <span class="pre">12,</span> <span class="pre">14,</span> <span class="pre">16,</span> <span class="pre">18])</span></code></p>
+<p>Realizar operaciones de <strong>algebra lineal</strong>✖️➕➖🟰</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Sumamos el array original con la copia del mismo</span>
+<span class="n">arr</span> <span class="o">+</span> <span class="n">arr_cp</span> 
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">array([</span> <span class="pre">0,</span>&#160; <span class="pre">2,</span>&#160; <span class="pre">4,</span>&#160; <span class="pre">6,</span>&#160; <span class="pre">8,</span> <span class="pre">10,</span> <span class="pre">12,</span> <span class="pre">14,</span> <span class="pre">16,</span> <span class="pre">18])</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Usar matrices o tensores y operarlos</span>
+<span class="n">matriz</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">matriz_cp</span> <span class="o">=</span> <span class="n">matriz</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">#Sumamos original con la copia de la matriz</span>
+<span class="n">matriz</span> <span class="o">+</span> <span class="n">matriz_cp</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">array([[</span> <span class="pre">0,</span>&#160; <span class="pre">2,</span>&#160; <span class="pre">4,</span>&#160; <span class="pre">6,</span>&#160; <span class="pre">8],</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">[10,</span> <span class="pre">12,</span> <span class="pre">14,</span> <span class="pre">16,</span> <span class="pre">18]])</span></code></p>
+<p>Si queremos calcular el producto punto solo debemos asegurarnos que los arrays tiene dimenciones iguales y que uno esta transpuesto:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Transpuesta de matriz_cp</span>
+<span class="n">matriz_cp</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">#Transpuesta</span> <span class="pre">de</span> <span class="pre">matriz_cp</span> <span class="pre">matriz_cp.T</span></code></p>
+<p>Ahora si! hay varias formas de hacerlo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Producto punto lo cual es muy util en la </span>
+<span class="c1">#ciencia de datos por ejemplo en proyecciones</span>
+<span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">matriz</span><span class="p">,</span><span class="n">matriz_cp</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+<span class="c1">#&#39;matriz @ matriz_cp.T&#39; es lo mismo que &#39;np.matmul(matriz,matriz_cp.T)&#39;</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">array([[</span> <span class="pre">30,</span>&#160; <span class="pre">80],</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">[</span> <span class="pre">80,</span> <span class="pre">255]])</span></code></p>
+<p>A continuacion: <strong>Como calcular la proyeccion de un vector sobre otro, <a class="reference external" href="https://www.youtube.com/watch?v=cq6jLrNqZL8">Video</a></strong>, tener en cuenta que producto matricial no es lo mismo que producto escalar o entre dos vectores.</p>
+<p><img alt="producto-escalar" src="https://user-images.githubusercontent.com/60556632/165134640-152ab8e1-1391-4d47-838d-a713f480af11.png" /></p>
+</div>
+<div class="section" id="series-y-dataframes-en-pandas">
+<h2>Series y DataFrames en Pandas<a class="headerlink" href="#series-y-dataframes-en-pandas" title="Permalink to this headline">¶</a></h2>
+<p><strong>Pandas Series</strong></p>
+<p>Es como un array unidimensional de Numpy donde podemos: Buscar por indice y hacer Slicing, Operaciones aritmeticas sobre distintos tipos de datos</p>
+<p><strong>Pandas DataFrame</strong></p>
+<p>Es como las estructuras matriciales de Numpy donde podemos hacer busqueda por indices, columnas o filas.</p>
+<p><strong>Pandas Series</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1">#Crear Series de los Jugadores del PSG</span>
+<span class="c1">#Si no definimos el indice este iniciara desde 0</span>
+<span class="n">psg_players</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;Navas&#39;</span><span class="p">,</span><span class="s1">&#39;Mbappe&#39;</span><span class="p">,</span><span class="s1">&#39;Neymar&#39;</span><span class="p">,</span><span class="s1">&#39;Messi&#39;</span><span class="p">],</span> 
+                        <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">30</span><span class="p">]</span>
+                        <span class="p">)</span>
+<span class="n">psg_players</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">1</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">Navas</span> <span class="pre">7</span>&#160;&#160;&#160;&#160; <span class="pre">Mbappe</span> <span class="pre">10</span>&#160;&#160;&#160; <span class="pre">Neymar</span> <span class="pre">30</span>&#160;&#160;&#160;&#160; <span class="pre">Messi</span> <span class="pre">dtype:</span> <span class="pre">object</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Es posible crear el Series a traves de un diccionario</span>
+<span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span><span class="s1">&#39;Navas&#39;</span><span class="p">,</span><span class="mi">7</span><span class="p">:</span><span class="s1">&#39;Mbappe&#39;</span><span class="p">,</span><span class="mi">10</span><span class="p">:</span><span class="s1">&#39;Naymar&#39;</span><span class="p">,</span><span class="mi">30</span><span class="p">:</span><span class="s1">&#39;Messi&#39;</span><span class="p">}</span>
+<span class="c1">#Ahora pasamos el dict a Series de pandas y obtenemos lo mismo</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">1</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">Navas</span> <span class="pre">7</span>&#160;&#160;&#160;&#160; <span class="pre">Mbappe</span> <span class="pre">10</span>&#160;&#160;&#160; <span class="pre">Naymar</span> <span class="pre">30</span>&#160;&#160;&#160;&#160; <span class="pre">Messi</span> <span class="pre">dtype:</span> <span class="pre">object</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Realizar un slicing el cual se fija en la cantidad</span>
+<span class="c1"># de elementos mas no en el indice.</span>
+<span class="n">psg_players</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">1</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">Navas</span> <span class="pre">7</span>&#160;&#160;&#160;&#160; <span class="pre">Mbappe</span> <span class="pre">10</span>&#160;&#160;&#160; <span class="pre">Neymar</span> <span class="pre">dtype:</span> <span class="pre">object</span></code></p>
+<p><strong>Pandas DataFrame</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Un DataFrame se puede definir como una super dict o JSON file</span>
+<span class="c1"># el DataFrame al menos tiene 3 dimenciones como se muestra:</span>
+
+<span class="n">super_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Jugador&#39;</span><span class="p">:[</span><span class="s1">&#39;Navas&#39;</span><span class="p">,</span><span class="s1">&#39;Mbappe&#39;</span><span class="p">,</span><span class="s1">&#39;Neymar&#39;</span><span class="p">,</span><span class="s1">&#39;Messi&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;Altura&#39;</span><span class="p">:[</span><span class="mf">183.0</span><span class="p">,</span><span class="mf">170.0</span><span class="p">,</span><span class="mf">170.0</span><span class="p">,</span><span class="mf">165.0</span><span class="p">],</span>
+ <span class="s1">&#39;Goles&#39;</span><span class="p">:[</span><span class="mi">2</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">]}</span>
+<span class="n">df_players</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">super_dict</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">30</span><span class="p">])</span>
+<span class="n">df_players</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>index</p></th>
+<th class="head"><p>Jugador</p></th>
+<th class="head"><p>Altura</p></th>
+<th class="head"><p>Goles</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Navas</p></td>
+<td><p>183.0</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>Mbappe</p></td>
+<td><p>170.0</p></td>
+<td><p>200</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>Neymar</p></td>
+<td><p>170.0</p></td>
+<td><p>200</p></td>
+</tr>
+<tr class="row-odd"><td><p>30</p></td>
+<td><p>Messi</p></td>
+<td><p>165.0</p></td>
+<td><p>200</p></td>
+</tr>
+</tbody>
+</table>
+<p>Igualmente podemos hacer consultas de columnas, indices y datos</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Obtener columnas del DataFrame</span>
+<span class="n">df_players</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">Index(['Jugador',</span> <span class="pre">'Altura',</span> <span class="pre">'Goles'],</span> <span class="pre">dtype='object')</span></code></p>
+</div>
+<div class="section" id="leer-archivos-csv-y-json-con-pandas">
+<h2>Leer archivos CSV y JSON con Pandas<a class="headerlink" href="#leer-archivos-csv-y-json-con-pandas" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1">#Montamos un sistema local de archivos a colab </span>
+<span class="c1"># en este caso el de google drive</span>
+<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="c1">#Permite cargar modulos de Python es un magic command</span>
+<span class="o">%</span><span class="n">reload_ext</span> <span class="n">autoreload</span>
+<span class="c1">#Reload all modules except those excluded by %aimport </span>
+<span class="o">%</span><span class="n">autoreload</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Output : <code class="docutils literal notranslate"><span class="pre">Drive</span> <span class="pre">already</span> <span class="pre">mounted</span> <span class="pre">at</span> <span class="pre">/content/drive</span></code></p>
+<p>Asi cargamos archivos <strong>csv</strong> y <strong>JSON</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Cagar archivos csv</span>
+<span class="c1">#A veces debemos usar el argumento &#39;sep&#39; dependiendo</span>
+<span class="c1"># el seperador del archivo csv.</span>
+
+<span class="c1">#El arg &#39;header&#39; permite definir que fila se debe tomar como header por defecto es igual a 0</span>
+<span class="c1">#El arg &#39;names&#39; se refiere a los nombres de las columnas.</span>
+
+<span class="n">df_countries</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/conda_data_science/data/raw/Metadata_Country.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Es poco comun leer archivos JSON, normalmente es csv o sql donde sql se convierte primero a csv.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Se puede realizar comunmente en datos estructurados como JSON</span>
+<span class="c1">#Podemos convertirlo a Series con el arg typ=&#39;Series&#39;</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/conda_data_science/data/raw/students.json&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>	<span class="n">edad</span>	<span class="n">cm</span>	<span class="n">pais</span>	<span class="n">genero</span>	<span class="n">Q1</span>	<span class="n">Q2</span>
+<span class="mi">0</span>	<span class="mi">10</span>	<span class="mi">115</span>	<span class="n">co</span>	<span class="n">M</span>	<span class="mf">5.0</span>	<span class="mi">7</span>
+<span class="mi">1</span>	<span class="mi">9</span>	<span class="mi">110</span>	<span class="n">mx</span>	<span class="n">F</span>	<span class="mf">10.0</span>	<span class="mi">9</span>
+<span class="mi">2</span>	<span class="mi">13</span>	<span class="mi">130</span>	<span class="n">co</span>	<span class="n">F</span>	<span class="mf">8.0</span>	<span class="mi">9</span>
+<span class="mi">3</span>	<span class="mi">14</span>	<span class="mi">155</span>	<span class="n">mx</span>	<span class="n">M</span>	<span class="n">NaN</span>	<span class="mi">8</span>
+<span class="mi">4</span>	<span class="mi">12</span>	<span class="mi">125</span>	<span class="n">mx</span>	<span class="n">M</span>	<span class="mf">7.0</span>	<span class="mi">8</span>
+<span class="mi">5</span>	<span class="mi">11</span>	<span class="mi">120</span>	<span class="n">ch</span>	<span class="n">M</span>	<span class="mf">8.0</span>	<span class="mi">8</span>
+<span class="mi">6</span>	<span class="mi">12</span>	<span class="mi">125</span>	<span class="n">ch</span>	<span class="n">F</span>	<span class="mf">3.0</span>	<span class="mi">9</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="filtrado-con-loc-y-iloc">
+<h2>Filtrado con loc y iloc<a class="headerlink" href="#filtrado-con-loc-y-iloc" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Filtrado por indices</span>
+<span class="n">df_data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">edad</span>	<span class="n">cm</span>	<span class="n">pais</span>	<span class="n">genero</span>	<span class="n">Q1</span>	<span class="n">Q2</span>
+<span class="mi">0</span>	<span class="mi">10</span>	<span class="mi">115</span>	<span class="n">co</span>	<span class="n">M</span>	<span class="mf">5.0</span>	<span class="mi">7</span>
+<span class="mi">1</span>	<span class="mi">9</span>	<span class="mi">110</span>	<span class="n">mx</span>	<span class="n">F</span>	<span class="mf">10.0</span>	<span class="mi">9</span>
+<span class="mi">2</span>	<span class="mi">13</span>	<span class="mi">130</span>	<span class="n">co</span>	<span class="n">F</span>	<span class="mf">8.0</span>	<span class="mi">9</span>
+<span class="mi">3</span>	<span class="mi">14</span>	<span class="mi">155</span>	<span class="n">mx</span>	<span class="n">M</span>	<span class="n">NaN</span>	<span class="mi">8</span>
+</pre></div>
+</div>
+<p>#Filtrado por Columnas
+df_data[[‘edad’,’cm’,’pais’]]</p>
+<p>#Primero filtramos por indice y luego por Columna con loc
+#df_data.loc[0:4,’edad’]</p>
+<p>#Primero filtramos por indice y luego por Columna con iloc
+df_data.iloc[0:4,:2]</p>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>	<span class="n">edad</span>	<span class="n">cm</span>
+<span class="mi">0</span>	<span class="mi">10</span>	<span class="mi">115</span>
+<span class="mi">1</span>	<span class="mi">9</span>	  <span class="mi">110</span>
+<span class="mi">2</span>	<span class="mi">13</span>	<span class="mi">130</span>
+<span class="mi">3</span>	<span class="mi">14</span>	<span class="mi">155</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="agregar-o-eliminar-datos-con-pandas">
+<h2>Agregar o eliminar datos con Pandas<a class="headerlink" href="#agregar-o-eliminar-datos-con-pandas" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Eliminamos columna &#39;edad&#39; usamos arg inplace=True para que se guarde.</span>
+<span class="n">df_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;edad&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_data</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>	<span class="n">cm</span>	<span class="n">pais</span>	<span class="n">genero</span>	<span class="n">Q1</span>	<span class="n">Q2</span>
+<span class="mi">0</span>	<span class="mi">115</span>	<span class="n">co</span>	<span class="n">M</span>	<span class="mf">5.0</span>	<span class="mi">7</span>
+<span class="mi">1</span>	<span class="mi">110</span>	<span class="n">mx</span>	<span class="n">F</span>	<span class="mf">10.0</span>	<span class="mi">9</span>
+<span class="mi">2</span>	<span class="mi">130</span>	<span class="n">co</span>	<span class="n">F</span>	<span class="mf">8.0</span>	<span class="mi">9</span>
+<span class="mi">3</span>	<span class="mi">155</span>	<span class="n">mx</span>	<span class="n">M</span>	<span class="n">NaN</span>	<span class="mi">8</span>
+<span class="mi">4</span>	<span class="mi">125</span>	<span class="n">mx</span>	<span class="n">M</span>	<span class="mf">7.0</span>	<span class="mi">8</span>
+<span class="mi">5</span>	<span class="mi">120</span>	<span class="n">ch</span>	<span class="n">M</span>	<span class="mf">8.0</span>	<span class="mi">8</span>
+<span class="mi">6</span>	<span class="mi">125</span>	<span class="n">ch</span>	<span class="n">F</span>	<span class="mf">3.0</span>	<span class="mi">9</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Borrado de Filas</span>
+<span class="n">df_data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_data</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cm</span>	<span class="n">pais</span>	<span class="n">genero</span>	<span class="n">Q1</span>	<span class="n">Q2</span>
+<span class="mi">3</span>	<span class="mi">155</span>	<span class="n">mx</span>	<span class="n">M</span>	<span class="n">NaN</span>	<span class="mi">8</span>
+<span class="mi">4</span>	<span class="mi">125</span>	<span class="n">mx</span>	<span class="n">M</span>	<span class="mf">7.0</span>	<span class="mi">8</span>
+<span class="mi">5</span>	<span class="mi">120</span>	<span class="n">ch</span>	<span class="n">M</span>	<span class="mf">8.0</span>	<span class="mi">8</span>
+<span class="mi">6</span>	<span class="mi">125</span>	<span class="n">ch</span>	<span class="n">F</span>	<span class="mf">3.0</span>	<span class="mi">9</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Borrado de Rango de Filas</span>
+<span class="n">df_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_data</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cm</span>	<span class="n">pais</span>	<span class="n">genero</span>	<span class="n">Q1</span>	<span class="n">Q2</span>
+<span class="mi">3</span>	<span class="mi">155</span>	<span class="n">mx</span>	<span class="n">M</span>	<span class="n">NaN</span>	<span class="mi">8</span>
+<span class="mi">6</span>	<span class="mi">125</span>	<span class="n">ch</span>	<span class="n">F</span>	<span class="mf">3.0</span>	<span class="mi">9</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Agregar Columnas</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">df_data</span><span class="p">[</span><span class="s1">&#39;New_column&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="n">df_data</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cm</span>	<span class="n">pais</span>	<span class="n">genero</span>	<span class="n">Q1</span>	<span class="n">Q2</span>	<span class="n">New_column</span>
+<span class="mi">3</span>	<span class="mi">155</span>	<span class="n">mx</span>	<span class="n">M</span>	<span class="n">NaN</span>	<span class="mi">8</span>	<span class="n">NaN</span>
+<span class="mi">6</span>	<span class="mi">125</span>	<span class="n">ch</span>	<span class="n">F</span>	<span class="mf">3.0</span>	<span class="mi">9</span>	<span class="n">NaN</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Agregar filas</span>
+<span class="n">df_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df_data</span><span class="p">,</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cm</span>	<span class="n">pais</span>	<span class="n">genero</span>	<span class="n">Q1</span>	<span class="n">Q2</span>	<span class="n">New_column</span>
+<span class="mi">0</span>	<span class="mi">155</span>	<span class="n">mx</span>	<span class="n">M</span>	<span class="n">NaN</span>	<span class="mi">8</span>	<span class="n">NaN</span>
+<span class="mi">1</span>	<span class="mi">125</span>	<span class="n">ch</span>	<span class="n">F</span>	<span class="mf">3.0</span>	<span class="mi">9</span>	<span class="n">NaN</span>
+<span class="mi">2</span>	<span class="mi">155</span>	<span class="n">mx</span>	<span class="n">M</span>	<span class="n">NaN</span>	<span class="mi">8</span>	<span class="n">NaN</span>
+<span class="mi">3</span>	<span class="mi">125</span>	<span class="n">ch</span>	<span class="n">F</span>	<span class="mf">3.0</span>	<span class="mi">9</span>	<span class="n">NaN</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="manejo-de-datos-nulos">
+<h2>Manejo de datos nulos<a class="headerlink" href="#manejo-de-datos-nulos" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#Creamos un diccionario con valores nulos</span>
+<span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;col1&#39;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span>
+ <span class="s1">&#39;col2&#39;</span><span class="p">:[</span><span class="mi">4</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span>
+ <span class="s1">&#39;col3&#39;</span><span class="p">:[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="kc">None</span><span class="p">]}</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">col1</span>	<span class="n">col2</span>	<span class="n">col3</span>
+<span class="mi">0</span>	<span class="mf">1.0</span>	<span class="mf">4.0</span>	<span class="n">a</span>
+<span class="mi">1</span>	<span class="mf">2.0</span>	<span class="n">NaN</span>	<span class="n">b</span>
+<span class="mi">2</span>	<span class="mf">3.0</span>	<span class="mf">6.0</span>	<span class="n">c</span>
+<span class="mi">3</span>	<span class="n">NaN</span>	<span class="mf">7.0</span>	<span class="kc">None</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Nos indica los valores nulos del dataframe</span>
+<span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">*</span><span class="mi">1</span> <span class="c1"># Lo multiplicamos por 1 para que sea mas facil filtar</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">col1</span>	<span class="n">col2</span>	<span class="n">col3</span>
+<span class="mi">0</span>	<span class="mi">0</span>	<span class="mi">0</span>	<span class="mi">0</span>
+<span class="mi">1</span>	<span class="mi">0</span>	<span class="mi">1</span>	<span class="mi">0</span>
+<span class="mi">2</span>	<span class="mi">0</span>	<span class="mi">0</span>	<span class="mi">0</span>
+<span class="mi">3</span>	<span class="mi">1</span>	<span class="mi">0</span>	<span class="mi">1</span>
+</pre></div>
+</div>
+<p>Reemplazar los valores nulos
+<strong>String</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Rellenar valores nulos con la palabra &#39;Missing&#39;</span>
+<span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;Missing&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">col1</span>	<span class="n">col2</span>	<span class="n">col3</span>
+<span class="mi">0</span>	<span class="mf">1.0</span>	<span class="mf">4.0</span>	<span class="n">a</span>
+<span class="mi">1</span>	<span class="mf">2.0</span>	<span class="n">Missing</span>	<span class="n">b</span>
+<span class="mi">2</span>	<span class="mf">3.0</span>	<span class="mf">6.0</span>	<span class="n">c</span>
+<span class="mi">3</span>	<span class="n">Missing</span>	<span class="mf">7.0</span>	<span class="n">Missing</span>
+</pre></div>
+</div>
+<p><strong>Estadistico</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Rellena con la media de los valores por columna</span>
+<span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">col1</span>	<span class="n">col2</span>	<span class="n">col3</span>
+<span class="mi">0</span>	<span class="mf">1.0</span>	<span class="mf">4.000000</span>	<span class="n">a</span>
+<span class="mi">1</span>	<span class="mf">2.0</span>	<span class="mf">5.666667</span>	<span class="n">b</span>
+<span class="mi">2</span>	<span class="mf">3.0</span>	<span class="mf">6.000000</span>	<span class="n">c</span>
+<span class="mi">3</span>	<span class="mf">2.0</span>	<span class="mf">7.000000</span>	<span class="kc">None</span>
+</pre></div>
+</div>
+<p><strong>Interpolacion</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Interpola los datos como si se tratade de una serie</span>
+<span class="n">df</span><span class="o">.</span><span class="n">interpolate</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">col1</span>	<span class="n">col2</span>	<span class="n">col3</span>
+<span class="mi">0</span>	<span class="mf">1.0</span>	<span class="mf">4.0</span>	<span class="n">a</span>
+<span class="mi">1</span>	<span class="mf">2.0</span>	<span class="mf">5.0</span>	<span class="n">b</span>
+<span class="mi">2</span>	<span class="mf">3.0</span>	<span class="mf">6.0</span>	<span class="n">c</span>
+<span class="mi">3</span>	<span class="mf">3.0</span>	<span class="mf">7.0</span>	<span class="kc">None</span>
+</pre></div>
+</div>
+<p><strong>Borrar Nulos</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Borra todas las filas con valores nulos</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="c1">#Igual pero se base en una columna especifica</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;col2&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>	<span class="n">col1</span>	<span class="n">col2</span>	<span class="n">col3</span>
+<span class="mi">0</span>	<span class="mf">1.0</span>	<span class="mf">4.0</span>	<span class="n">a</span>
+<span class="mi">2</span>	<span class="mf">3.0</span>	<span class="mf">6.0</span>	<span class="n">c</span>
+<span class="mi">3</span>	<span class="n">NaN</span>	<span class="mf">7.0</span>	<span class="kc">None</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="filtrado-por-condiciones">
+<h2>Filtrado por condiciones<a class="headerlink" href="#filtrado-por-condiciones" title="Permalink to this headline">¶</a></h2>
+<p>Cargamos un DataFrame en Google Coolab</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>edad</p></th>
+<th class="head"><p>cm</p></th>
+<th class="head"><p>pais</p></th>
+<th class="head"><p>genero</p></th>
+<th class="head"><p>Q1</p></th>
+<th class="head"><p>Q2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>10</p></td>
+<td><p>115</p></td>
+<td><p>co</p></td>
+<td><p>M</p></td>
+<td><p>5.0</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>9</p></td>
+<td><p>110</p></td>
+<td><p>mx</p></td>
+<td><p>F</p></td>
+<td><p>10.0</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>13</p></td>
+<td><p>130</p></td>
+<td><p>co</p></td>
+<td><p>F</p></td>
+<td><p>8.0</p></td>
+<td><p>9</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>14</p></td>
+<td><p>155</p></td>
+<td><p>mx</p></td>
+<td><p>M</p></td>
+<td><p>NaN</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>12</p></td>
+<td><p>125</p></td>
+<td><p>mx</p></td>
+<td><p>M</p></td>
+<td><p>7.0</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>11</p></td>
+<td><p>120</p></td>
+<td><p>ch</p></td>
+<td><p>M</p></td>
+<td><p>8.0</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>12</p></td>
+<td><p>125</p></td>
+<td><p>ch</p></td>
+<td><p>F</p></td>
+<td><p>3.0</p></td>
+<td><p>9</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="funciones-principales-de-pandas">
+<h2>Funciones principales de Pandas<a class="headerlink" href="#funciones-principales-de-pandas" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://pandas.pydata.org/docs/user_guide/10min.html">Funciones</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#Funciones importantes en pandas</span>
+<span class="c1">#Info nos describe los tipos de datos</span>
+<span class="n">df_students</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 7 entries, 0 to 6
+Data columns (total 6 columns):
+ #   Column  Non-Null Count  Dtype  
+---  ------  --------------  -----  
+ 0   edad    7 non-null      int64  
+ 1   cm      7 non-null      int64  
+ 2   pais    7 non-null      object 
+ 3   genero  7 non-null      object 
+ 4   Q1      6 non-null      float64
+ 5   Q2      7 non-null      int64  
+dtypes: float64(1), int64(3), object(2)
+memory usage: 392.0+ bytes
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Nos muestra algunos estadisticos basicos</span>
+<span class="c1"># Asi podemos entender la distribucion de los datos</span>
+<span class="n">df_students</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">edad</span>	<span class="n">cm</span>	<span class="n">Q1</span>	<span class="n">Q2</span>
+<span class="n">count</span>	<span class="mf">7.000000</span>	<span class="mf">7.000000</span>	<span class="mf">6.000000</span>	<span class="mf">7.000000</span>
+<span class="n">mean</span>	<span class="mf">11.571429</span>	<span class="mf">125.714286</span>	<span class="mf">6.833333</span>	<span class="mf">8.285714</span>
+<span class="n">std</span>	<span class="mf">1.718249</span>	<span class="mf">14.556949</span>	<span class="mf">2.483277</span>	<span class="mf">0.755929</span>
+<span class="nb">min</span>	<span class="mf">9.000000</span>	<span class="mf">110.000000</span>	<span class="mf">3.000000</span>	<span class="mf">7.000000</span>
+<span class="mi">25</span><span class="o">%</span>	<span class="mf">10.500000</span>	<span class="mf">117.500000</span>	<span class="mf">5.500000</span>	<span class="mf">8.000000</span>
+<span class="mi">50</span><span class="o">%</span>	<span class="mf">12.000000</span>	<span class="mf">125.000000</span>	<span class="mf">7.500000</span>	<span class="mf">8.000000</span>
+<span class="mi">75</span><span class="o">%</span>	<span class="mf">12.500000</span>	<span class="mf">127.500000</span>	<span class="mf">8.000000</span>	<span class="mf">9.000000</span>
+<span class="nb">max</span>	<span class="mf">14.000000</span>	<span class="mf">155.000000</span>	<span class="mf">10.000000</span>	<span class="mf">9.000000</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#La cantidad de memoria en bits que esta usando el DataFrame</span>
+<span class="n">df_students</span><span class="o">.</span><span class="n">memory_usage</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Index</span>      <span class="mi">56</span>
+<span class="n">edad</span>       <span class="mi">56</span>
+<span class="n">cm</span>         <span class="mi">56</span>
+<span class="n">pais</span>      <span class="mi">413</span>
+<span class="n">genero</span>    <span class="mi">406</span>
+<span class="n">Q1</span>         <span class="mi">56</span>
+<span class="n">Q2</span>         <span class="mi">56</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Cuenta el total de cada categoria en una columna</span>
+<span class="n">df_students</span><span class="p">[</span><span class="s1">&#39;pais&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mx</span>    <span class="mi">3</span>
+<span class="n">co</span>    <span class="mi">2</span>
+<span class="n">ch</span>    <span class="mi">2</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">pais</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Repetimos una de las filas intensionalmente</span>
+<span class="c1">#para usar la funcion borrar duplicados</span>
+
+<span class="c1">#Añadimos row0 al final</span>
+<span class="n">df_students</span> <span class="o">=</span> <span class="n">df_students</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df_students</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">df_students</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;last&#39;</span><span class="p">)</span><span class="c1">#Mantiene ultimo Duplicado</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>	<span class="n">edad</span>	<span class="n">cm</span>	<span class="n">pais</span>	<span class="n">genero</span>	<span class="n">Q1</span>	<span class="n">Q2</span>
+<span class="mi">1</span>	<span class="mi">9</span>	<span class="mi">110</span>	<span class="n">mx</span>	<span class="n">F</span>	<span class="mf">10.0</span>	<span class="mi">9</span>
+<span class="mi">2</span>	<span class="mi">13</span>	<span class="mi">130</span>	<span class="n">co</span>	<span class="n">F</span>	<span class="mf">8.0</span>	<span class="mi">9</span>
+<span class="mi">3</span>	<span class="mi">14</span>	<span class="mi">155</span>	<span class="n">mx</span>	<span class="n">M</span>	<span class="n">NaN</span>	<span class="mi">8</span>
+<span class="mi">4</span>	<span class="mi">12</span>	<span class="mi">125</span>	<span class="n">mx</span>	<span class="n">M</span>	<span class="mf">7.0</span>	<span class="mi">8</span>
+<span class="mi">5</span>	<span class="mi">11</span>	<span class="mi">120</span>	<span class="n">ch</span>	<span class="n">M</span>	<span class="mf">8.0</span>	<span class="mi">8</span>
+<span class="mi">6</span>	<span class="mi">12</span>	<span class="mi">125</span>	<span class="n">ch</span>	<span class="n">F</span>	<span class="mf">3.0</span>	<span class="mi">9</span>
+<span class="mi">0</span>	<span class="mi">10</span>	<span class="mi">115</span>	<span class="n">co</span>	<span class="n">M</span>	<span class="mf">5.0</span>	<span class="mi">7</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Permite ordenar el Dataframe segun una columna</span>
+<span class="n">df_students</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;cm&#39;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="c1">#Mayor a Menor</span>
+</pre></div>
+</div>
+<p>Output :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">edad</span>	<span class="n">cm</span>	<span class="n">pais</span>	<span class="n">genero</span>	<span class="n">Q1</span>	<span class="n">Q2</span>
+<span class="mi">3</span>	<span class="mi">14</span>	<span class="mi">155</span>	<span class="n">mx</span>	<span class="n">M</span>	<span class="n">NaN</span>	<span class="mi">8</span>
+<span class="mi">2</span>	<span class="mi">13</span>	<span class="mi">130</span>	<span class="n">co</span>	<span class="n">F</span>	<span class="mf">8.0</span>	<span class="mi">9</span>
+<span class="mi">4</span>	<span class="mi">12</span>	<span class="mi">125</span>	<span class="n">mx</span>	<span class="n">M</span>	<span class="mf">7.0</span>	<span class="mi">8</span>
+<span class="mi">6</span>	<span class="mi">12</span>	<span class="mi">125</span>	<span class="n">ch</span>	<span class="n">F</span>	<span class="mf">3.0</span>	<span class="mi">9</span>
+<span class="mi">5</span>	<span class="mi">11</span>	<span class="mi">120</span>	<span class="n">ch</span>	<span class="n">M</span>	<span class="mf">8.0</span>	<span class="mi">8</span>
+<span class="mi">0</span>	<span class="mi">10</span>	<span class="mi">115</span>	<span class="n">co</span>	<span class="n">M</span>	<span class="mf">5.0</span>	<span class="mi">7</span>
+<span class="mi">0</span>	<span class="mi">10</span>	<span class="mi">115</span>	<span class="n">co</span>	<span class="n">M</span>	<span class="mf">5.0</span>	<span class="mi">7</span>
+<span class="mi">0</span>	<span class="mi">10</span>	<span class="mi">115</span>	<span class="n">co</span>	<span class="n">M</span>	<span class="mf">5.0</span>	<span class="mi">7</span>
+<span class="mi">1</span>	<span class="mi">9</span>	<span class="mi">110</span>	<span class="n">mx</span>	<span class="n">F</span>	<span class="mf">10.0</span>	<span class="mi">9</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="groupby">
+<h2>Groupby<a class="headerlink" href="#groupby" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Agrupamos por &#39;pais&#39; el cual es una columna categorica </span>
+<span class="c1">#Y realizamos el conteo por categoria de todo el dataframe</span>
+<span class="n">df_students</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;pais&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">edad</span>	<span class="n">cm</span>	<span class="n">genero</span>	<span class="n">Q1</span>	<span class="n">Q2</span>
+<span class="n">pais</span>					
+<span class="n">ch</span>	<span class="mi">2</span>	<span class="mi">2</span>	<span class="mi">2</span>	<span class="mi">2</span>	<span class="mi">2</span>
+<span class="n">co</span>	<span class="mi">2</span>	<span class="mi">2</span>	<span class="mi">2</span>	<span class="mi">2</span>	<span class="mi">2</span>
+<span class="n">mx</span>	<span class="mi">3</span>	<span class="mi">3</span>	<span class="mi">3</span>	<span class="mi">2</span>	<span class="mi">3</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">alores</span> <span class="n">maximos</span> <span class="n">por</span> <span class="n">categoria</span>
+<span class="c1">#Podemos usar todo tipo de funciones de Agregacion</span>
+<span class="n">df_students</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;pais&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">edad</span>	<span class="n">cm</span>	<span class="n">genero</span>	<span class="n">Q1</span>	<span class="n">Q2</span>
+<span class="n">pais</span>					
+<span class="n">ch</span>	<span class="mi">12</span>	<span class="mi">125</span>	<span class="n">M</span>	<span class="mf">8.0</span>	<span class="mi">9</span>
+<span class="n">co</span>	<span class="mi">13</span>	<span class="mi">130</span>	<span class="n">M</span>	<span class="mf">8.0</span>	<span class="mi">9</span>
+<span class="n">mx</span>	<span class="mi">14</span>	<span class="mi">155</span>	<span class="n">M</span>	<span class="mf">10.0</span>	<span class="mi">9</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Indicar varias funciones</span>
+<span class="n">df_students</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;pais&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="nb">min</span><span class="p">,</span><span class="nb">max</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Output:
+<img alt="image" src="https://user-images.githubusercontent.com/60556632/165316012-152994cb-e06d-414f-9e3b-23bc25d84e32.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Funciones de Agregacion a traves de diccionario</span>
+<span class="n">df_students</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;pais&#39;</span><span class="p">,</span><span class="s1">&#39;genero&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">({</span><span class="s1">&#39;edad&#39;</span><span class="p">:[</span><span class="nb">min</span><span class="p">,</span><span class="nb">max</span><span class="p">],</span><span class="s1">&#39;cm&#39;</span><span class="p">:</span><span class="nb">sum</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>Output:
+<img alt="image" src="https://user-images.githubusercontent.com/60556632/165316091-d87fbbda-7e4d-4b58-b57d-156c667cbb69.png" /></p>
+</div>
+<div class="section" id="combinando-dataframes">
+<h2>Combinando DataFrames<a class="headerlink" href="#combinando-dataframes" title="Permalink to this headline">¶</a></h2>
+<p><strong>Merge-Join Pandas</strong>
+<img alt="Combine DataFrames" src="https://user-images.githubusercontent.com/60556632/165316711-1daffc96-caa0-4b0f-9fc1-d25ef8c5675a.png" />
+<strong>Concat Axis 0 Pandas</strong>
+<img alt="image" src="https://user-images.githubusercontent.com/60556632/165318657-496c3b6c-96bd-41e0-a93c-e60afab0d1f3.png" />
+<strong>Concat Axis 1 Pandas</strong>
+<img alt="image" src="https://user-images.githubusercontent.com/60556632/165318894-af0f3c41-0706-4af2-83bf-9ec57afc698f.png" /></p>
+</div>
+<div class="section" id="merge-y-concat">
+<h2>Merge y Concat<a class="headerlink" href="#merge-y-concat" title="Permalink to this headline">¶</a></h2>
+<p><strong>Concat</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Creamos 2 DataFrames para realizar operaciones entre conjuntos</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;A0&#39;</span><span class="p">,</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span><span class="s1">&#39;A2&#39;</span><span class="p">,</span><span class="s1">&#39;A3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span><span class="s1">&#39;B1&#39;</span><span class="p">,</span><span class="s1">&#39;B2&#39;</span><span class="p">,</span><span class="s1">&#39;B3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">,</span><span class="s1">&#39;C3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="s1">&#39;D0&#39;</span><span class="p">,</span><span class="s1">&#39;D1&#39;</span><span class="p">,</span><span class="s1">&#39;D2&#39;</span><span class="p">,</span><span class="s1">&#39;D3&#39;</span><span class="p">]})</span>
+
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;A4&#39;</span><span class="p">,</span><span class="s1">&#39;A5&#39;</span><span class="p">,</span><span class="s1">&#39;A6&#39;</span><span class="p">,</span><span class="s1">&#39;A7&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;B4&#39;</span><span class="p">,</span><span class="s1">&#39;B5&#39;</span><span class="p">,</span><span class="s1">&#39;B6&#39;</span><span class="p">,</span><span class="s1">&#39;B7&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="s1">&#39;C4&#39;</span><span class="p">,</span><span class="s1">&#39;C5&#39;</span><span class="p">,</span><span class="s1">&#39;C6&#39;</span><span class="p">,</span><span class="s1">&#39;C7&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="s1">&#39;D4&#39;</span><span class="p">,</span><span class="s1">&#39;D5&#39;</span><span class="p">,</span><span class="s1">&#39;D6&#39;</span><span class="p">,</span><span class="s1">&#39;D7&#39;</span><span class="p">]})</span>
+ 
+<span class="c1">#Concatenacion por axis=0 o Filas</span>
+<span class="c1">#Los indices se heredan por eso usamos ignore_index</span>
+<span class="n">concat_axis_0</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span><span class="n">df2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">concat_axis_0</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165331603-beb6f8a5-c8f8-4f86-a584-5c276649c837.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Usualmente se concatena por axis 0, pero tambien se puede</span>
+<span class="c1">#hacer a nivel de columnas o axis = 1</span>
+<span class="n">concat_axis_1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span><span class="n">df2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">concat_axis_1</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165331705-0fa276d9-cdc3-4593-9bbd-c4efdb298631.png" /></p>
+<p><strong>Merge</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Merge Pandas funciona como un inner join por default, creamos dos DataFrames</span>
+<span class="n">left</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;key&#39;</span><span class="p">:[</span><span class="s1">&#39;k0&#39;</span><span class="p">,</span><span class="s1">&#39;k1&#39;</span><span class="p">,</span><span class="s1">&#39;k2&#39;</span><span class="p">,</span><span class="s1">&#39;k3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;A0&#39;</span><span class="p">,</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span><span class="s1">&#39;A2&#39;</span><span class="p">,</span><span class="s1">&#39;A3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span><span class="s1">&#39;B1&#39;</span><span class="p">,</span><span class="s1">&#39;B2&#39;</span><span class="p">,</span><span class="s1">&#39;B3&#39;</span><span class="p">]})</span>
+
+<span class="n">right</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;key&#39;</span><span class="p">:[</span><span class="s1">&#39;k0&#39;</span><span class="p">,</span><span class="s1">&#39;k1&#39;</span><span class="p">,</span><span class="s1">&#39;k2&#39;</span><span class="p">,</span><span class="s1">&#39;k3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">,</span><span class="s1">&#39;C3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="s1">&#39;D0&#39;</span><span class="p">,</span><span class="s1">&#39;D1&#39;</span><span class="p">,</span><span class="s1">&#39;D2&#39;</span><span class="p">,</span><span class="s1">&#39;D3&#39;</span><span class="p">]})</span>
+
+<span class="c1">#El merge se realiza sobre una columna especifica como key</span>
+<span class="n">left</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;key&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165331781-93e8cb63-902d-43a7-aa5e-ac649d3cf25d.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Merge Pandas, modificamos DataFrames</span>
+<span class="n">left</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;key&#39;</span><span class="p">:[</span><span class="s1">&#39;k0&#39;</span><span class="p">,</span><span class="s1">&#39;k1&#39;</span><span class="p">,</span><span class="s1">&#39;k2&#39;</span><span class="p">,</span><span class="s1">&#39;k3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;A0&#39;</span><span class="p">,</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span><span class="s1">&#39;A2&#39;</span><span class="p">,</span><span class="s1">&#39;A3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span><span class="s1">&#39;B1&#39;</span><span class="p">,</span><span class="s1">&#39;B2&#39;</span><span class="p">,</span><span class="s1">&#39;B3&#39;</span><span class="p">]})</span>
+<span class="c1">#Intencionalmente cambiamos el key a key2</span>
+<span class="n">right</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;key2&#39;</span><span class="p">:[</span><span class="s1">&#39;k0&#39;</span><span class="p">,</span><span class="s1">&#39;k1&#39;</span><span class="p">,</span><span class="s1">&#39;k2&#39;</span><span class="p">,</span><span class="s1">&#39;k3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">,</span><span class="s1">&#39;C3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="s1">&#39;D0&#39;</span><span class="p">,</span><span class="s1">&#39;D1&#39;</span><span class="p">,</span><span class="s1">&#39;D2&#39;</span><span class="p">,</span><span class="s1">&#39;D3&#39;</span><span class="p">]})</span>
+
+<span class="c1">#El merge solo funcionara si se especifican las columnas</span>
+<span class="c1">#de cada df por separado</span>
+<span class="n">left</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;key2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165331852-064020b5-b06a-4fb4-87c6-cd826746146e.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Merge Pandas, creamos dos DataFrames</span>
+<span class="n">left</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;key&#39;</span><span class="p">:[</span><span class="s1">&#39;k0&#39;</span><span class="p">,</span><span class="s1">&#39;k1&#39;</span><span class="p">,</span><span class="s1">&#39;k2&#39;</span><span class="p">,</span><span class="s1">&#39;k3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;A0&#39;</span><span class="p">,</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span><span class="s1">&#39;A2&#39;</span><span class="p">,</span><span class="s1">&#39;A3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span><span class="s1">&#39;B1&#39;</span><span class="p">,</span><span class="s1">&#39;B2&#39;</span><span class="p">,</span><span class="s1">&#39;B3&#39;</span><span class="p">]})</span>
+<span class="c1">#Intencionalmente cambiamos el key a key2 y k3 a nan</span>
+<span class="n">right</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;key2&#39;</span><span class="p">:[</span><span class="s1">&#39;k0&#39;</span><span class="p">,</span><span class="s1">&#39;k1&#39;</span><span class="p">,</span><span class="s1">&#39;k2&#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span>
+ <span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">,</span><span class="s1">&#39;C3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="s1">&#39;D0&#39;</span><span class="p">,</span><span class="s1">&#39;D1&#39;</span><span class="p">,</span><span class="s1">&#39;D2&#39;</span><span class="p">,</span><span class="s1">&#39;D3&#39;</span><span class="p">]})</span>
+
+<span class="c1">#El merge solo funcionara para los k0,k1,k2 no para k3</span>
+<span class="c1">#k3 ya no hace parte de la coincidencias</span>
+<span class="n">left</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;key2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165331935-fe0b6ca3-29bf-4647-b405-a4181bb13660.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Merge como un left join, dando prioridad a left</span>
+<span class="n">left</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;key&#39;</span><span class="p">:[</span><span class="s1">&#39;k0&#39;</span><span class="p">,</span><span class="s1">&#39;k1&#39;</span><span class="p">,</span><span class="s1">&#39;k2&#39;</span><span class="p">,</span><span class="s1">&#39;k3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;A0&#39;</span><span class="p">,</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span><span class="s1">&#39;A2&#39;</span><span class="p">,</span><span class="s1">&#39;A3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span><span class="s1">&#39;B1&#39;</span><span class="p">,</span><span class="s1">&#39;B2&#39;</span><span class="p">,</span><span class="s1">&#39;B3&#39;</span><span class="p">]})</span>
+<span class="c1">#Intencionalmente cambiamos el key a key2 y k3 a nan</span>
+<span class="n">right</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;key2&#39;</span><span class="p">:[</span><span class="s1">&#39;k0&#39;</span><span class="p">,</span><span class="s1">&#39;k1&#39;</span><span class="p">,</span><span class="s1">&#39;k2&#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">],</span>
+ <span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">,</span><span class="s1">&#39;C3&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="s1">&#39;D0&#39;</span><span class="p">,</span><span class="s1">&#39;D1&#39;</span><span class="p">,</span><span class="s1">&#39;D2&#39;</span><span class="p">,</span><span class="s1">&#39;D3&#39;</span><span class="p">]})</span>
+
+<span class="c1">#Asi se veria un left joint usando &#39;how&#39;</span>
+<span class="c1">#Esto seria igual si lo hacemos con right join</span>
+<span class="n">left</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;key&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;key2&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output:
+<img alt="image" src="https://user-images.githubusercontent.com/60556632/165332052-ccd18f98-97a6-4ba4-b07e-343db0f182de.png" /></p>
+<p><strong>Join</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Join a diferencia de merge se basa en la filas</span>
+<span class="c1">#creamos un df_left y df_right y le asignamos un indice</span>
+<span class="n">df_left</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:[</span><span class="s1">&#39;A0&#39;</span><span class="p">,</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span><span class="s1">&#39;A2&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;B&#39;</span><span class="p">:[</span><span class="s1">&#39;B0&#39;</span><span class="p">,</span><span class="s1">&#39;B1&#39;</span><span class="p">,</span><span class="s1">&#39;B2&#39;</span><span class="p">]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;k0&#39;</span><span class="p">,</span><span class="s1">&#39;k1&#39;</span><span class="p">,</span><span class="s1">&#39;k2&#39;</span><span class="p">],)</span>
+
+<span class="c1">#Intencionalmente saltamos el indice k1 de df_left</span>
+<span class="n">df_right</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;C&#39;</span><span class="p">:[</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span><span class="s1">&#39;C1&#39;</span><span class="p">,</span><span class="s1">&#39;C2&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;D&#39;</span><span class="p">:[</span><span class="s1">&#39;D0&#39;</span><span class="p">,</span><span class="s1">&#39;D1&#39;</span><span class="p">,</span><span class="s1">&#39;D2&#39;</span><span class="p">]},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;k0&#39;</span><span class="p">,</span><span class="s1">&#39;k2&#39;</span><span class="p">,</span><span class="s1">&#39;k3&#39;</span><span class="p">])</span>
+
+<span class="c1">#Se realiza left join por default</span>
+<span class="n">df_left</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df_right</span><span class="p">)</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+<p>Output:
+<img alt="image" src="https://user-images.githubusercontent.com/60556632/165334348-455fef20-37bf-4fa3-91d4-ae6031d7488f.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Podemos realizar diferentes tipos de joins a traves de &#39;how&#39;</span>
+<span class="n">df_left</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df_right</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+<span class="c1">#how =&#39;left&#39;</span>
+<span class="c1">#how =&#39;outer&#39;</span>
+<span class="c1">#how =&#39;inner&#39;</span>
+<span class="c1">#how =&#39;right&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pivot-y-melt">
+<h2>Pivot y Melt<a class="headerlink" href="#pivot-y-melt" title="Permalink to this headline">¶</a></h2>
+<p>Pivot, básicamente, transforma los valores de determinadas columnas o filas en los índices de un nuevo DataFrame, y la intersección de estos es el valor resultante.</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165361143-ea8d3766-3a31-45db-979b-f3bbda053718.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Pivot table es como una table dinamica en excel, solo tenemos que indicar</span>
+<span class="c1">#cuales son las filas, columnas y de donde vienen los datos</span>
+<span class="n">df_students</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;pais&#39;</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="s1">&#39;genero&#39;</span><span class="p">,</span><span class="n">values</span><span class="o">=</span><span class="s1">&#39;edad&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165361196-cd2658dc-17ac-473d-96cb-b5b1a49fd084.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Melt convierte columnas a filas </span>
+<span class="n">df_students</span><span class="p">[[</span><span class="s1">&#39;pais&#39;</span><span class="p">,</span><span class="s1">&#39;genero&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">melt</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165361293-64de9c4a-6ac5-42c9-985d-560f50578918.png" /></p>
+</div>
+<div class="section" id="apply">
+<h2>Apply<a class="headerlink" href="#apply" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Creamos una funcion de Python</span>
+<span class="k">def</span> <span class="nf">two_times</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">values</span> <span class="o">*</span> <span class="mi">2</span>
+
+<span class="c1">#Utilizamos &#39;apply&#39; y asi todos los valores de &#39;cm&#39; </span>
+<span class="c1"># se pasan por la funcion &#39;two_times&#39; </span>
+<span class="c1">#Crear un nueva columna con el calculo realizado</span>
+<span class="n">df_students</span><span class="p">[</span><span class="s1">&#39;cm&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">two_times</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">0</span>    <span class="mi">230</span>
+<span class="mi">1</span>    <span class="mi">220</span>
+<span class="mi">2</span>    <span class="mi">260</span>
+<span class="mi">3</span>    <span class="mi">310</span>
+<span class="mi">4</span>    <span class="mi">250</span>
+<span class="mi">5</span>    <span class="mi">240</span>
+<span class="mi">6</span>    <span class="mi">250</span>
+<span class="n">Name</span><span class="p">:</span> <span class="n">cm</span><span class="p">,</span> <span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Lambdas con apply</span>
+<span class="n">df_students</span><span class="p">[</span><span class="s1">&#39;lamda_1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_students</span><span class="p">[</span><span class="s1">&#39;cm&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">df_students</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165390439-bd88277c-f067-43b2-842b-6bf06f5b4254.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Lambda en todo el DataFrame</span>
+<span class="n">df_students</span><span class="p">[</span><span class="s1">&#39;lamda_2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_students</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;cm&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;genero&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span> <span class="k">else</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;cm&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_students</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165390556-1c6e629e-5d6b-4b96-b55f-f283d5ebb173.png" /></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="eda-wines-template.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Vinho Verde Analysis🚀🪜</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="stat-probability.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Escalamiento Lineal</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By DanielNMuner<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

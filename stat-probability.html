@@ -1,0 +1,1751 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Escalamiento Lineal &#8212; Daniel&#39;s Portfolio</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Transformacion de Datos con Numpy y Pandas - Carlos Alarcon" href="personal-notes.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Daniel's Portfolio</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Portfolio &amp; Resume
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dental-office-analysis.html">
+   Dental Office 🦷🪥
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eda-wines-template.html">
+   Vinho Verde Analysis🚀🪜
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="personal-notes.html">
+   Transformacion de Datos con Numpy y Pandas - Carlos Alarcon
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Escalamiento Lineal
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/stat-probability.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/danielnmuner/danielnmuner.github.io"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/danielnmuner/danielnmuner.github.io/issues/new?title=Issue%20on%20page%20%2Fstat-probability.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/danielnmuner/danielnmuner.github.io/main?urlpath=tree/portfolio/_build/html/stat-probability.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Escalamiento Lineal
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transformacion-no-lineal">
+   Transformacion no lineal
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#procesamiento-de-variables-categoricas">
+   Procesamiento de Variables Categoricas
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correlaciones">
+   Correlaciones
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analisis-de-componentes-principale">
+   Analisis de componentes principale
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#probabilidad">
+   Probabilidad
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ejemplos-de-probabilidad">
+     Ejemplos de Probabilidad
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distribucion-normal-gaussiana">
+     Distribucion normal gaussiana
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distribucion-normal-gausiana-a-partir-de-los-datos">
+   Distribución normal (gausiana) a partir de los datos
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estimacion-parametrica">
+   Estimación paramétrica
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#maximum-likelihood-estimation-mle">
+     Maximum likelihood estimation (MLE)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regresion-lineal-con-mle">
+     Regresion Lineal con MLE
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mle-como-base-para-la-regresion-logistica">
+   MLE como base para la regresión logística
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regresion-logistica-con-scikit-learn">
+     Regresión logística con Scikit-learn
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#teorema-de-bayes">
+     Teorema de Bayes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Escalamiento Lineal</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Escalamiento Lineal
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#transformacion-no-lineal">
+   Transformacion no lineal
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#procesamiento-de-variables-categoricas">
+   Procesamiento de Variables Categoricas
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correlaciones">
+   Correlaciones
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analisis-de-componentes-principale">
+   Analisis de componentes principale
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#probabilidad">
+   Probabilidad
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ejemplos-de-probabilidad">
+     Ejemplos de Probabilidad
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distribucion-normal-gaussiana">
+     Distribucion normal gaussiana
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distribucion-normal-gausiana-a-partir-de-los-datos">
+   Distribución normal (gausiana) a partir de los datos
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#estimacion-parametrica">
+   Estimación paramétrica
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#maximum-likelihood-estimation-mle">
+     Maximum likelihood estimation (MLE)
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regresion-lineal-con-mle">
+     Regresion Lineal con MLE
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mle-como-base-para-la-regresion-logistica">
+   MLE como base para la regresión logística
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regresion-logistica-con-scikit-learn">
+     Regresión logística con Scikit-learn
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#teorema-de-bayes">
+     Teorema de Bayes
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="escalamiento-lineal">
+<h1>Escalamiento Lineal<a class="headerlink" href="#escalamiento-lineal" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Los modelos de machine learning son eficientes en el rango [-1,1]. Convertir los datos en este rango facilita la convergencia de los modelos de ML.</p></li>
+<li><p>Los metodos mas usados son <strong>max-min</strong>, <strong>Clipping</strong> y <strong>Z-score</strong>. Los cuales de usan pricipalmente en data simetricamente distribuida.</p></li>
+<li><p><span class="math notranslate nohighlight">\(X \rightarrow X_{s}\)</span></p></li>
+<li><p><strong>min-max</strong>: <span class="math notranslate nohighlight">\(X_{s} = \frac{2x-min-max}{max-min}\)</span></p></li>
+<li><p>El clipping es un metodo que forza los outliers al min y max, sin embargo, por el hecho de que existan outliers no quiere decir que debamos eliminarlos.</p></li>
+<li><p><strong>Z-score</strong>: <span class="math notranslate nohighlight">\(X_{s} = \frac{x-\mu}{\sigma}\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="transformacion-no-lineal">
+<h1>Transformacion no lineal<a class="headerlink" href="#transformacion-no-lineal" title="Permalink to this headline">¶</a></h1>
+<p>La utilizamos cuando la distrubucion de los datos no es simetrica. Las debemos usar antes de realizar escalamientos lineales.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(X_{s} = tanh(\frac{x}{a}) \rightarrow\)</span> El paramentro <code class="docutils literal notranslate"><span class="pre">a</span></code> permite defomarlos datos para que estos se vean mas simetricos.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.ma.core</span> <span class="kn">import</span> <span class="n">true_divide</span>
+<span class="kn">import</span> <span class="nn">timeit</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">!</span>pip install <span class="nv">xlrd</span><span class="o">==</span><span class="m">1</span>.2.0
+
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">})</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;xtick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1">#Datasets: Permite cagar el data set de diabetes</span>
+<span class="c1">#Linear_model: Permite realizar un regresion lineal sobre los datos</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">linear_model</span>
+
+<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="n">X</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span>  <span class="n">datasets</span><span class="o">.</span><span class="n">load_diabetes</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">raw</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="kc">None</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">max_raw</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+<span class="n">min_raw</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+<span class="n">scaled_min_max</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">raw</span> <span class="o">-</span><span class="n">min_raw</span> <span class="o">-</span> <span class="n">max_raw</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">max_raw</span> <span class="o">-</span> <span class="n">min_raw</span><span class="p">)</span>
+<span class="n">scaled_z</span> <span class="o">=</span> <span class="p">(</span><span class="n">raw</span><span class="o">-</span><span class="n">raw</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span><span class="o">/</span><span class="p">(</span><span class="n">raw</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">raw</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">scaled_min_max</span><span class="p">)</span>
+<span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">scaled_z</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting xlrd==1.2.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading xlrd-1.2.0-py2.py3-none-any.whl (103 kB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/103.3 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">103.3/103.3 kB</span> <span class=" -Color -Color-Red">6.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: xlrd
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed xlrd-1.2.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Yellow">WARNING: There was an error checking the latest version of pip.</span>
+
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 14&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;xtick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="c1">#Datasets: Permite cagar el data set de diabetes</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="c1">#Linear_model: Permite realizar un regresion lineal sobre los datos</span>
+<span class="ne">---&gt; </span><span class="mi">14</span> <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span><span class="p">,</span> <span class="n">linear_model</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Funcion para entrenar el modelo</span>
+<span class="k">def</span> <span class="nf">train_raw</span><span class="p">():</span>
+  <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">train_scaled_min</span><span class="p">():</span>
+  <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">scaled_min_max</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">train_scaled_z</span><span class="p">():</span>
+  <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">scaled_z</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raw_time</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">train_raw</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">scaled_time_min</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">train_scaled_min</span><span class="p">,</span><span class="n">number</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">scaled_time_z</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="n">train_scaled_z</span><span class="p">,</span><span class="n">number</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="c1">#El tiempo de ejecucion se reduce en la medica que utilizamos modelos escalados</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;train raw: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">raw_time</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s1">, train_scaled_min: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">scaled_time_min</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s1">,train_scaled_z: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">scaled_time_z</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>train raw: 0.0653, train_scaled_min: 0.0369,train_scaled_z: 0.0324
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/MyDrive/conda_data_science/data/raw/&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s1">/cars.csv&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Skew Data&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price_usd&#39;</span><span class="p">])</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Tanh(X/100)&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price_usd&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">100</span><span class="p">)),</span> <span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;step&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Tanh(X/1000)&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price_usd&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">1000</span><span class="p">)),</span> <span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;step&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Tanh(X/10000)&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;price_usd&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">tanh</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="mi">10000</span><span class="p">)),</span> <span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;step&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stat-probability_4_0.png" src="_images/stat-probability_4_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="procesamiento-de-variables-categoricas">
+<h1>Procesamiento de Variables Categoricas<a class="headerlink" href="#procesamiento-de-variables-categoricas" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#This column has 3 unique values</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;engine_type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>gasoline    25647
+diesel      12874
+electric       10
+Name: engine_type, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#If we categorize data into vectors It&#39;ll look like this, where get_dummies generate 3 independent columns</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;engine_type&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(38531, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sklearn.preprocessing</span> <span class="k">as</span> <span class="nn">preprocessing</span>
+<span class="n">encoder</span> <span class="o">=</span> <span class="n">preprocessing</span><span class="o">.</span><span class="n">OneHotEncoder</span><span class="p">(</span><span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">encoder</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;engine_type&#39;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OneHotEncoder(handle_unknown=&#39;ignore&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;engine_type&#39;</span><span class="p">]])</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="n">values</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(38531, 3)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="correlaciones">
+<h1>Correlaciones<a class="headerlink" href="#correlaciones" title="Permalink to this headline">¶</a></h1>
+<p><strong>¿Qué es la correlación?</strong></p>
+<ul class="simple">
+<li><p>La correlación es una medida estadística que expresa hasta qué punto dos variables están relacionadas linealmente (esto es, cambian conjuntamente a una tasa constante).</p></li>
+</ul>
+<p><strong>¿Qué es la covarianza?</strong></p>
+<ul class="simple">
+<li><p>Es un valor que indica el grado de variación conjunta de dos variables aleatorias respecto a sus medias.</p></li>
+</ul>
+<p><strong>¿Qué es el coeficiente de correlación?</strong></p>
+<ul class="simple">
+<li><p>El coeficiente de correlación es la medida específica que cuantifica la intensidad de la relación lineal entre dos variables en un análisis de correlación.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Escalamos los datos con StandardScaler</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="n">iris</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;iris&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">iris</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;species&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stat-probability_12_0.png" src="_images/stat-probability_12_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Escalamos los datos</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span>
+    <span class="n">iris</span><span class="p">[[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">]]</span>
+    <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">scaled</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">scaled</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4, 150)
+(150, 4)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Transponemos los datos</span>
+<span class="n">covariance_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">scaled</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+<span class="n">covariance_matrix</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4, 4)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Para calcular la covarianza debemos transponer los datos de (4, 150) a (150, 4)</span>
+<span class="n">covariance_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">scaled</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">font_scale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">hm</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">covariance_matrix</span><span class="p">,</span>
+                 <span class="n">cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">square</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                 <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;.2f&#39;</span><span class="p">,</span>
+                 <span class="n">annot_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">},</span>
+                 <span class="n">yticklabels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">],</span>
+                 <span class="n">xticklabels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stat-probability_15_0.png" src="_images/stat-probability_15_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Sin transponer los datos no obtenemos la matriz esperada</span>
+<span class="n">covariance_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">scaled</span><span class="p">)</span>
+<span class="n">covariance_matrix</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(150, 150)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">covariance_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">scaled</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="analisis-de-componentes-principale">
+<h1>Analisis de componentes principale<a class="headerlink" href="#analisis-de-componentes-principale" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Consiste en reducir el tamaño de los datos que aportan la misma informacion.</p></li>
+<li><p>Los valores propios y los vectores propios caracterizan la varianza de un conjunto de datos en terminos de las componentes pricipales <code class="docutils literal notranslate"><span class="pre">PCA</span></code>.</p></li>
+<li><p>Se busca capturar una catidad minima pero suficiente de varianza.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
+
+<span class="c1">#Alpicamos el escalamiento de los datos [-1,1]</span>
+<span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
+<span class="n">scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span>
+    <span class="n">iris</span><span class="p">[[</span><span class="s1">&#39;sepal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal_width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal_width&#39;</span><span class="p">]]</span>
+    <span class="p">)</span>
+<span class="c1">#Creamos la matriz de covarianza a partir de los datos ya escaldos</span>
+<span class="n">covariance_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">scaled</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">iris</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x7f1fbfc0eb50&gt;
+</pre></div>
+</div>
+<img alt="_images/stat-probability_20_1.png" src="_images/stat-probability_20_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span> <span class="n">data</span><span class="o">=</span><span class="n">iris</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;petal_length&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;petal_width&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">scaled</span><span class="p">[:,</span><span class="mi">2</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">scaled</span><span class="p">[:,</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stat-probability_21_0.png" src="_images/stat-probability_21_0.png" />
+<img alt="_images/stat-probability_21_1.png" src="_images/stat-probability_21_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculamos los valores propios, esto es como descomponer una matriz </span>
+<span class="n">eigen_values</span><span class="p">,</span><span class="n">eigen_vectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">covariance_matrix</span><span class="p">)</span>
+<span class="n">eigen_values</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([2.93808505, 0.9201649 , 0.14774182, 0.02085386])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eigen_vectors</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.52106591, -0.37741762, -0.71956635,  0.26128628],
+       [-0.26934744, -0.92329566,  0.24438178, -0.12350962],
+       [ 0.5804131 , -0.02449161,  0.14212637, -0.80144925],
+       [ 0.56485654, -0.06694199,  0.63427274,  0.52359713]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Determinamos la varianza explicada lo cual es basicamente convertir los eigenvalues</span>
+<span class="c1">#a porcentajes</span>
+<span class="n">variance_explain</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">eigen_values</span><span class="p">:</span>
+  <span class="n">variance_explain</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">i</span><span class="o">/</span><span class="nb">sum</span><span class="p">(</span><span class="n">eigen_values</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">variance_explain</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[72.9624454132999, 22.850761786701725, 3.668921889282867, 0.5178709107155016]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Ya utilizamos numpy ahora haremos el mismo proceimiento con sklearn</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
+<span class="c1">#Le indicamos que reduzca los datos en base a la varianza explicada</span>
+<span class="c1">#Y que lo haga a solo dos componenetes</span>
+<span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">pca</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">scaled</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PCA(n_components=2)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Esto coincide con los datos que calculamos de numpy</span>
+<span class="n">pca</span><span class="o">.</span><span class="n">explained_variance_ratio_</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.72962445, 0.22850762])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Aqui creamos nuevos datos a partir de una transformacion de PCA</span>
+<span class="c1">#es decir una nueva tabla con solo dos columnas</span>
+<span class="n">reduce_scaled</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">scaled</span><span class="p">)</span>
+
+<span class="c1">#Añadimos los datos obtenidos al dataframe</span>
+<span class="n">iris</span><span class="p">[</span><span class="s1">&#39;pca_1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">reduce_scaled</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">iris</span><span class="p">[</span><span class="s1">&#39;pca_2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">reduce_scaled</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">iris</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-bbfa5737-75ab-40ea-b13b-b8370998c111">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal_length</th>
+      <th>sepal_width</th>
+      <th>petal_length</th>
+      <th>petal_width</th>
+      <th>species</th>
+      <th>pca_1</th>
+      <th>pca_2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>setosa</td>
+      <td>-2.264703</td>
+      <td>0.480027</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>setosa</td>
+      <td>-2.080961</td>
+      <td>-0.674134</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>setosa</td>
+      <td>-2.364229</td>
+      <td>-0.341908</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+      <td>setosa</td>
+      <td>-2.299384</td>
+      <td>-0.597395</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>setosa</td>
+      <td>-2.389842</td>
+      <td>0.646835</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>6.7</td>
+      <td>3.0</td>
+      <td>5.2</td>
+      <td>2.3</td>
+      <td>virginica</td>
+      <td>1.870503</td>
+      <td>0.386966</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>6.3</td>
+      <td>2.5</td>
+      <td>5.0</td>
+      <td>1.9</td>
+      <td>virginica</td>
+      <td>1.564580</td>
+      <td>-0.896687</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>6.5</td>
+      <td>3.0</td>
+      <td>5.2</td>
+      <td>2.0</td>
+      <td>virginica</td>
+      <td>1.521170</td>
+      <td>0.269069</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>6.2</td>
+      <td>3.4</td>
+      <td>5.4</td>
+      <td>2.3</td>
+      <td>virginica</td>
+      <td>1.372788</td>
+      <td>1.011254</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>5.9</td>
+      <td>3.0</td>
+      <td>5.1</td>
+      <td>1.8</td>
+      <td>virginica</td>
+      <td>0.960656</td>
+      <td>-0.024332</td>
+    </tr>
+  </tbody>
+</table>
+<p>150 rows × 7 columns</p>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-bbfa5737-75ab-40ea-b13b-b8370998c111')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-bbfa5737-75ab-40ea-b13b-b8370998c111 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-bbfa5737-75ab-40ea-b13b-b8370998c111');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">iris</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;pca_1&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;pca_2&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;species&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 864x576 with 0 Axes&gt;
+</pre></div>
+</div>
+<img alt="_images/stat-probability_28_1.png" src="_images/stat-probability_28_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="probabilidad">
+<h1>Probabilidad<a class="headerlink" href="#probabilidad" title="Permalink to this headline">¶</a></h1>
+<p>###Fuentes de Incertidumbre:</p>
+<p><strong>Modelo</strong>: Representacion Simplificada de la realidad. El hecho de simplicar la realidad en un modelo aumenta la incertidumfre de los datos.</p>
+<p><strong>Modelo de Clasificacion de Texto <code class="docutils literal notranslate"><span class="pre">Clasificador</span> <span class="pre">Probabilistico</span></code></strong>: Si tenemos un texto y debemos indicar si pertenece a <code class="docutils literal notranslate"><span class="pre">[Sports,Games,Business]</span></code>. El modelo se basa en probabilidades para determinar a que categoria pertenece.</p>
+<ol class="simple">
+<li><p>El modelo selecciona ciertos atributos del texto como etiquetas, titulos etc, y los extrae.</p></li>
+<li><p>El vector de atributos es entregado al modelo de ML. Puesto que el modelo conoce las posibles respuestas <code class="docutils literal notranslate"><span class="pre">[Sports,Games,Business]</span></code> decimos que es un modelo supervisado. El modelo debe ser previamente entrenado con la mayor cantidad de datos, de manera que al usar textos sin etiquetas el modelo pueda realizar una prediccion correcta.</p></li>
+<li><p>Todas la etapas de un modelo en ciertos aspectos involucran probabilidad. Entrenamiento: <code class="docutils literal notranslate"><span class="pre">[Arquitectura/Diseño,Paramentros/MLE,Hiper-parametros/Calibracion]</span></code>, Prediccion: Interpretacion de la prediccion.</p></li>
+</ol>
+<p>###Tipos de Probabilidad
+¿Probabilidad en 2 Dados o dos sucesos?</p>
+<ul class="simple">
+<li><p>¿Cada dado sea Par?</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(P(A_{even},B_{even}) = \left [ \frac{3}{6} \right ]\left [ \frac{3}{6} \right ]=\left [ \frac{9}{36} \right ] \rightarrow P_{conjunta}\)</span></p></li>
+</ul>
+</li>
+<li><p>¿Dice A sea par given Dice B sea par?</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(P(A_{even}|B_{even}) = \left [ \frac{3}{6} \right ]\left [ \frac{3}{3} \right ]=\left [ \frac{9}{18} \right ] \rightarrow P_{condicional}\)</span></p></li>
+</ul>
+</li>
+<li><p>¿Dice B sea par al lanzar los dos dados?</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(P(B_{even}) = \left [ \frac{18}{36} \right ]\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>Regla del Producto</strong></p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(P(A,B) = P(A|B)P(B) = \left [ \frac{9}{18} \right ]\left [ \frac{18}{36} \right ] =  \left [ \frac{9}{36} \right ]\)</span></p></li>
+</ul>
+</li>
+<li><p><strong>Conjunta <code class="docutils literal notranslate"><span class="pre">joint</span></code></strong>: Probabilidad de muchos sucesos en todo el espacio muestral.</p></li>
+<li><p><strong>Condicional</strong>: Es aquella que restringe o acota el espacio muestral, es decir <code class="docutils literal notranslate"><span class="pre">no</span></code> cambia el numero de eventos existosos pero <code class="docutils literal notranslate"><span class="pre">si</span></code> el de los posibles. <code class="docutils literal notranslate"><span class="pre">Las</span> <span class="pre">probabilidades</span> <span class="pre">condicionales</span> <span class="pre">no</span> <span class="pre">reflejan</span> <span class="pre">relaciones</span> <span class="pre">de</span> <span class="pre">causalidad</span></code></p></li>
+<li><p><strong>Marginal</strong>: Consiste en obtener la probabilidad independiente de <span class="math notranslate nohighlight">\(P(A)\)</span> o <span class="math notranslate nohighlight">\(P(B)\)</span> a partir de <span class="math notranslate nohighlight">\(P(A \cap B)\)</span> o probabilidad conjunta <span class="math notranslate nohighlight">\(P(A,B)\)</span>.</p></li>
+</ul>
+<div class="section" id="ejemplos-de-probabilidad">
+<h2>Ejemplos de Probabilidad<a class="headerlink" href="#ejemplos-de-probabilidad" title="Permalink to this headline">¶</a></h2>
+<p><strong>El siguiente ejemplo se realiza con dados</strong></p>
+<p>A. = {Get 4},
+B. = {Get Even},
+C. = {Get Odd}</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(P(A) = \left [ \frac{1}{6} \right ]\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(A|B) = \left [ \frac{1}{3} \right ]\)</span> Quiere decir, el hecho de que haya ocurrido <strong>B</strong> aumenta la probabilidad de que ocurra <strong>A</strong>. <span class="math notranslate nohighlight">\(\left [ \frac{1}{3} \right ] &gt; \left [ \frac{1}{6} \right ]\)</span> En este caso positivamente correlacionados.</p></li>
+<li><p><span class="math notranslate nohighlight">\(P(A|C) = 0\)</span> Estan correlacionado negativamente, es decir son eventos excluyentes. Y no se debe confundir con independientes.</p></li>
+</ol>
+<p><strong>Juego de la Ruleta</strong><br />
+El conjunto de opciones por las que aposto cada jugador son exluyentes ya que no hay ningun conjunto de interseccion.</p>
+<ul class="simple">
+<li><p>Opciones de los Jugadores sin Interseccion</p>
+<ul>
+<li><p><strong>player_a</strong> = {1,2,3,4}</p></li>
+<li><p><strong>player_b</strong> = {5,6,7,8}</p></li>
+</ul>
+</li>
+</ul>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(P(2) = 1/8 \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(1|b) = 0/4\)</span></p></li>
+</ol>
+<ul class="simple">
+<li><p>Opciones de los Jugadores con Interseccion</p>
+<ul>
+<li><p><strong>player_a</strong> = {1,2,3,4}</p></li>
+<li><p><strong>player_b</strong> = {5,6,7,4}</p></li>
+</ul>
+</li>
+</ul>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(P(1|b) = 1/4\)</span> Que salga 1 dado que gano b.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Opciones de los Jugadores</p>
+<ul>
+<li><p><strong>player_a</strong> = {1,2,3,4}</p></li>
+<li><p><strong>player_b</strong> = {2,3,6,7}</p></li>
+</ul>
+</li>
+</ul>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(P(a|b) = 2/4\)</span></p></li>
+</ol>
+<p>###Ejemplos avanzados
+<strong>Paradoja ¿niño o niña?</strong></p>
+<ol class="simple">
+<li><p>Una mujertiene dos bebes donde el mayor es varon.</p></li>
+<li><p>Una mujer tiene dos bebes donde uno de ellos es varon.
+¿Cual es la probabilidad de que esta mujer tenga dos hijos varones?</p></li>
+<li><p><span class="math notranslate nohighlight">\(P(MM) = 1/4\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(MM | Mayor M) = 1/2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(MM | Alguno M) = 1/3\)</span></p></li>
+</ol>
+<p><strong>Problema de Monty Hall</strong>
+En general la probabilidades cambian en la medica que hay un cambio en la informacion.</p>
+<p><img alt="monty-hall" src="https://i.ibb.co/sF1ybPL/monty.png" /></p>
+<p>###¿Qué es una distribución?
+Una distribucion de probabilidad es una funcion que toma una variable aleatoria y a cada uno de sus posibles estados en el espacio muestral le asigna una probabilidad. <span class="math notranslate nohighlight">\(P(X=x)\)</span> es una funcion de la variable aleatoria <span class="math notranslate nohighlight">\(X_{aleatoria}\)</span>.</p>
+<ul class="simple">
+<li><p>Las letras mayusculas <span class="math notranslate nohighlight">\(X\)</span> se usan para notar variables aleatorias y las minusculas <span class="math notranslate nohighlight">\(x\)</span> para valores en el espacio muestral.</p></li>
+<li><p>Las funciones tienen dominios <span class="math notranslate nohighlight">\(Dom_{X}\)</span> = [Discreto,Continuo].</p></li>
+<li><p>A la distribucion tambien se le denomina densidad de probabilidad.</p></li>
+<li><p>Se conoce como distribucion acumulada a la integral de una distribucion para un rango dado que puede ser discreto o continuo.</p></li>
+</ul>
+<p>###Distribuciones discretas
+<strong>Distribucion de Bernulli</strong> Ocurrencias Binarias</p>
+<ul class="simple">
+<li><p><strong>Simple</strong></p></li>
+</ul>
+<p>Lanzar una moneda <span class="math notranslate nohighlight">\(P(X=1) = p\)</span> y respectivamente <span class="math notranslate nohighlight">\(P(X=0) = 1-p\)</span></p>
+<ul class="simple">
+<li><p><strong>Compleja</strong></p></li>
+</ul>
+<p>Lanzar Varias monedas, es decir secuencias repetitivas de varios eventos binarios o bernulli, entonces hablamos de la distribucion binomial.
+<img alt="bernulli" src="https://i.ibb.co/HY9VnSw/bernulli.png" /></p>
+<p>Secuencias repetitivas para <code class="docutils literal notranslate"><span class="pre">n-lanzamientos</span></code> y <code class="docutils literal notranslate"><span class="pre">k-caras</span></code> donde el espacio muestral puede ser muy grande, entoces utilizamos una distribucion binomial.</p>
+<p><img alt="dis-binomial" src="https://i.ibb.co/X5dwXX8/binomial.png" /></p>
+<ul class="simple">
+<li><p><strong>Formula de distribucion Binomial</strong>
+<span class="math notranslate nohighlight">\(P(k;n;p)= \binom{n}{k}p^{k}(1-p)^{(n-k)}\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Here the libraries we&#39;ll be using in binomial ditribution</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">binomial</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">binom</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">factorial</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#K: N de exitos</span>
+<span class="c1">#n: N lanzamientos</span>
+<span class="c1">#p: Porbabilidad de Exito</span>
+<span class="k">def</span> <span class="nf">my_binomial</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="n">p</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="n">k</span><span class="p">))</span><span class="o">*</span><span class="nb">pow</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">k</span><span class="p">)</span><span class="o">*</span><span class="nb">pow</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">p</span><span class="p">,</span><span class="n">n</span><span class="o">-</span><span class="n">k</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calcular la probabilidad 2 caras,3 lanzamientos, con una probabilidad </span>
+<span class="c1">#equilibrada de 0.5, es decir las monedas pesan igual.</span>
+<span class="n">my_binomial</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.375
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Obtener la dist binomial con scipy</span>
+<span class="c1">#binom(k,p) -&gt;(Exitos,P equilibrada)</span>
+<span class="n">dist_scipy</span> <span class="o">=</span> <span class="n">binom</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="c1">#probability mass function (Densidad de Probabilidad)</span>
+<span class="c1">#pmf(n) N lanzamientos</span>
+<span class="n">dist_scipy</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.375
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Cumulative density function, calcula la distribucion de </span>
+<span class="c1">#probabilidad acumulada o area bajo la curva de 0 a 2 lanzamientos</span>
+<span class="n">dist_scipy</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.875
+</pre></div>
+</div>
+</div>
+</div>
+<p>###Escuela Frecuentista
+Los algoritmos deterministicos o generadores aleatorios permiten simular eventos aleatorios cercanos a la vida real.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Simulacion de n lanzamientos con monedas quilibradas, donde k = binomial(n,p) o nuemero de exitos</span>
+<span class="c1">#funcion de numpy que funciona como generador aleatorio, P=Probabilidad Equilibrada, N=numero de lanzamientos</span>
+
+<span class="n">p</span><span class="o">=</span><span class="mf">0.5</span>
+<span class="n">n</span><span class="o">=</span><span class="mi">3</span>
+<span class="n">values</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">plot_flip_coins</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">values</span><span class="p">):</span>
+  <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">binomial</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">p</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">100</span><span class="p">)])</span>
+  <span class="n">simulation</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+  <span class="c1">#scipy.stats binom(n,p)</span>
+  <span class="n">theoric</span> <span class="o">=</span> <span class="p">[</span><span class="nb">round</span><span class="p">(</span><span class="n">binom</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">p</span><span class="p">)</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">k</span><span class="p">),</span><span class="mi">3</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">values</span><span class="p">]</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">values</span><span class="p">,</span><span class="n">simulation</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">values</span><span class="p">,</span><span class="n">theoric</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s1"> experiments&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">plot_flip_coins</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stat-probability_36_0.png" src="_images/stat-probability_36_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="distribucion-normal-gaussiana">
+<h2>Distribucion normal gaussiana<a class="headerlink" href="#distribucion-normal-gaussiana" title="Permalink to this headline">¶</a></h2>
+<div class="math notranslate nohighlight">
+\[P(X) = \frac{1}{\sigma \sqrt{2 \pi}} \exp{\left[-\frac{1}{2}\left(\frac{X-\mu}{\sigma} \right)^2 \right]}\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mu\)</span>: media de la distribución</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma\)</span>: desviación estándar de la distribución</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># definimos nuestra distribución gaussiana</span>
+<span class="k">def</span> <span class="nf">gaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">):</span>
+  <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">sigma</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="o">*</span><span class="nb">pow</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="n">mu</span><span class="p">)</span><span class="o">/</span><span class="n">sigma</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">gaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stat-probability_38_0.png" src="_images/stat-probability_38_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># usando scipy</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span> 
+<span class="c1">#norm(median,std)</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="n">norm</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="c1">#pdf:Probability density Function dist.pdf(value_x)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">dist</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stat-probability_39_0.png" src="_images/stat-probability_39_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculando la distribución acumulada, igualmente indicamos norm(median,std), dist.cdf(value_x)</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="n">norm</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">dist</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stat-probability_40_0.png" src="_images/stat-probability_40_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="distribucion-normal-gausiana-a-partir-de-los-datos">
+<h1>Distribución normal (gausiana) a partir de los datos<a class="headerlink" href="#distribucion-normal-gausiana-a-partir-de-los-datos" title="Permalink to this headline">¶</a></h1>
+<p>These data on housefly wing lengths provide an excellent example of normally distributed data from the field of biometry.  The normal distribution, one of the most widely used distributions in statistics, is often referred to as the Gaussian or bell-shaped distribution.</p>
+<ul class="simple">
+<li><p><em>El archivo <a class="reference external" href="https://seattlecentral.edu/qelp/sets/057/057.html">excel</a></em></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">housefly_wings</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s1">/s057.xls&#39;</span><span class="p">)</span>
+<span class="c1">#Tomamos la normally Distributed Housefly Wing Lengths, filas [4:0] </span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">housefly_wings</span><span class="p">[</span><span class="s1">&#39;Normally Distributed Housefly Wing Lengths&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">4</span><span class="p">:]</span>
+<span class="n">values</span><span class="p">,</span> <span class="n">dist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">dist</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stat-probability_42_0.png" src="_images/stat-probability_42_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># estimación de la distribución de probabilidad</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1">#distribución teórica</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="n">norm</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">dist</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1">#Graficamos tanto distribución teórica como distribucion real de los datos</span>
+<span class="n">values</span><span class="p">,</span> <span class="n">dist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">return_counts</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1">#Dividimos dist/len(arr) para que dist se de en terminos de porcentaje, recordando que la </span>
+<span class="c1">#distribucion teorica tiene un rango de (0,1)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">dist</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stat-probability_43_0.png" src="_images/stat-probability_43_0.png" />
+</div>
+</div>
+<p>##¿Cómo estimar una distribución?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Generador aleatorio basado en distribuciones normales si importamos una funcion espcifica del modulo</span>
+<span class="c1">#numply.random solo cambia que el codigo es mas legible</span>
+<span class="kn">from</span> <span class="nn">numpy.random</span> <span class="kn">import</span> <span class="n">normal</span>
+<span class="c1">#np.random.normal(loc=mean,scale=std,size=#data)</span>
+<span class="n">norm_dist_random</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">norm_dist_random</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stat-probability_45_0.png" src="_images/stat-probability_45_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="estimacion-parametrica">
+<h1>Estimación paramétrica<a class="headerlink" href="#estimacion-parametrica" title="Permalink to this headline">¶</a></h1>
+<p>La estimación paramétrica es una herramienta que las empresas utilizan para evaluar factores importantes de un proyecto, como el tiempo total, el coste o los recursos que se necesitan para completarlo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#1. Obtenemos los datos originales data_sample, graficamos el histograma usamos atributo density=True, es decir en rango de 0-1</span>
+<span class="c1">#2. Graficamos pdf para cada valor de x, pero antes debemos instanciar dist = norm(mu, sigma)</span>
+
+<span class="n">data_sample</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span> 
+<span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mf">0.1</span><span class="p">)</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="n">data_sample</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="n">data_sample</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="c1">#Instancimos la distribucion, indicando la media y la std</span>
+<span class="n">dist</span> <span class="o">=</span> <span class="n">norm</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+<span class="c1">#Calculamos Y para cada valor de X</span>
+<span class="n">probabilities</span> <span class="o">=</span> <span class="p">[</span><span class="n">dist</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">values</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data_sample</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1">#Graficamos la distribucion plt.plot(X,Y)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">values</span><span class="p">,</span><span class="n">probabilities</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stat-probability_47_0.png" src="_images/stat-probability_47_0.png" />
+</div>
+</div>
+<p>###Estimación <a class="reference external" href="https://scikit-learn.org/stable/modules/density.html">No Paramétrica</a> - Union de funciones para Distribuciones Multimodales</p>
+<p>La idea general de la estimación no paramétrica es usar la información del pasado que más se parezca a la actual sin establecer ningún modelo concreto de predicción.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Kernel</span> <span class="pre">Density</span> <span class="pre">estimation</span></code>: Debemos indicar los siguientes paramentros.</p>
+<ul class="simple">
+<li><p>[parámetro de suavizado]: Smoothing parameter</p></li>
+<li><p>[función base]: Basis function (Que funcion se adapta mas a los datos)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#hstack permite jutar varios arreglos</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">hstack</span>
+<span class="c1">#Importamo la funcion KernelDensityFunction</span>
+<span class="kn">from</span> <span class="nn">sklearn.neighbors</span> <span class="kn">import</span> <span class="n">KernelDensity</span>
+
+<span class="c1">#Construimos una distribución bimodal a partir de dos distribuciones normales con diferente</span>
+<span class="c1">#media y cantidad de datos pero misma std</span>
+<span class="n">sample1</span> <span class="o">=</span> <span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+<span class="n">sample2</span> <span class="o">=</span> <span class="n">normal</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">7000</span><span class="p">)</span>
+<span class="c1">#Hacemos un stack de los datos para unirlos en el eje de las columnas</span>
+<span class="n">sample</span> <span class="o">=</span> <span class="n">hstack</span><span class="p">((</span><span class="n">sample1</span><span class="p">,</span> <span class="n">sample2</span><span class="p">))</span>
+<span class="c1">#Hacemos reshape para que todos los datos queden en una sola columna, el reshape es obligatorio</span>
+<span class="c1">#siempre que usamos sklearn</span>
+<span class="n">sample</span> <span class="o">=</span> <span class="n">sample</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">sample</span><span class="p">),</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="c1">#Creamos un modelo KernelDensity(bandwidth=suavizado, kernel=&#39;gaussian&#39;)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">KernelDensity</span><span class="p">(</span><span class="n">bandwidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;gaussian&#39;</span><span class="p">)</span>
+<span class="c1">#Ajustamos el modelo a los datos es decir automaticamente obtiene la media y std de las distribuciones</span>
+<span class="c1">#Aqui estamos aplicando MLE </span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span>
+
+<span class="c1">#Los values no pueden ser de tipo lista sino de tipo array y la funcion np.asarray(list) -&gt; array</span>
+<span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">([</span><span class="n">value</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">60</span><span class="p">)])</span>
+<span class="c1">#Ademas hacemos el reshape nuevamente, es obligatorio</span>
+<span class="n">values</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">values</span><span class="p">),</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="c1">#model.score_samples(x) - Compute the log-likelihood of each sample under the model. - Obtenermos la probabilidad logaritmica</span>
+<span class="c1">#El underflow es un problema que surge cuando sobre pasamos el limite inferior de presicion </span>
+<span class="c1">#que una maquina puede computar, es decir numeros muy pequeños. Con score_samples(x) expresamos las probabilidades, no como multiplicaciones,</span>
+<span class="c1">#sino como sumas asi evitamos el under flow que es comun en casos de probabilidad</span>
+<span class="n">probabilities</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">score_samples</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+<span class="c1">#calculamos la exponencial de probabilidad logaritmica</span>
+<span class="n">probabilities</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">probabilities</span><span class="p">)</span>
+
+<span class="c1">#Graficamos datos vs kdf</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sample</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">values</span><span class="p">[:],</span> <span class="n">probabilities</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stat-probability_49_0.png" src="_images/stat-probability_49_0.png" />
+</div>
+</div>
+<div class="section" id="maximum-likelihood-estimation-mle">
+<h2>Maximum likelihood estimation <a class="reference external" href="https://www.youtube.com/watch?v=XepXtl9YKwc&amp;t=87s">(MLE)</a><a class="headerlink" href="#maximum-likelihood-estimation-mle" title="Permalink to this headline">¶</a></h2>
+<p>In statistics, maximum likelihood estimation (MLE) is a method of estimating the parameters of an assumed probability distribution, given some observed data. This is achieved by maximizing a likelihood function so that, under the assumed statistical model, the observed data is most probable.</p>
+<ul class="simple">
+<li><p>Es un framework para la estimacion de densidades de probabilidad dentro de un esquema de trabajo muy general.</p></li>
+<li><p>El Maching Learning consiste en ajustar densidades a datos. <strong>Supervisado</strong>: <code class="docutils literal notranslate"><span class="pre">[Clasificacion,</span> <span class="pre">Regresion]</span></code> <strong>No-Supervisado</strong>:<code class="docutils literal notranslate"><span class="pre">[Clusterizacion]</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="regresion-lineal-con-mle">
+<h2>Regresion Lineal con MLE<a class="headerlink" href="#regresion-lineal-con-mle" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>En el colegio 🥱<span class="math notranslate nohighlight">\(y= mx(Pediente) + b(Pto_Corte)\)</span>, En Machine Learning 😎 <span class="math notranslate nohighlight">\(y=b_{0}x(Weight) + b_{1}(Bias)\)</span> en escencia es lo mismo.</p></li>
+<li><p>En una regresion lineal <span class="math notranslate nohighlight">\(y=y_{i}-(mx_{i}+b)\)</span></p></li>
+<li><p><strong>MLE</strong> puede aplicarse en cualquier modelo <strong>h</strong>, <span class="math notranslate nohighlight">\(P(x|y) \to max\sum_{i}logP(y_{i}|x_{i};h)\)</span></p></li>
+<li><p>Matematicamente una <strong>RL</strong> explicada a traves de una <strong>Distribucion Gaussiana</strong> $<span class="math notranslate nohighlight">\(P(X) = max\left\{\sum log(\frac{1}{\sigma \sqrt{2 \pi}} \exp{\left[-\frac{1}{2}\left(\frac{y_{i}-(mx_{i}+b)}{\sigma} \right)^2 \right])}\right\}\)</span>$</p></li>
+</ul>
+<p><img alt="explicaciom" src="https://i.ibb.co/p3CMfwR/explanation-MLE.png" /></p>
+<p>###En conclusion esta seria el resultado del MLE aplicado a una RL
+<img alt="RL" src="https://i.ibb.co/DRymVD1/rl.png" /></p>
+<p>###Regresion Logistica
+Resuelve problemas de clasificacion, <strong>!No resuelve problemas de <a class="reference external" href="https://www.youtube.com/watch?v=xxk8378kn7s">Regresion Lineal</a>!</strong>. La funcion usa es la sigmiode <span class="math notranslate nohighlight">\(\to y=\frac{1}{1-exp^{-1}}\)</span></p>
+<p><img alt="RLs" src="https://static.platzi.com/media/user_upload/6-190acabb-86c0-459e-8f88-383bac96734e.jpg" /></p>
+<ul class="simple">
+<li><p><strong>Cross Entrophy</strong>: Es la funcion de error que busca minimizarse en un problema de clasificacion binario, es una consecuencia del <strong>MLE</strong>, cuando buscamos una funcion de probabilidad que nos de los valores maximos cuando las predicciones del modelo por medio de la sigmiode se hacercan a las clases del conjunto de datos que tengo. Es necesario entender por que se usa esta funcion de error en un problema binario.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="mle-como-base-para-la-regresion-logistica">
+<h1>MLE como base para la regresión logística<a class="headerlink" href="#mle-como-base-para-la-regresion-logistica" title="Permalink to this headline">¶</a></h1>
+<p>Consideramos el problema de MLE:</p>
+<div class="math notranslate nohighlight">
+\[
+\max \sum_i \log P(y_i \vert x_i; h)
+\]</div>
+<p>donde:</p>
+<p><span class="math notranslate nohighlight">\(y_i\)</span>: clase o categoría de cada elemento y <span class="math notranslate nohighlight">\(x_i\)</span>: son los atributos de cada elemento, donde además cada elemento del dataset satisface una distribución de Bernoulli:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+P = \begin{cases}
+p,
+&amp; \mbox{si $y=1$,}\\
+1-p, &amp; \mbox{si $y=0$.} 
+\end{cases} 
+\end{split}\]</div>
+<p>En este caso la verosimilitud está dada por:</p>
+<div class="math notranslate nohighlight">
+\[
+L = \hat{y}y+(1-\hat{y})(1-y)  
+\]</div>
+<p>Esta función da como resultado probabilidades altas cuando <span class="math notranslate nohighlight">\(\hat{y} \sim y\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Regresion Logistica</span>
+<span class="c1">#Permite crear graficos 3D</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>  
+
+<span class="c1">#Cm permite acceder a diferentes paletas de colores</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cm</span>
+<span class="c1">#yp es y gorrito</span>
+<span class="k">def</span> <span class="nf">likelihood</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">yp</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">yp</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">yp</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">y</span><span class="p">)</span>
+
+<span class="c1">#Crear lienzo y axes 3D</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="c1">#Idicamos los rangos del grafico</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="n">YP</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
+<span class="c1">#Cuadricula para grafico 3D</span>
+<span class="n">Y</span><span class="p">,</span> <span class="n">YP</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">YP</span><span class="p">)</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">likelihood</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">YP</span><span class="p">)</span>
+
+<span class="c1">#plot_surface(X, Y, Z) donde Z = likelihood. </span>
+<span class="n">surf</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">Y</span><span class="p">,</span> <span class="n">YP</span><span class="p">,</span> <span class="n">Z</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cm</span><span class="o">.</span><span class="n">coolwarm</span><span class="p">,</span>
+                       <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">antialiased</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="c1">#Creamos una barra de colores </span>
+<span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">surf</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+  
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/stat-probability_52_0.png" src="_images/stat-probability_52_0.png" />
+</div>
+</div>
+<p>Considerando <span class="math notranslate nohighlight">\(p \rightarrow \log(p)\)</span>, y sumando la verosimilitud para todos los puntos del dataset obtenemos:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+max{\sum_i \left(y \log \hat{y} + (1-y) \log (1-\hat{y}) \right)} \\
+= \min - \sum_i \left( y \log \hat{y} + (1-y) \log (1-\hat{y}) \right)
+\end{split}\]</div>
+<p>que es la conocida función de costo para clasificación conocida como Cross-entropy.</p>
+<div class="section" id="regresion-logistica-con-scikit-learn">
+<h2>Regresión logística con Scikit-learn<a class="headerlink" href="#regresion-logistica-con-scikit-learn" title="Permalink to this headline">¶</a></h2>
+<p>Recordemos que:</p>
+<div class="math notranslate nohighlight">
+\[
+\hat{y} = \frac{1}{1-\exp{(-\text{log-odds})}}
+\]</div>
+<p>donde <span class="math notranslate nohighlight">\(\text{log-odds} = \beta_0 + \beta_1 x_1 + \dots \beta_n x_n\)</span> y los betas son los parámetros del modelo.</p>
+<p>Aplicaremos un ejercicio de clasificación simple con el <a class="reference external" href="https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html">dataset</a> <a class="reference external" href="https://en.wikipedia.org/wiki/Iris_flower_data_set">Iris</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">load_iris</span>
+
+<span class="c1">#Ya tiene implementado todo lo que necesiamos para un modelos de</span>
+<span class="c1">#regresion logistica</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LogisticRegression</span>
+
+<span class="c1">#Guardamos en un array el nombre de los </span>
+<span class="n">atrib_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;sepal length&#39;</span><span class="p">,</span> <span class="s1">&#39;sepal width&#39;</span><span class="p">,</span> <span class="s1">&#39;petal length&#39;</span><span class="p">,</span> <span class="s1">&#39;petal width&#39;</span><span class="p">]</span>
+<span class="c1">#Asignamos los datos tal como lo indica sklearn</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">load_iris</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#random_state: Es un generador aleatorio que inicializa las variables del modelo</span>
+<span class="c1">#solver=&#39;liblinear&#39;: Es el metodo de optimizacion del modelo, es el que busca la mejor combinacion de parametros</span>
+<span class="c1">#.fit(X-Entrada,Y-SalidaModelo): Permite que el modelo se ajuste a los datos del dataset </span>
+<span class="n">clasifier</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s1">&#39;liblinear&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">[:</span><span class="mi">100</span><span class="p">],</span><span class="n">y</span><span class="p">[:</span><span class="mi">100</span><span class="p">])</span>
+<span class="c1">#Nos muestra los coheficientes (B0, B1, Bi)Pesos que indican la relavancia de las variables al momento de predecir.</span>
+<span class="c1">#Es decir los parametros que mejor ajustan las predicciones del modelo de clasificacion a las categorias dadas. </span>
+<span class="n">clasifier</span><span class="o">.</span><span class="n">coef_</span>
+
+<span class="c1">#La regresion logistica tambien se puede entender como un problema de MLE, justificando el uso de la funcion costo (cross-entrophy)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-0.40247392, -1.46382925,  2.23785648,  1.00009294]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="teorema-de-bayes">
+<h2>Teorema de Bayes<a class="headerlink" href="#teorema-de-bayes" title="Permalink to this headline">¶</a></h2>
+<p>Refleja una <strong>filosofia de interpretacion</strong> muy diferente sobre las probabilidades que obtenemos de sucesos aleatorios. El modelo de bayes busca corregir el problema que tiene la escuela frecuentista respecto a que las probabilidades teoricas no coinciden inicialmente con las reales. El teorema de compone de 4 elementos fundamentales.</p>
+<p><img alt="bayes" src="https://i.ibb.co/R7tJHhY/bayes.png" /></p>
+<ol class="simple">
+<li><p><strong>Probabilidades priori</strong>: Probabilidad Inicial de una variable aleatoria. Esta creencia no necesariamente refleja la realidad.</p></li>
+<li><p><strong>Probabilidades Evidencia</strong>: Justifica la ocurrencia de un evento dada una evidencia</p></li>
+<li><p><strong>Probabilidades de Verocimilitud</strong></p></li>
+<li><p><strong>Probabilidades Posteriori</strong>.</p></li>
+</ol>
+<p>La evidencia modifica las probabilidades reales.
+###Test Medico: Mamografia(Sensitividad 80%)
+El dispositivo de deteccion del cancer tiene una sesitividad del 80%
+<span class="math notranslate nohighlight">\(P(X=1|Y=1)\)</span>=80% <span class="math notranslate nohighlight">\(\to\)</span> Es decir, tiene cancer pero aun asi la probabilidad es del 80%.</p>
+<ul class="simple">
+<li><p><strong>Verocimilitud</strong>: La sensitividad es un parametro que se obtiene a partir de resultados que ya estaban verificados. Ahora el 80% no es necesariamente la probabilidad de tener cancer.</p></li>
+<li><p><strong>Priori</strong>Si dejamos de lado el dispositivo, tenemos como conocimiento previo que la probabilidad de tener de tener cancer es del 0.04%.</p></li>
+<li><p>La probabilidad de ser un falso positivo con el dispositivo es del 10%</p></li>
+</ul>
+<p><img alt="Bayes" src="https://i.ibb.co/ZHhkfCH/bayes.png" /></p>
+<p>###Bayes en machine learning
+En la escuela frecuentista usamos <strong>MLE</strong>, sin embargo, la escuela bayesiana tiene una analogo <strong>MAP</strong>(Maximun Aposteriori) Maximisar la probabilidad posterior del teorena de Bayes. Si recordamos el Teorema de Bayes tiene cuatro partes.</p>
+<p><img alt="bayes" src="https://i.ibb.co/R7tJHhY/bayes.png" /></p>
+<ul class="simple">
+<li><p>En <strong>MLE</strong> nos preocupamos por estimar la maxima verocimilitud que tambien se encuentra en teorema de Bayes, pero en <strong>MAP</strong> nos interesa optimizar o estima la Probabilidad Posteriori.<br />
+<img alt="MAP" src="https://i.ibb.co/zsznWmd/MAP.png" /></p></li>
+<li><p>La evidencia se desprecia en <strong>MAP</strong> por que sin importar los cual es modelo que estamos usando la evidencia siempre es la misma. Todos los probelas de optimizacion bayesiana se reducen solo a:  <span class="math notranslate nohighlight">\(max P(h|D) \to max P(D|h)P(h)\)</span> donde todo depende de quien es <strong>h</strong>. Donde no estimamos <strong>MLE</strong>(Obener paramentros de modelo a partir de los datos) sino <span class="math notranslate nohighlight">\(max P(h|D)\)</span>(Obtener datos a partir de los paramentros) los problemas de clasificion con bayes tambien cambian.</p></li>
+<li><p><strong>Clasificador de Naive Bayes</strong>
+<img alt="NB" src="https://i.ibb.co/Ln1vvzq/NB.png" /></p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="personal-notes.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Transformacion de Datos con Numpy y Pandas - Carlos Alarcon</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By DanielNMuner<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
