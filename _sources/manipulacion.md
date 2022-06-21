@@ -1,6 +1,6 @@
 ## Numpy & Pandas 🐼
-### Transformacion de Datos con Numpy y Pandas - Carlos Alarcon
-### [Funciones Pandas](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html)
+Transformacion de Datos con Numpy y Pandas - Carlos Alarcon
+[Funciones Pandas](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html)
 ### NumPy
 
   - [x] [Numpy Array](#numpy-array)
