@@ -1,10 +1,11 @@
-## Fundamentos Apps Script👨‍💻
+#### Fundamentos Apps Script👨‍💻
 [Apps Script](https://www.youtube.com/playlist?list=PLG1qdjD__qH4dyXq4sM03Rf0RFhB_4tbm)
 Powered by: Aula en la nube
 [Apps Script Fundamentos](https://www.youtube.com/playlist?list=PLFVYPW43NcuzRignaoqLX1BBoNmN-cVQV)
 Powered By: Mozart Alberto García de Haro
-#### Indice
-#### Basic Module
+**Indice**    
+
+**Basic Module**
 - [Crear y abrir documentos en Google DOCS](#crear-y-abrir-documentos-en-google-docs)
 - [Condiciones](#condiciones)
 - [Bucle](#bucle)
@@ -32,10 +33,10 @@ Powered By: Mozart Alberto García de Haro
 - [Crear Barra lateral en Google Sheets](#crear-barra-lateral-en-google-sheets)
 
 
-## Installar Google Apps Script
+#### Installar Google Apps Script
 1. Google Apps Script and open it then start scripting. Also get access from Goolge Drive
 
-## Crear y abrir documentos en Google DOCS   
+#### Crear y abrir documentos en Google DOCS   
 
 *[Indice](#indice)*
 1. Creacion de un Documento en Blanco en Google Docs
@@ -63,7 +64,7 @@ function OpenDocumento() {
   documento.getBody().appendParagraph('Text')
 }
 ```
-## Condiciones   
+#### Condiciones   
 
 *[Indice](#indice)*
 
@@ -102,7 +103,7 @@ else
 
 }
 ```
-## Bucle   
+#### Bucle   
 
 *[Indice](#indice)*
 A continuaciones aplicaremos loops en documentos, pero para eso debemos abrir el Documento sobre el que se escribira en la ejecucion del bucle.
@@ -148,7 +149,7 @@ function ChangeDocThruLoop(){
 }
 ```
 
-## Bucle FOR IN y análisis de atributos   
+#### Bucle FOR IN y análisis de atributos   
 *[Indice](#indice)*
 
 Este codigo ademas de usar `For In` similar a `For Each` utilizar metodos que hacen que un vector se convierta en otro vector y ademas se modifique a partir de sus atributos. 
@@ -179,7 +180,7 @@ function AnalizarParrafos(){
 }
 ```
 
-## Crear funciones con parámetros y menú personalizado   
+#### Crear funciones con parámetros y menú personalizado   
 *[Indice](#indice)*   
 
 La funcion `onOpen` recibe este nombre por comvension para la creacion de un menu en el panel de herramientas de google Docs
@@ -234,7 +235,7 @@ function PromptWindow(){
   }
 }
 ```
-## Crear formulario HTML en Google Docs
+#### Crear formulario HTML en Google Docs
 *[Indice](#indice)* 
 
 1. Creamos un formulario usando HTML y luego usamos JavaScript para llamar la funcion de Apps Script y pasarle lo argumentos obtenidos a partir del formulario.
@@ -321,7 +322,7 @@ function OpenFromJS(texto,numero,color,fecha){
 }
 ```
 
-## Crear tablas personalizadas con formulario HTML   
+#### Crear tablas personalizadas con formulario HTML   
 *[Indice](#indice)* 
 
 En esta seccion se explica como crear una tabla en Google Docs. El usuario indica filas, columnas y que colores debe tener el encabezado y el cuerpo de la tabla. El proceso de ejecucion involucra una interfaz de usuario creada a partir de **HTML**, **CSS** y **JavaScript** la cual se comunica con **Apps Script** y ejecuta la logica de la creacion de la tabla en este lenguage.
@@ -478,7 +479,7 @@ function ParamsTable(rows,columns,colorE,colorP,colorI){
 ```
 ![image](https://user-images.githubusercontent.com/60556632/174497243-41a114b6-0c1f-4431-9765-3ea5678f3ae3.png)
 
-## Combinar correspondencia en Google Docs
+#### Combinar correspondencia en Google Docs
 *[Indice](#indice)*
 
 A continuacion se muestra como podemos crear documentos personalizables a partir de los parametros indicados por el usuario los cuales fueron previamente asignados a una variable la cual se reemplazara en el documento.
@@ -536,7 +537,7 @@ function CreateCertificate(curso,plataforma,funcion){
 ```
 ![image](https://user-images.githubusercontent.com/60556632/174513478-a463c626-6017-428f-adc6-f71bb63d6828.png)
 
-## Combinar correspondencia múltiple    
+#### Combinar correspondencia múltiple    
 *[Indice](#indice)*   
 A diferencia del codigo anterior(HTML Form) ahora utilizamos **Google Sheets** para crear varios documentos.
 1. Como no usamos **HTML** no necesitamos funciones adicionales para abrir **HTML** que luego le pasa los datos a **JavaScript** y luego se los pasa a **Apps Script**. Nada de lo anterior, solo creamos del codigo **Apps Script** desde **Spread Sheet**, creamos una funcion que se conecta con el documento platilla que recibe los datos desde filas y columnas y que se ejecuta en un bucle hasta que no encuentra mas filas.
@@ -615,7 +616,7 @@ function InsertData() {
   }
 }
 ```
-## Añadir ventana de verificación sobre combinar correspondencia    
+#### Añadir ventana de verificación sobre combinar correspondencia    
 *[Indice](#indice)* 
 
 La ventana de verificacion nos permite confirmar la accion del usuario en caso de que la accion no haya sido activada intensionalmente. El codigo es exactamente el mismo que la seccion anterior solo que esta encerrado en condicionales para ejecutarse o no segun la repuesta del usuario.
@@ -637,7 +638,7 @@ function InsertData() {
   }
 ```
 
-## Añadiendo casillas de verificación
+#### Añadiendo casillas de verificación
 *[Indice](#indice)*
 
 Entre mas valiaciones e informacion tenga usuario este tendra mas informacion de que no se ha creado y en caso de haberlo creado, indicaremos cuando. El codigo de creacion de documentos a partir de una patilla es el mismo y solo se añade una estructura de control `IF` para validar si el docuemento fue creado  previamente.
@@ -741,7 +742,7 @@ Entre mas valiaciones e informacion tenga usuario este tendra mas informacion de
 }
 ```
 
-## Generar PDF a partir de un documento de Google
+#### Generar PDF a partir de un documento de Google
 *[Indice](#indice)*
 
 Crear PDF y guardarlo en la carpeta raiz de Google Drive. Lo primero es ejecutar `saveAndClose()` para que el PDF no se cree mientras se guarda el el DOC sino que lo haga cuando ya haya sido creado. Indicamos el tipo de documento con `getAs()` y con `setName()` ademas de dale nombre añadimos el tipo de archivo `.pdf`. Finalmente creamos el PDF en la carpeta raiz de Drive.
@@ -752,7 +753,7 @@ docPdf.setName(documento.getName()+'.pdf');
 DriveApp.createFile(docPdf);
 ```
 
-## Crear carpetas y mover archivos    
+#### Crear carpetas y mover archivos    
 *[Indice](#indice)*
 
 La carpeta raiz es `DriveApp` y por esto si creamos una carpeta esta se guarda alli a no ser que indiquemos mas instrucciones
@@ -779,7 +780,7 @@ var carpetaPadre = DriveApp.getFileById(idHoja).getParents().next();
 var carpeta =carpetaPadre.createFolder('Certificados: '+ new Date());
 ```
 
-## Mejorando función combinar correspondencia    
+#### Mejorando función combinar correspondencia    
 *[Indice](#indice)*    
 
 El objetivo es indicarle al usuario si enverdad se han generado documentos. En el codigo anterior se mostraba el mensaje de alerta `Se han creado los documentos` incluado cuando no era el caso. Ahora colocaremos condicionales adicionales para entragar la informacion correcta.
@@ -810,7 +811,7 @@ else
   ui.alert('No se han encontrado datos por lo cual no se generaron documentos')
 ```
 
-## Enviar correos electrónicos con PDF adjunto     
+#### Enviar correos electrónicos con PDF adjunto     
 *[Indice](#indice)*   
 Para enviar un correo electronico necesitamos primero crear una lista que contenga los correo electronicos en `Google Sheets`, luego usamos las funcion `GmailApp.sendEmail(destinatario,titulo,cuerpo,{attachments:[documento]})` le pasamos los paramentros obtenidos y listo.😎
 ```js
@@ -819,7 +820,7 @@ var titulo =  'Certificado: ' + currentSheet.getRange('B'+row).getValue();
 var cuerpo =  'Enhorabuena, a continuacion adjuntamos el certificado de ' + currentSheet.getRange('F'+row).getValue()+ ' que obtubiste en ' + currentSheet.getRange('B'+row).getValue();
 GmailApp.sendEmail(destinatario,titulo,cuerpo,{attachments:[documentoPdf]})
 ```
-## Funciones personalizadas en Google Sheets    
+#### Funciones personalizadas en Google Sheets    
 *[Indice](#indice)*   
 
 Las funciones personalizadas pueden ser usadas dentro de las celdas de excel, solo tenemos de ejecutarlas y entregarle los parametros que requiere la funcion, es como ejecutar cualquier funcion mativa de excel. 
@@ -830,7 +831,7 @@ function DOUBLE(x){
 }
 ```
 
-## Bucle FOR Doble sobre un rango de celdas en Google Sheets    
+#### Bucle FOR Doble sobre un rango de celdas en Google Sheets    
 *[Indice](#indice)*   
 - Operar arreglos de datos a partir de estructuras iterativas.
 ```js
@@ -859,7 +860,7 @@ function DoubleArray(datos) {
 } 
 ```
 
-## Bucle FOR IN Doble sobre un rango de celdas    
+#### Bucle FOR IN Doble sobre un rango de celdas    
 *[Indice](#indice)*  
 
 A continuacion se muestra como se puede ejecutar el mimo codigo a partir de un bucle `For In`
@@ -884,7 +885,7 @@ function DoubleArrayForIn(datos) {
   } 
 } 
 ```
-## Bucle FOREACH Doble sobre un rango de celdas    
+#### Bucle FOREACH Doble sobre un rango de celdas    
 *[Indice](#indice)*  
 
 El uso es `ForEach` es mas simplificado de todos los `For` hasta el momento. A continuacion se muetran desde la forma mas larga hasta la mas corta con `arrow functions`.
@@ -968,7 +969,7 @@ function DoubleTotal(datos){
 }
 ```
 
-## Función MAP para manipular matrices y arrays    
+#### Función MAP para manipular matrices y arrays    
 *[Indice](#indice)*  
 
 Funcion que obtiene otra matriz pero utilizando la funcion map.
@@ -994,7 +995,7 @@ function MapTotalArray(datos){
   }
 }
 ```
-## Función REDUCE para analizar matrices y arrays   
+#### Función REDUCE para analizar matrices y arrays   
 *[Indice](#indice)*  
 
 Al aplicar la funcion reduce sobre una matriz el codigo quedaria de la siguiente forma:.
@@ -1006,7 +1007,7 @@ function MapTotalArray(datos){
 }
 ```
 
-## Función FILTER sobre rango de celdas   
+#### Función FILTER sobre rango de celdas   
 *[Indice](#indice)*  
 
 Esta funcion permite aplicar un filtro sobre los datos, es decir reducir el tamaño del arreglo. Si queremos realizar una reduccion de los datos, podemos primero filtart los datos y luego pasarlos a una funcion que haga la reduccion. 
@@ -1022,7 +1023,7 @@ function FilterArray(datos){
 }
 ```
 
-## Funciones con varios parámetros    
+#### Funciones con varios parámetros    
 *[Indice](#indice)* 
 
 La documentacion de una funcion permite al usuario tener mas informacion hacerca de su uso como saber el tipo de dato que debe ingresar. El proceso se debe seguir tal cual como aparece a continuacion. 
@@ -1047,7 +1048,7 @@ function MULTIPLICADOR(datos,multiplicador){
   }
 }
 ``` 
-## Crear Barra lateral en Google Sheets    
+#### Crear Barra lateral en Google Sheets    
 *[Indice](#indice)*   
 
 - [Creacion de Barra Repositorio](https://github.com/aulaenlanube/barra-lateral-estilos-gas)
