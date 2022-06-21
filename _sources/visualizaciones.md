@@ -1,8 +1,9 @@
-# Matplotlib y Seaborn 📊
+## Matplotlib y Seaborn 📊
 
-## [Someone Notes](https://aldeherr.github.io/Seabor_matplotlib/)
+[Someone Notes](https://aldeherr.github.io/Seabor_matplotlib/)
 
-## Matplotlib
+**Matplotlib**        
+
   - [x] [La importancia de la visualización de datos](#la-importancia-de-la-visualización-de-datos)
   - [x] [Subplot](#subplot) 
   - [x] [Método orientado a objetos](#método-orientado-a-objetos) 
@@ -12,7 +13,8 @@
   - [x] [Bar Plot](#bar-plot)
   - [x] [Crear otro tipo de gráficas](#crear-otro-tipo-de-gráficas)
 
-## Seaborn
+**Seaborn**     
+
   - [x] [Set](#set)
   - [x] [Parámetros más usados con Seaborn](#parámetros-más-usados-con-seaborn)
   - [x] [Distribuciones](#distribuciones) 
@@ -21,7 +23,7 @@
   - [x] [Jointplot y Pairplot](#jointplot-y-pairplot)
   - [x] [Heatmap](#heatmap)
 
-## La importancia de la visualización de datos
+### La importancia de la visualización de datos
 
 **Cheatsheets** valiosas
 ![image](https://matplotlib.org/cheatsheets/_images/cheatsheets-1.png)

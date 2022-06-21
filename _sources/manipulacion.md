@@ -1,7 +1,8 @@
 ## Numpy & Pandas 🐼
 Transformacion de Datos con Numpy y Pandas - Carlos Alarcon
 [Funciones Pandas](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html)
-### NumPy
+**NumPy**  
+
 
   - [x] [Numpy Array](#numpy-array)
   - [x] [Tipos de datos](#tipos-de-datos)
@@ -11,8 +12,10 @@ Transformacion de Datos con Numpy y Pandas - Carlos Alarcon
   - [x] [Funciones principales de NumPy](#funciones-principales-de-numpy) 
   - [x] [Copy](#copy)
   - [x] [Condiciones](#condiciones)
-  - [x] [Operaciones](#operaciones)  
-### Pandas
+  - [x] [Operaciones](#operaciones)   
+  
+**Pandas**    
+
   - [x] [Series y DataFrames en Pandas](#series-y-dataframes-en-pandas)
   - [x] [Leer archivos CSV y JSON con Pandas](#leer-archivos-csv-y-json-con-pandas)  
   - [x] [Filtrado con loc y iloc](#filtrado-con-loc-y-iloc)

@@ -3,8 +3,8 @@
 
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/darngcode/some-cookiecutters/main?label=Cookiecutter&logo=Cookiecutter)
 
-Cookiecutters
----
+**Cookiecutters**
+
 This repo encompasses what I think is relevant and good enough to create personal projects as a future data analyst. All the repositories were cloned and saved on my own. Please take them a look if you want to. 
 
 Some links
