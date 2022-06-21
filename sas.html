@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>18. Learning SAS &#8212; Daniel&#39;s Portfolio</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="19. Fundamentos Apps Script👨‍💻" href="googlecode.html" />
+    <link rel="prev" title="10. Estadistica &amp; Probabilidad 🌏" href="stat-probability.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Daniel's Portfolio</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Portfolio &amp; Resume
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Analyst Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dental-office-analysis.html">
+   1. Dental Office 🦷🪥
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eda-wines-template.html">
+   2. Vinho Verde Analysis🚀🪜
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Learning Process
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="manipulacion.html">
+   3. Numpy &amp; Pandas 🐼
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="visualizaciones.html">
+   4. Matplotlib y Seaborn 📊
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="entorno.html">
+   5. Cookiecutters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="stat-probability.html">
+   10. Estadistica &amp; Probabilidad 🌏
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   18. Learning SAS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="googlecode.html">
+   19. Fundamentos Apps Script👨‍💻
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/sas.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/danielnmuner/danielnmuner.github.io"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/danielnmuner/danielnmuner.github.io/issues/new?title=Issue%20on%20page%20%2Fsas.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#environment">
+   18.1. Environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gettin-start">
+   18.2. Gettin Start
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Learning SAS</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#environment">
+   18.1. Environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gettin-start">
+   18.2. Gettin Start
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="learning-sas">
+<h1><span class="section-number">18. </span>Learning SAS<a class="headerlink" href="#learning-sas" title="Permalink to this headline">¶</a></h1>
+<p>Statistical Analysis System</p>
+<div class="section" id="environment">
+<h2><span class="section-number">18.1. </span>Environment<a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h2>
+<p><strong>Menu</strong></p>
+<ul class="simple">
+<li><p><strong>Server Files and Folders</strong></p></li>
+<li><p>Task and Utilities</p></li>
+<li><p>Snippets</p></li>
+<li><p><strong>Libraries</strong></p></li>
+<li><p>File shortcuts</p></li>
+</ul>
+<p><strong>Server Files and Folders</strong>
+Normalmente se deben guardar los archivos en <code class="docutils literal notranslate"><span class="pre">Archivos(Inicio)</span></code>.</p>
+<p><strong>Libraries</strong>
+Es un repositorio de Datos donde podemos asignar permisos basados en roles. Para acceder a los datos indicamos el nombre de la libreria y el nombre del tada set.</p>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="c">/*Nombre del dataset*/</span>
+<span class="kr">data </span>test;
+<span class="c">/*Ruta del dataset en libraries*/</span>
+    <span class="k">set</span> sashelp<span class="m">.</span>airline;
+<span class="c">/*Cada linea finaliza con `;` y los errores de sintaxis no se muestran como tal*/</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<p>Para ejecutar el codigo tenemos que seleccionarlo y luego ejecutarlo, ademas es importante guardarlo en una carpeta en <code class="docutils literal notranslate"><span class="pre">Archivos(Inicio)</span></code>.</p>
+</div>
+<div class="section" id="gettin-start">
+<h2><span class="section-number">18.2. </span>Gettin Start<a class="headerlink" href="#gettin-start" title="Permalink to this headline">¶</a></h2>
+<p>La <code class="docutils literal notranslate"><span class="pre">columnas</span></code> las llamamos <code class="docutils literal notranslate"><span class="pre">Variables</span></code>
+Las <code class="docutils literal notranslate"><span class="pre">filas</span></code> las llamamos <code class="docutils literal notranslate"><span class="pre">Observations</span></code></p>
+<ul class="simple">
+<li><p><strong>Origin Datasets</strong></p>
+<ul>
+<li><p>SAS Data Set are stored in SAS Libraries. Your temp Data Sets are always stored in the <strong>WORK</strong> Library.</p></li>
+</ul>
+</li>
+<li><p><strong>Valores nulos de tipo caracter y numericos</strong></p>
+<ul>
+<li><p>Los caracteres faltantes se identifican con un <code class="docutils literal notranslate"> </code> y los datos numericos faltantes con <code class="docutils literal notranslate"><span class="pre">.</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Tipos de Bloques en SAS</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">data</span> <span class="pre">step</span></code> <em>Crea o modifica datos</em></p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="c">/*Creamos variable o DataFrame*/</span>
+<span class="kr">data </span>airline_create;
+    <span class="k">set</span> sashelp<span class="m">.</span>airline;
+<span class="c">/*Creamos la columna Month la cual es igual al mes de la columna date*/</span>
+    Month = <span class="nb">month(</span>date)<span class="kr">;</span>
+<span class="kr">run;</span>
+<span class="c">/*Procedure step que imprime data que es igual a airline create*/</span>
+<span class="kr">proc print </span>data=airline_create<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<p><strong>Datalines</strong></p>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">data </span>demografic_cols;
+<span class="cm">/*Ademas de $ para indicar que es tipo caracter podemos usar 1-5 rangos para</span>
+<span class="cm">indicar los espacios que pueden ocupar los datos de las filas es como</span>
+<span class="cm">un limitante de carateres y numeros, es util cuando tenemos archivos de</span>
+<span class="cm">texto alineados pero sin limitadores como ; o ,*/</span>
+	<span class="k">input</span> Name $ <span class="m">1-5</span> Age <span class="m">6-8</span> State $ <span class="m">9-11</span> Weight <span class="m">12-15</span>;
+<span class="k">	datalines;</span><span class="x"></span>
+<span class="x">Marie 25 WV 132</span>
+<span class="x">Danie 188 ST 188</span>
+<span class="x">;</span>
+<span class="kr">run;</span>
+
+<span class="kr">proc print </span>data=demografic_cols<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Datalines Archivos separados por espacios</strong></p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">data </span>demografic_cols;
+<span class="c">/*Donde infile recibe la ruta del archivo no delimitado por ; sino por espacios*/</span>
+	<span class="k">infile</span> <span class="s">&#39;path/file.txt&#39;</span>;
+<span class="cm">/*+1 salta una colmna e inicia a partir de la siguiente</span>
+<span class="cm">@18 Indica que iniciara en la columna 18*/</span>
+	<span class="k">input</span> Gender $ <span class="m">1-2</span> <span class="k">Index</span> +<span class="m">1</span> Age $ <span class="m">5-6</span> Ethnicity $ @<span class="m">18</span><span class="kr">;</span>
+<span class="kr">run;</span>
+
+<span class="kr">proc print </span>data=demografic_cols<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Datalines en Fechas</strong></p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">data </span>date_sample;
+<span class="cm">/*El 10. indica el total de caracteres incluyendo `-`</span>
+<span class="cm">si no usamos format obtendremos el valor numerico de la fecha*/</span>
+	<span class="k">format</span> Date_Birth MMDDYY10.;
+	<span class="k">input</span> Name $ Date_Birth MMDDYY10.;
+<span class="k">	Datalines;</span><span class="x"></span>
+<span class="x">Oliver 03-16-1972</span>
+<span class="x">Natalie 12-11-1965</span>
+<span class="x">;</span>
+<span class="kr">run;</span>
+<span class="kr">proc print </span>data=date_sample<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Informats</strong>
+Son usados para leer datos no estandar como:</p></li>
+<li><p>Hyphens</p></li>
+<li><p>Slashes</p></li>
+<li><p>Dollar Sign</p></li>
+<li><p>Percent Sign</p></li>
+<li><p>Commas</p></li>
+<li><p><strong>Data Step</strong>
+Data Statement: Name of the new dataset you want to create and the library you are storing it in
+Set Statement: Name of the old dateset</p></li>
+<li><p><strong>Create a library that already contains SAS datasets</strong></p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">data </span>bweight_kg;
+	<span class="k">set</span> sashelp<span class="m">.</span>bweight;
+<span class="c">/*Creamos la variable Weight_Kg y Domestic_Status*/</span>
+	Weight_Kg = Weight/<span class="m">1000</span>; * division;
+	Domestic_Status =  <span class="s">&quot;International&quot;</span>;*character asignment<span class="kr">;</span>
+<span class="kr">run;</span>
+
+<span class="kr">proc print </span>data=bweight_kg<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Crecion de una Libreria</strong></p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="cm">/*Creacion de una libreria de nombre &#39;mydata&#39;</span>
+<span class="cm">donde la libreria es una instancia de una</span>
+<span class="cm">de carperta en esta caso &#39;bpo2b&#39;*/</span>
+<span class="k">libname</span> mydata <span class="s">&#39;/home/u61609774/bpo2b&#39;</span><span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong><a class="reference external" href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/proc/p0f0fjpjeuco4gn1ri963f683mi4.htm">Proc Means</a></strong>
+Provee estadistica basica para varibles numericas. Si ejecutamos este codigo obtenemos la siguiente tabla.</p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="c">/*Proc means*/</span>
+<span class="kr">data </span>baseball_data;
+	<span class="k">set</span> sashelp<span class="m">.</span>baseball<span class="kr">;</span>
+<span class="kr">run;</span>
+
+<span class="kr">proc print </span>data=baseball_data<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/171197100-e4e2b273-dacf-4bbd-bf7b-a3c4271d99df.png" />
+Si queremos calcular los estadisticos de <code class="docutils literal notranslate"><span class="pre">nHits</span></code> y <code class="docutils literal notranslate"><span class="pre">nRuns</span></code> podemos usar el siguiente codigo:</p>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="c">/*Proc means*/</span>
+<span class="kr">data </span>baseball_data;
+	<span class="k">set</span> sashelp<span class="m">.</span>baseball<span class="kr">;</span>
+<span class="kr">run;</span>
+
+<span class="kr">proc means </span>data=baseball_data;
+<span class="c">/*Indicamos las variables a calcular sus estadisticos*/</span>
+	var nHits nRuns<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/171197810-85789cda-1461-4450-a21f-8a8c2dc929ee.png" /></p>
+<p>A continuacion especificamos que estadisticos necesitamos e incluso crear un nuevo archivo de salida con <code class="docutils literal notranslate"><span class="pre">output</span> <span class="pre">out</span></code></p>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="c">/*Proc means*/</span>
+<span class="kr">data </span>baseball_data;
+	<span class="k">set</span> sashelp<span class="m">.</span>baseball<span class="kr">;</span>
+<span class="kr">run;</span>
+
+<span class="cm">/*Indicamos algunos estadisticos</span>
+<span class="cm">q1: es el quantil minimo</span>
+<span class="cm">maxdec: Decimales maximos</span>
+<span class="cm">nmiss: total nulos</span>
+<span class="cm">n: total datos</span>
+<span class="cm">mean: media</span>
+<span class="cm">median: mediana</span>
+<span class="cm">*/</span>
+<span class="kr">proc means </span>data=baseball_data median q1 maxdec=<span class="m">2</span> nmiss n mean;
+	var nHits nRuns;
+<span class="c">/*output out: Crea un nuevo archivo &#39;baseball_stats&#39; */</span>
+	<span class="k">output</span> <span class="k">out</span> = baseball_stats<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<p>A continuacion usamos <code class="docutils literal notranslate"><span class="pre">Class</span></code> el cual es funciona como un groupby donde podemos calcular estadisticos a partir de la agrupacion de datos categoricos.</p>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="c">/*Proc means*/</span>
+<span class="kr">data </span>baseball_data;
+	<span class="k">set</span> sashelp<span class="m">.</span>baseball<span class="kr">;</span>
+<span class="kr">run;</span>
+
+<span class="kr">proc means </span>data=baseball_data;
+<span class="c">/*Calculamos stats a partir de la agurpacion por `League`*/</span>
+	class League;
+	var nHits nRuns<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/171201706-da1e6ed9-3945-4cc5-a382-feb0e529d4c5.png" /></p>
+<p>Una alternativa a <code class="docutils literal notranslate"><span class="pre">class</span></code> es <code class="docutils literal notranslate"><span class="pre">by</span></code> sin embargo primero debemos hacer un <code class="docutils literal notranslate"><span class="pre">sort</span></code> como se muestra acontinuacion</p>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="c">/*Realizamos un sort de League*/</span>
+<span class="kr">proc sort </span>data=baseball_data <span class="k">out</span>=baseball_sorted;
+	<span class="k">by</span> League<span class="kr">;</span>
+<span class="kr">run;</span>
+
+<span class="cm">/*Ahora si podemos aplicar un by. Al final es lo mismo que class</span>
+<span class="cm">pero class es mas facil y claro*/</span>
+<span class="kr">proc means </span>data=baseball_sorted;
+	<span class="k">by</span> League;
+	var nHits nRuns<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Uso de Where</strong></p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">proc means </span>data=sashelp<span class="m">.</span>baseball;
+<span class="cm">/*Basic stats de la variable nOuts</span>
+<span class="cm">filtrando los datos diferentes a Houston*/</span>
+	var nOuts;
+	<span class="k">where</span> team <span class="k">not</span> = <span class="s">&#39;Houston&#39;</span>;
+<span class="c">/*Nombre de la tabla*/</span>
+	<span class="k">Title</span> <span class="s">&#39;All outs Except Houston&#39;</span><span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Uso de <a class="reference external" href="https://documentation.sas.com/doc/en/pgmsascdc/v_010/procstat/procstat_freq_overview.htm">Table</a></strong>
+Muestra la lista de variables que queremos ver. A continuacion generacion de Tabla de Frecuencias</p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">proc freq </span>data=sashelp<span class="m">.</span>baseball;
+<span class="cm">/*Creamos dos tablas de frecuencias</span>
+<span class="cm">Una para Position y Otra para League*/</span>
+	tables Position League<span class="kr">;	</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/171206660-df790ae5-ab84-454a-84b5-a65b19048a94.png" />
+<img alt="image" src="https://user-images.githubusercontent.com/60556632/171206800-17dee8fe-7c42-44e7-9c7b-6885b573c5bd.png" /></p>
+<p>En caso de querer mover o sacar alguna de las columnas de la tabla de frecuencias solo lo podemos hacer para una tabla de freq no para dos como en el caso anterior.</p>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">proc freq </span>data=sashelp<span class="m">.</span>baseball;
+<span class="c">/*Mover la columna de valores acumulados*/</span>
+	tables Position/NOCUM<span class="kr">;	</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>**Tabulacion de frecuencias transversal a variables categoricas.</p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">proc freq </span>data=sashelp<span class="m">.</span>baseball;
+<span class="c">/*Tabulacion transversal a dos variable categoricas*/</span>
+	tables Position * League<span class="kr">;	</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/171208280-411715b2-4aeb-4fc1-9ab6-af5259b70c3f.png" /></p>
+<ul class="simple">
+<li><p><strong>Formats</strong>
+A continuacion daremos formato a la columna date donde pasaremos de <code class="docutils literal notranslate"><span class="pre">JAN49</span></code> a <code class="docutils literal notranslate"><span class="pre">DD-MM-YYYY</span></code> format.</p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">data </span>airline_data;
+<span class="cm">/*El numero 10. sirve para indicar el total de carateres</span>
+<span class="cm">y DATE es el nombre de la columna*/</span>
+	<span class="k">format</span> DATE MMDDYY10.;
+	<span class="k">set</span> sashelp<span class="m">.</span>airline<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<p>A continuacion podemos ver como convertir una variable numerica en una categorica o viceversa.</p>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">data </span>airline_data;
+	<span class="k">set</span> sashelp<span class="m">.</span>airline;
+<span class="cm">/*put(column_name,format) es importante recordar que los numeros normalemte</span>
+<span class="cm">estan identados a la derecha y los caracteres a la izquierda.</span>
+<span class="cm">$: Indica que es de tipo caracter</span>
+<span class="cm">4:El numero de carateres</span>
+
+<span class="cm">Asi ahora tenemos una nueva columna New_Air con el mismo valor de AIR pero categorico*/</span>
+	New_Air = <span class="k">put</span>(AIR, $<span class="m">4</span>.)<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Proc Format</strong>
+Esta opcion permite reemplazar valores en nuestro dataset.</p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">proc format;</span>
+<span class="cm">/*Creamos una variable gender y agegrp internamente </span>
+<span class="cm">cada una almacena un formato que luego sera asignado a determinada tabla</span>
+<span class="cm">LOW y HIGH son variable internas de SAS*/</span>
+	VALUE $gender <span class="s">&#39;M&#39;</span> = <span class="s">&#39;Male&#39;</span>
+				  <span class="s">&#39;F&#39;</span> = <span class="s">&#39;Female&#39;</span>;
+	VALUE agegrp  LOW - <span class="m">13</span> = <span class="s">&#39;Youth Teen&#39;</span>
+				  <span class="m">14</span> - HIGH = <span class="s">&#39;Mid Teen&#39;</span><span class="kr">;</span>
+<span class="kr">run;</span>
+
+<span class="kr">proc print </span>data=sashelp<span class="m">.</span>class;
+<span class="c">/*Asignamos ageqpr a age y $gender a sex*/</span>
+	<span class="k">format</span> age agegrp. sex $gender.<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/171213744-b3940a27-db5c-4973-af89-9f82e60fc1ee.png" /></p>
+<ul class="simple">
+<li><p><strong>Proc Tabulate</strong>
+Sirve para cruzar variables categoricas y evaluar diferentes paramentros.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Class</span></code> Columns and <code class="docutils literal notranslate"><span class="pre">Table</span></code> Columns</p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="c">/*Por defecto el estadistico es N*/</span>
+<span class="kr">proc tabulate </span>data=sashelp<span class="m">.</span>baseball;
+	class Division;
+	<span class="k">table</span> Division<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/171215805-85b43b72-558d-45b4-b3ba-01b0f988514c.png" /></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Class</span></code> Rows,Columns and <code class="docutils literal notranslate"><span class="pre">Table</span></code> Rows,Columns</p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">proc tabulate </span>data=sashelp<span class="m">.</span>baseball;
+<span class="cm">/*Indicamos Rows and Columsn</span>
+<span class="cm">No olvidar `,` en tables*/</span>
+	class Division League;
+	<span class="k">table</span> Division, League<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/171216571-faedb756-7742-4f12-b7f2-38bcfcb3cd34.png" /></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Class</span></code> Page,Rows,Columns and <code class="docutils literal notranslate"><span class="pre">Table</span></code> Page,Rows,Columns</p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">proc tabulate </span>data=sashelp<span class="m">.</span>baseball;
+<span class="cm">/*Indicamos Page, Rows and Columsn</span>
+<span class="cm">No olvidar `,` en tables</span>
+<span class="cm">Page es el cantida de tablas data una categoria</span>
+<span class="cm">en este caso division solo tiene 2 categorias*/</span>
+	class Division League Team;
+	<span class="k">table</span> Division, League, Team<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/171217411-00e35ef3-104c-458b-a345-76d4c9d710ab.png" /></p>
+<ul class="simple">
+<li><p>Otros estadistico que pueden ser usados en el ejemplo anterior.
+<img alt="image" src="https://user-images.githubusercontent.com/60556632/171218172-c3a9808d-f513-488f-8d27-8c0557599900.png" /></p></li>
+</ul>
+<p>A continuacion se muestra como se pueden agregar estos estadisticos.</p>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">proc tabulate </span>data=sashelp<span class="m">.</span>baseball;
+	class Division League;
+	var nOuts;
+<span class="cm">/*Agrega ALL: Subtotales</span>
+<span class="cm">MEAN: La media de nOuts pero ademas la media de los subtotales de League</span>
+<span class="cm">Importante si table no tiene `,` no se van a separa por filas y columnas*/</span>
+	<span class="k">table</span> Division ALL, MEAN*nOuts*(League ALL)<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/171219483-e1f27ceb-4a69-4009-9cf5-43dad56b6021.png" /></p>
+<ul class="simple">
+<li><p><strong>Proc <a class="reference external" href="https://support.sas.com/resources/papers/proceedings/proceedings/sugi30/259-30.pdf">Report</a></strong></p></li>
+<li><p>Ordenar Ascendentemente</p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">proc report </span>data=sashelp<span class="m">.</span>baseball;
+<span class="c">/*Utiliza la Columna CrHits para ordenar toda la table ascendentemente*/</span>
+	define CrHits / <span class="k">Order</span> <span class="s">&#39;Career Hits Order&#39;</span><span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Agrupar tablas acotadas</p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">proc report </span>data=sashelp<span class="m">.</span>baseball <span class="k">MISSING</span>;
+<span class="c">/*Indica las columnas que queremos tomar a traves de column*/</span>
+	column League Salary;
+<span class="cm">/*Agrupa Salary en funcion de League una variable categorica</span>
+<span class="cm">y suma el total de salario para cada grupo de League*/</span>
+	define League / <span class="k">GROUP</span><span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Agupar tablas acotadas e indicar el estaditico</p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="c">/*MISSING indica que tendremos en cuenta los valores nulos*/</span>
+<span class="kr">proc report </span>data=sashelp<span class="m">.</span>baseball <span class="k">MISSING</span>;
+<span class="c">/*Indica las columnas que queremos tomar a traves de column*/</span>
+	column League Salary;
+<span class="cm">/*Agrupa Salary en funcion de League una variable categorica</span>
+<span class="cm">y suma el total de salario para cada grupo de League*/</span>
+	define League / <span class="k">GROUP</span>;
+<span class="cm">/*Si queremos indicar otro estadistico diferente a `Sum` entonces </span>
+<span class="cm">debemos definir la variable numerica para un estadistico dado*/</span>
+	define Salary / Analysis Mean;
+<span class="c">/*Ahora es stat sera Mean en vez de Sum*/</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>If/Then/Else Statement</strong></p></li>
+<li><p>Condicional Simple</p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">data </span>class_data;
+<span class="c">/*Cantidad maxima de caracteres*/</span>
+	<span class="k">length</span> _Sex $<span class="m">10</span>;
+	<span class="k">set</span> sashelp<span class="m">.</span>class;
+<span class="c">/*Crea una nueva columna con un nuevo nombre*/</span>
+	<span class="k">if</span> Sex = <span class="s">&#39;M&#39;</span> <span class="k">then</span> _Sex = <span class="s">&#39;Male&#39;</span>;
+	<span class="k">else</span> _Sex = <span class="s">&#39;Female&#39;</span><span class="kr">;</span>
+<span class="kr">run;</span>
+
+<span class="kr">proc print </span>data=class_data<span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Condicional compuesto</p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">data </span>class_data;
+	<span class="k">length</span> Fish_Size $<span class="m">10</span>;
+	<span class="k">set</span> sashelp<span class="m">.</span>fish;
+	<span class="k">if</span> Length1 &lt; <span class="m">15</span> <span class="k">then</span> Fish_Size = <span class="s">&#39;Small&#39;</span>;
+	<span class="k">else</span> <span class="k">if</span> Lenght &gt;<span class="m">15</span> <span class="k">and</span> <span class="k">Length</span> &lt; <span class="m">25</span> <span class="k">then</span> Fish_Size = <span class="s">&#39;Medium&#39;</span>;
+	<span class="k">else</span> Fish_Size = <span class="s">&#39;Large&#39;</span><span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Condicional con mas de una accion</p></li>
+</ul>
+<div class="highlight-sas notranslate"><div class="highlight"><pre><span></span><span class="kr">data </span>class_data;
+	<span class="k">length</span> Fish_Size $<span class="m">10</span>;
+	<span class="k">set</span> sashelp<span class="m">.</span>fish;
+	<span class="k">if</span> Length1 &lt; <span class="m">15</span> <span class="k">then</span> <span class="k">Do</span>;
+<span class="c">/*Crear dos columnas en base a un condicional*/</span>
+	Fish_Size = <span class="s">&#39;Small&#39;</span>;
+	Fish_Location = <span class="s">&#39;SaltWater&#39;</span>;
+	<span class="k">end</span><span class="kr">;</span>
+<span class="kr">run;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="stat-probability.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">10. </span>Estadistica &amp; Probabilidad 🌏</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="googlecode.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">19. </span>Fundamentos Apps Script👨‍💻</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By DanielNMuner<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

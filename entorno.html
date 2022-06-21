@@ -1,0 +1,530 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5. Cookiecutters &#8212; Daniel&#39;s Portfolio</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="10. Estadistica &amp; Probabilidad 🌏" href="stat-probability.html" />
+    <link rel="prev" title="4. Matplotlib y Seaborn 📊" href="visualizaciones.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Daniel's Portfolio</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Portfolio &amp; Resume
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Analyst Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dental-office-analysis.html">
+   1. Dental Office 🦷🪥
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eda-wines-template.html">
+   2. Vinho Verde Analysis🚀🪜
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Learning Process
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="manipulacion.html">
+   3. Numpy &amp; Pandas 🐼
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="visualizaciones.html">
+   4. Matplotlib y Seaborn 📊
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   5. Cookiecutters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="stat-probability.html">
+   10. Estadistica &amp; Probabilidad 🌏
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sas.html">
+   18. Learning SAS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="googlecode.html">
+   19. Fundamentos Apps Script👨‍💻
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/entorno.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/danielnmuner/danielnmuner.github.io"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/danielnmuner/danielnmuner.github.io/issues/new?title=Issue%20on%20page%20%2Fentorno.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   5. Cookiecutters
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-links">
+     5.1. Some links
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-directory-and-files-management-programiz">
+   6. Python Directory and Files Management programiz
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#os-module">
+   7. OS Module
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pathlib">
+     7.1. pathlib
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pyfilesystem2">
+     7.2. PyFilesystem2
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pyprojroot-pyhere">
+     7.3. pyprojroot &amp; pyhere
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notebooks-and-scripts-as-a-team">
+   8. Notebooks and Scripts as a team
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-up-project-s-module">
+   9. Set up project’s module
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Cookiecutters</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   5. Cookiecutters
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-links">
+     5.1. Some links
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-directory-and-files-management-programiz">
+   6. Python Directory and Files Management programiz
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#os-module">
+   7. OS Module
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pathlib">
+     7.1. pathlib
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pyfilesystem2">
+     7.2. PyFilesystem2
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pyprojroot-pyhere">
+     7.3. pyprojroot &amp; pyhere
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notebooks-and-scripts-as-a-team">
+   8. Notebooks and Scripts as a team
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#set-up-project-s-module">
+   9. Set up project’s module
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <p>##Entorno de Desarrollo 💻</p>
+<p><img alt="GitHub branch checks state" src="https://img.shields.io/github/checks-status/darngcode/some-cookiecutters/main?label=Cookiecutter&amp;logo=Cookiecutter" /></p>
+<div class="section" id="cookiecutters">
+<h1><span class="section-number">5. </span>Cookiecutters<a class="headerlink" href="#cookiecutters" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<p>This repo encompasses what I think is relevant and good enough to create personal projects as a future data analyst. All the repositories were cloned and saved on my own. Please take them a look if you want to.</p>
+<div class="section" id="some-links">
+<h2><span class="section-number">5.1. </span>Some links<a class="headerlink" href="#some-links" title="Permalink to this headline">¶</a></h2>
+<p>Here are the links to go through and sure their amazing authors.</p>
+<ol class="simple">
+<li><p><a class="reference external" href="https://github.com/balechon/cookiecutter-Data_Analysis">balechon</a></p></li>
+<li><p><a class="reference external" href="https://github.com/jvelezmagic/cookiecutter-conda-data-science">jvelezmagic</a></p></li>
+<li><p><a class="reference external" href="https://github.com/drivendata/cookiecutter-data-science">pjbull</a></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="python-directory-and-files-management-programiz">
+<h1><span class="section-number">6. </span>Python Directory and Files Management <a class="reference external" href="https://www.programiz.com/python-programming/directory">programiz</a><a class="headerlink" href="#python-directory-and-files-management-programiz" title="Permalink to this headline">¶</a></h1>
+</div>
+<hr class="docutils" />
+<div class="section" id="os-module">
+<h1><span class="section-number">7. </span>OS Module<a class="headerlink" href="#os-module" title="Permalink to this headline">¶</a></h1>
+<p>This package abstracts the functionalities of the platform and provides the python functions to navigate, create, delete and modify files and folders. “<a class="reference external" href="https://stackabuse.com/introduction-to-python-os-module/">stackabuse</a>”</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Import OS module<br />
+<code class="docutils literal notranslate"> <span class="pre">import</span> <span class="pre">os</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> State variables
+<code class="docutils literal notranslate"><span class="pre">CURRENT_DIR</span> <span class="pre">=</span> <span class="pre">os.getcwd()</span></code> Current location<br />
+<code class="docutils literal notranslate"><span class="pre">DATA_DIR=os.path.join(CURRENT_DIR,os.pardir,'data','raw')</span> </code> os.path.join allow us to join all arguments on that function.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Confirm <code class="docutils literal notranslate"><span class="pre">DATA_DIR</span></code> exist.<br />
+<code class="docutils literal notranslate"><span class="pre">os.path.exists(DATA_DIR)</span></code></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Iterate over <code class="docutils literal notranslate"><span class="pre">DATA_DIR</span></code> using the next code<br />
+<code class="docutils literal notranslate"><span class="pre">[os.path.join(DATA_DIR,item)</span> <span class="pre">for</span> <span class="pre">item</span> <span class="pre">in</span> <span class="pre">os.listdir(DATA_DIR)]</span></code> The function <code class="docutils literal notranslate"><span class="pre">listdir()</span></code> turn <code class="docutils literal notranslate"><span class="pre">DATA_DIR</span></code> into a iterable.</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Create a folder using <code class="docutils literal notranslate"><span class="pre">os.mkdir()</span></code> function.<br />
+<code class="docutils literal notranslate"><span class="pre">os.mkdir(os.path.join(CURRENT_DIR,'folder_name'))</span></code> In doing so we can create the folder in that especific path.</p></li>
+</ul>
+<div class="section" id="pathlib">
+<h2><span class="section-number">7.1. </span>pathlib<a class="headerlink" href="#pathlib" title="Permalink to this headline">¶</a></h2>
+<p>As an alternative, we can use the pathlib module that’s easier to implement than the os module.</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> import pathlib</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pathlib</span>
+<span class="n">CURRENT_DIR</span> <span class="o">=</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span><span class="p">()</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
+<span class="n">DATA_DIR</span> <span class="o">=</span> <span class="n">CURRENT_DIR</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">joinpath</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Functions like <code class="docutils literal notranslate"><span class="pre">Path()</span></code> abstract the O.S. path structure and will use <code class="docutils literal notranslate"><span class="pre">/</span></code> or <code class="docutils literal notranslate"><span class="pre">\</span></code> depending on. <code class="docutils literal notranslate"><span class="pre">resolve()</span></code> is a linux function that displays the path to get to current directory. Finally <code class="docutils literal notranslate"><span class="pre">parent</span></code> and <code class="docutils literal notranslate"><span class="pre">joinpath</span></code> to bring certain path.</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Creating a folder with pathlib differs from the os module.  Here is the right way with pathlib.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"> <span class="pre">DATA_DIR.joinpath('pathlib').mkdir()</span></code> Instead of specifying the path and file or folder name within the <code class="docutils literal notranslate"><span class="pre">mkdir()</span></code> function we’ll define it before the function.</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> List specific files based on a pattern or wildcards
+<code class="docutils literal notranslate"><span class="pre">list(DATA_DIR.glob(&quot;.git*&quot;))</span></code> Globbing is mainly used to match filenames or searching for content in a file. Globbing uses wildcard characters to create the pattern <a class="reference external" href="https://linuxhint.com/bash_globbing_tutorial/">linuxhint</a></p></li>
+</ul>
+</div>
+<div class="section" id="pyfilesystem2">
+<h2><span class="section-number">7.2. </span>PyFilesystem2<a class="headerlink" href="#pyfilesystem2" title="Permalink to this headline">¶</a></h2>
+<p>PyFilesystem2 stand out from previous modules given that whenever we arrange a path we’ll just use <code class="docutils literal notranslate"><span class="pre">/</span></code> separately from the O.S. for instance <code class="docutils literal notranslate"><span class="pre">DATA_DIR</span> <span class="pre">=</span> <span class="pre">fs</span> <span class="pre">.open_fs('../data/raw/')</span></code>
+It generally resemble to prior modules when it comes to the basic functionalities.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">fs</span>
+<span class="c1"># Open current directory</span>
+<span class="n">CURRENT_DIR</span><span class="o">=</span><span class="n">fs</span><span class="o">.</span><span class="n">open_fs</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+<span class="c1">#Previous function will return a OSFS object so it&#39;s no longer a simple str</span>
+</pre></div>
+</div>
+<p>Now if you want to iterate over pathname we can use the next function <code class="docutils literal notranslate"> <span class="pre">walk.files()</span></code> as shown below.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">DATA_DIR</span><span class="o">.</span><span class="n">walk</span><span class="o">.</span><span class="n">files</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pyprojroot-pyhere">
+<h2><span class="section-number">7.3. </span>pyprojroot &amp; pyhere<a class="headerlink" href="#pyprojroot-pyhere" title="Permalink to this headline">¶</a></h2>
+<p>Pyprojroot and Pyhere are modules that allow us to set up a root on a fixed folder in that way we say that the path become a relative path since it has been picked up on purpose.</p>
+<p><code class="docutils literal notranslate"> <span class="pre">import</span> <span class="pre">pyprojroot</span></code> to Find relative paths from a project root directory <a class="reference external" href="https://github.com/chendaniely/pyprojroot/blob/master/README.md">chendaniely</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">pyprojroot</span></code> finds the root working directory for your project as a pathlib object. You can now use the here function to pass in a relative path from the project root directory (no matter what working directory you are in the project), and you will get a full path to the specified file. That is, in a jupyter notebook, you can write something like <code class="docutils literal notranslate"><span class="pre">pandas.read_csv(here('./data/my_data.csv'))</span></code> instead of <code class="docutils literal notranslate"><span class="pre">pandas.read_csv('../data/my_data.csv')</span></code>. This allows you to restructure the files in your project without having to worry about changing file paths.</p>
+</div>
+</div>
+<div class="section" id="notebooks-and-scripts-as-a-team">
+<h1><span class="section-number">8. </span>Notebooks and Scripts as a team<a class="headerlink" href="#notebooks-and-scripts-as-a-team" title="Permalink to this headline">¶</a></h1>
+<p><strong>Note: The following sections assume you are located in your conda environment.</strong></p>
+</div>
+<div class="section" id="set-up-project-s-module">
+<h1><span class="section-number">9. </span>Set up project’s module<a class="headerlink" href="#set-up-project-s-module" title="Permalink to this headline">¶</a></h1>
+<p>To move beyond notebook prototyping, all reusable code should go into the <code class="docutils literal notranslate"><span class="pre">nice_environment/</span></code> folder package. To use that package inside your project, install the project’s module in editable mode, so you can edit files in the <code class="docutils literal notranslate"><span class="pre">nice_environment</span></code> folder and use the modules inside your notebooks :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install --editable .
+</pre></div>
+</div>
+<p>To use the module inside your notebooks, add <code class="docutils literal notranslate"><span class="pre">%autoreload</span></code> at the top of your notebook :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">load_ext</span> <span class="n">autoreload</span>
+<span class="o">%</span><span class="n">autoreload</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Example of module usage where data_dir() is a function created within <code class="docutils literal notranslate"><span class="pre">nice_environment/</span></code> so any function can be called from my notebooks, making sure previous recomendations were followed.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nice_environment.utils.paths</span> <span class="kn">import</span> <span class="n">data_dir</span>
+<span class="n">data_dir</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="visualizaciones.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Matplotlib y Seaborn 📊</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="stat-probability.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Estadistica &amp; Probabilidad 🌏</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By DanielNMuner<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

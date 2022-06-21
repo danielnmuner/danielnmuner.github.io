@@ -1,0 +1,1378 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. Matplotlib y Seaborn 📊 &#8212; Daniel&#39;s Portfolio</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5. Cookiecutters" href="entorno.html" />
+    <link rel="prev" title="3. Numpy &amp; Pandas 🐼" href="manipulacion.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Daniel's Portfolio</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Portfolio &amp; Resume
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Analyst Projects
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dental-office-analysis.html">
+   1. Dental Office 🦷🪥
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eda-wines-template.html">
+   2. Vinho Verde Analysis🚀🪜
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Learning Process
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="manipulacion.html">
+   3. Numpy &amp; Pandas 🐼
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. Matplotlib y Seaborn 📊
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="entorno.html">
+   5. Cookiecutters
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="stat-probability.html">
+   10. Estadistica &amp; Probabilidad 🌏
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sas.html">
+   18. Learning SAS
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="googlecode.html">
+   19. Fundamentos Apps Script👨‍💻
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/visualizaciones.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/danielnmuner/danielnmuner.github.io"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/danielnmuner/danielnmuner.github.io/issues/new?title=Issue%20on%20page%20%2Fvisualizaciones.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#someone-notes">
+   4.1. Someone Notes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matplotlib">
+   4.2. Matplotlib
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#seaborn">
+   4.3. Seaborn
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-importancia-de-la-visualizacion-de-datos">
+   4.4. La importancia de la visualización de datos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pyplot-basico-funciones">
+   4.5. Pyplot básico Funciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subplot">
+     4.5.1. Subplot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodo-orientado-a-objetos">
+     4.5.2. Método orientado a objetos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subplots">
+     4.5.3. Subplots
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#leyendas-etiquetas-titulos-tamano">
+     4.5.4. Leyendas, etiquetas, títulos, tamaño
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#colores-y-estilos">
+     4.5.5. Colores y estilos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bar-plot">
+     4.5.6. Bar Plot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-otro-tipo-de-graficas">
+     4.5.7. Crear otro tipo de gráficas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     4.5.8. Seaborn
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set">
+     4.5.9. Set
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametros-mas-usados-con-seaborn">
+     4.5.10. Parámetros más usados con Seaborn
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distribuciones">
+     4.5.11. Distribuciones
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#categoricos">
+     4.5.12. Categóricos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#archivos-de-la-clase">
+     4.5.13. Archivos de la clase
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jointplot-y-pairplot">
+     4.5.14. Jointplot y Pairplot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#heatmap">
+     4.5.15. Heatmap
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Matplotlib y Seaborn 📊</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#someone-notes">
+   4.1. Someone Notes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#matplotlib">
+   4.2. Matplotlib
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#seaborn">
+   4.3. Seaborn
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-importancia-de-la-visualizacion-de-datos">
+   4.4. La importancia de la visualización de datos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pyplot-basico-funciones">
+   4.5. Pyplot básico Funciones
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subplot">
+     4.5.1. Subplot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#metodo-orientado-a-objetos">
+     4.5.2. Método orientado a objetos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#subplots">
+     4.5.3. Subplots
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#leyendas-etiquetas-titulos-tamano">
+     4.5.4. Leyendas, etiquetas, títulos, tamaño
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#colores-y-estilos">
+     4.5.5. Colores y estilos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bar-plot">
+     4.5.6. Bar Plot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#crear-otro-tipo-de-graficas">
+     4.5.7. Crear otro tipo de gráficas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     4.5.8. Seaborn
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set">
+     4.5.9. Set
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parametros-mas-usados-con-seaborn">
+     4.5.10. Parámetros más usados con Seaborn
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distribuciones">
+     4.5.11. Distribuciones
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#categoricos">
+     4.5.12. Categóricos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#archivos-de-la-clase">
+     4.5.13. Archivos de la clase
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#jointplot-y-pairplot">
+     4.5.14. Jointplot y Pairplot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#heatmap">
+     4.5.15. Heatmap
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="matplotlib-y-seaborn">
+<h1><span class="section-number">4. </span>Matplotlib y Seaborn 📊<a class="headerlink" href="#matplotlib-y-seaborn" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="someone-notes">
+<h2><span class="section-number">4.1. </span><a class="reference external" href="https://aldeherr.github.io/Seabor_matplotlib/">Someone Notes</a><a class="headerlink" href="#someone-notes" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="matplotlib">
+<h2><span class="section-number">4.2. </span>Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this headline">¶</a></h2>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#la-importancia-de-la-visualizaci%C3%B3n-de-datos">La importancia de la visualización de datos</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#subplot">Subplot</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#m%C3%A9todo-orientado-a-objetos">Método orientado a objetos</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#subplots">Subplots</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#leyendas-,-etiquetas-,-t%C3%ADtulos-,-tama%C3%B1o">Leyendas, etiquetas, títulos, tamaño</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#colores-y-estilos">Colores y estilos</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#bar-plot">Bar Plot</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#crear-otro-tipo-de-gr%C3%A1ficas">Crear otro tipo de gráficas</a></p></li>
+</ul>
+</div>
+<div class="section" id="seaborn">
+<h2><span class="section-number">4.3. </span>Seaborn<a class="headerlink" href="#seaborn" title="Permalink to this headline">¶</a></h2>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#set">Set</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#par%C3%A1metros-m%C3%A1s-usados-con-seaborn">Parámetros más usados con Seaborn</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#distribuciones">Distribuciones</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#categ%C3%B3ricos">Categóricos</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#archivos-de-la-clase">Archivos de la clase</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#jointplot-y-pairplot">Jointplot y Pairplot</a></p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> <a class="reference external" href="#heatmap">Heatmap</a></p></li>
+</ul>
+</div>
+<div class="section" id="la-importancia-de-la-visualizacion-de-datos">
+<h2><span class="section-number">4.4. </span>La importancia de la visualización de datos<a class="headerlink" href="#la-importancia-de-la-visualizacion-de-datos" title="Permalink to this headline">¶</a></h2>
+<p><strong>Cheatsheets</strong> valiosas
+<img alt="image" src="https://matplotlib.org/cheatsheets/_images/cheatsheets-1.png" />
+<img alt="image" src="https://matplotlib.org/cheatsheets/_images/handout-beginner.png" />
+<img alt="image" src="https://matplotlib.org/cheatsheets/_images/handout-intermediate.png" />
+<img alt="image" src="https://matplotlib.org/cheatsheets/_images/cheatsheets-2.png" />
+<img alt="image" src="https://matplotlib.org/cheatsheets/_images/handout-tips.png" /></p>
+</div>
+<div class="section" id="pyplot-basico-funciones">
+<h2><span class="section-number">4.5. </span>Pyplot básico <a class="reference external" href="https://matplotlib.org/stable/plot_types/basic/plot.html">Funciones</a><a class="headerlink" href="#pyplot-basico-funciones" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Importamos la libreria de Matplotlib</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#Creamos un array con linspace el cual particiona un rango</span>
+<span class="c1">#en este caso 0 a 5 en 11 partes iguales</span>
+<span class="n">x</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="c1">#Funcion cuadratica</span>
+
+<span class="c1">#Definine los ejes X, Y con plot(X,Y), ademas de formato con &#39;bs-&#39;</span>
+<span class="c1">#Ejemplo: plot(x,y,&#39;color,string,tipo_linea&#39;) </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;bs-&#39;</span><span class="p">)</span>
+<span class="c1">#Para que se muestre la grafica usamos:</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165412747-d3cbe9ae-5584-4d84-b313-c318924dfeff.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Graficar X en un histograma cambiando &#39;plot&#39; por &#39;hist&#39;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="c1">#plt.pie(x) Grafico de pastel</span>
+<span class="c1">#plt.scatter(x,y) Grafico de correlacion</span>
+<span class="c1">#plt.boxplot(x) Grafico de cajas</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165412773-5d6479fe-0707-439f-b309-46cbddf0257e.png" /></p>
+<p>Fomato en Graficas con Matplotlib.pyplot</p>
+<p><strong>Formatos de Strings</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>character</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘.’</p></td>
+<td><p>point marker</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘,’</p></td>
+<td><p>pixel marker</p></td>
+</tr>
+<tr class="row-even"><td><p>‘o’</p></td>
+<td><p>circle marker</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘v’</p></td>
+<td><p>triangle_down marker</p></td>
+</tr>
+<tr class="row-even"><td><p>‘^’</p></td>
+<td><p>triangle_up marker</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘&lt;’</p></td>
+<td><p>triangle_left marker</p></td>
+</tr>
+<tr class="row-even"><td><p>‘&gt;’</p></td>
+<td><p>triangle_right marker</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘1’</p></td>
+<td><p>tri_down marker</p></td>
+</tr>
+<tr class="row-even"><td><p>‘2’</p></td>
+<td><p>tri_up marker</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘3’</p></td>
+<td><p>tri_left marker</p></td>
+</tr>
+<tr class="row-even"><td><p>‘4’</p></td>
+<td><p>tri_right marker</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘8’</p></td>
+<td><p>octagon marker</p></td>
+</tr>
+<tr class="row-even"><td><p>‘s’</p></td>
+<td><p>square marker</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘p’</p></td>
+<td><p>pentagon marker</p></td>
+</tr>
+<tr class="row-even"><td><p>‘P’</p></td>
+<td><p>plus (filled) marker</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘*’</p></td>
+<td><p>star marker</p></td>
+</tr>
+<tr class="row-even"><td><p>‘h’</p></td>
+<td><p>hexagon1 marker</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘H’</p></td>
+<td><p>hexagon2 marker</p></td>
+</tr>
+<tr class="row-even"><td><p>‘+’</p></td>
+<td><p>plus marker</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘x’</p></td>
+<td><p>x marker</p></td>
+</tr>
+<tr class="row-even"><td><p>‘X’</p></td>
+<td><p>x (filled) marker</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘D’</p></td>
+<td><p>diamond marker</p></td>
+</tr>
+<tr class="row-even"><td><p>‘d’</p></td>
+<td><p>thin_diamond marker</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘</p></td>
+<td><p>’</p></td>
+</tr>
+<tr class="row-even"><td><p>‘_’</p></td>
+<td><p>hline marker</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Tipos de Lineas</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>character</p></th>
+<th class="head"><p>description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘-’</p></td>
+<td><p>solid line style</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘–’</p></td>
+<td><p>dashed line style</p></td>
+</tr>
+<tr class="row-even"><td><p>‘-.’</p></td>
+<td><p>dash-dot line style</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘:’</p></td>
+<td><p>dotted line style</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Colores</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>character</p></th>
+<th class="head"><p>color</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>‘b’</p></td>
+<td><p>blue</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘g’</p></td>
+<td><p>green</p></td>
+</tr>
+<tr class="row-even"><td><p>‘r’</p></td>
+<td><p>red</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘c’</p></td>
+<td><p>cyan</p></td>
+</tr>
+<tr class="row-even"><td><p>‘m’</p></td>
+<td><p>magenta</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘y’</p></td>
+<td><p>yellow</p></td>
+</tr>
+<tr class="row-even"><td><p>‘k’</p></td>
+<td><p>black</p></td>
+</tr>
+<tr class="row-odd"><td><p>‘w’</p></td>
+<td><p>white</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="subplot">
+<h3><span class="section-number">4.5.1. </span>Subplot<a class="headerlink" href="#subplot" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Subplot es una herramienta que nos permite colocar varios graficos</span>
+<span class="c1">#Creamos un array usando numpy</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="c1">#subplot de 1 row X 2 cols luego son dos graficos</span>
+<span class="c1">#por tanto de indica en el 3er arg si es el 1 o el 2</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#1er Grafico dos en uno</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;g--&#39;</span><span class="p">)</span> <span class="c1">#Relacion X,Y</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;g--&#39;</span><span class="p">)</span> <span class="c1">#Relacion Y,X</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#2er Grafico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="c1"># Histograma de Y</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165413712-eeed0c98-e751-4307-9af6-f708990ad75e.png" /></p>
+</div>
+<div class="section" id="metodo-orientado-a-objetos">
+<h3><span class="section-number">4.5.2. </span>Método orientado a objetos<a class="headerlink" href="#metodo-orientado-a-objetos" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Object Oriented</span>
+<span class="c1"># - Requiere mas codigo pero vale la pena</span>
+<span class="c1"># - Mayor personalizacion</span>
+<span class="c1"># - Mas amigable a mulipple graficos</span>
+<span class="c1"># - Mas codigo</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="c1">#Creamos el objeto fig. El metodo figure() es el liezo</span>
+<span class="c1">#donde van las graficas</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+
+<span class="c1">#Definimos las dimenciones y posicion del Lienzo de cada grafico</span>
+<span class="c1">#add_axes([pos_x,pos_y,len_x,len_y])</span>
+
+<span class="n">axes</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.9</span><span class="p">])</span>
+<span class="n">axes2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.55</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.3</span><span class="p">])</span>
+
+<span class="c1">#Graficamos axes como objetos independientes</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">axes2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+
+<span class="c1">#Mostrar objeto fig o lienzos</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165430699-726c10ef-d88b-4a94-8f71-2361f69f8c24.png" /></p>
+<p><strong>Partes de Fig</strong>
+<img alt="image" src="https://user-images.githubusercontent.com/60556632/165423223-c5e00e5a-40c7-4a99-b286-6bcb1666e690.png" /></p>
+</div>
+<div class="section" id="subplots">
+<h3><span class="section-number">4.5.3. </span>Subplots<a class="headerlink" href="#subplots" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Object Oriented</span>
+<span class="c1"># - Requiere mas codigo pero vale la pena</span>
+<span class="c1"># - Mayor personalizacion</span>
+<span class="c1"># - Mas amigable a mulipple graficos</span>
+<span class="c1"># - Mas codigo</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1">#Definimos objetos fig y axes, en otras palabras</span>
+<span class="c1">#crear el lienzo para luego graficar 1 row X 2 cols</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#Diferente de Subplot</span>
+
+<span class="c1">#Primer grafico en la posicion [0]</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="c1">#Primer grafico en la posicion [1]</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165432534-4d5087e2-0b85-4c32-bd1f-fcce39f336bc.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Como la salida es un array entonces podemos definir</span>
+<span class="c1">#previamente el nombre de los axes en vez de usar posiciones </span>
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span> <span class="c1">#Diferente de Subplot</span>
+
+<span class="c1">#Exactamente igual al grafico anterior, a esto nos referimos </span>
+<span class="c1">#con orientado a objetos independientes</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165432534-4d5087e2-0b85-4c32-bd1f-fcce39f336bc.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Si creamos un lienzo de tipo matricial</span>
+<span class="c1">#axes se debe indicar la posicion a menos que </span>
+<span class="c1">#(ax1,ax2,ax3,ax4)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">#Indicamos la posicion de acada axes.</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;m&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+
+<span class="c1">#Controla el padding entre bordes de los figs</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165432624-fd644ed8-d707-4c18-9ba5-e06e4fb0e24b.png" /></p>
+</div>
+<div class="section" id="leyendas-etiquetas-titulos-tamano">
+<h3><span class="section-number">4.5.4. </span>Leyendas, etiquetas, títulos, tamaño<a class="headerlink" href="#leyendas-etiquetas-titulos-tamano" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#A continuacion le daremos mas contexto a los graficos</span>
+<span class="c1">#Creamos objetos fig y axes</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1">#Cambiamos el tamaño todo el Lienzo conÑ </span>
+<span class="c1">#figsize=(len_x,len_y)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="c1">#Titulo axes[0]</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Relacion_X Y&#39;</span><span class="p">)</span>
+<span class="c1">#Ejes</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Axis X&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Axis Y&#39;</span><span class="p">)</span>
+<span class="c1">#Etiquetamos dentro de &#39;plot&#39; y con lenged</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$sin(x)$&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1">#Titulo axes[1]</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Relacion_Y X&#39;</span><span class="p">)</span>
+<span class="c1">#Ejes</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Axis Y&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Axis X&#39;</span><span class="p">)</span>
+<span class="c1">#Etiquetamos dentro de &#39;plot&#39; y con lenged</span>
+<span class="c1">#dentro del signo $$ podemos colocar notacion matematica</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;$sin(y)$&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="c1">#Controla el padding entre bordes de los axes</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165434284-1c7236d7-6552-4e34-9005-c44750f16a3f.png" /></p>
+<p><strong>Aporte de Platzi</strong>
+<img alt="image" src="https://user-images.githubusercontent.com/60556632/165434546-efb4131e-d310-4e97-b8fa-f292c38f53ea.png" /></p>
+</div>
+<div class="section" id="colores-y-estilos">
+<h3><span class="section-number">4.5.5. </span>Colores y estilos<a class="headerlink" href="#colores-y-estilos" title="Permalink to this headline">¶</a></h3>
+<p><strong><a class="reference external" href="https://matplotlib.org/3.5.1/tutorials/colors/colors.html">Estilos de Linea</a></strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Colores y estilos</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+
+<span class="c1">#Mostrar en pantalla los estilos con lo que </span>
+<span class="c1">#puedo trabajar</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">available</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Solarize_Light2&#39;</span><span class="p">,</span> <span class="s1">&#39;_classic_test_patch&#39;</span><span class="p">,</span> <span class="s1">&#39;bmh&#39;</span><span class="p">,</span> <span class="s1">&#39;classic&#39;</span><span class="p">,</span> <span class="s1">&#39;dark_background&#39;</span><span class="p">,</span> <span class="s1">&#39;fast&#39;</span><span class="p">,</span> <span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">,</span> <span class="s1">&#39;ggplot&#39;</span><span class="p">,</span> <span class="s1">&#39;grayscale&#39;</span><span class="p">,</span> <span class="s1">&#39;seaborn&#39;</span><span class="p">,</span> <span class="s1">&#39;seaborn-bright&#39;</span><span class="p">,</span> <span class="s1">&#39;seaborn-colorblind&#39;</span><span class="p">,</span> <span class="s1">&#39;seaborn-dark&#39;</span><span class="p">,</span> <span class="s1">&#39;seaborn-dark-palette&#39;</span><span class="p">,</span> <span class="s1">&#39;seaborn-darkgrid&#39;</span><span class="p">,</span> <span class="s1">&#39;seaborn-deep&#39;</span><span class="p">,</span> <span class="s1">&#39;seaborn-muted&#39;</span><span class="p">,</span> <span class="s1">&#39;seaborn-notebook&#39;</span><span class="p">,</span> <span class="s1">&#39;seaborn-paper&#39;</span><span class="p">,</span> <span class="s1">&#39;seaborn-pastel&#39;</span><span class="p">,</span> <span class="s1">&#39;seaborn-poster&#39;</span><span class="p">,</span> <span class="s1">&#39;seaborn-talk&#39;</span><span class="p">,</span> <span class="s1">&#39;seaborn-ticks&#39;</span><span class="p">,</span> <span class="s1">&#39;seaborn-white&#39;</span><span class="p">,</span> <span class="s1">&#39;seaborn-whitegrid&#39;</span><span class="p">,</span> <span class="s1">&#39;tableau-colorblind10&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Creamos un plot y aplicamos alguno de los stilos</span>
+<span class="c1">#en plt.style.available de la siguiente forma:</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="c1">#Finalmente graficamos con mas stilos:</span>
+<span class="c1">#Opcionalmente a &#39;g2-&#39; esta por separado:</span>
+
+<span class="c1">#color=&#39;#66ffc4&#39;</span>
+<span class="c1">#marker=&#39;0&#39;, markersize=10, markerfacecolor=&#39;#66ffc4&#39;</span>
+<span class="c1">#linestyle=&#39;--&#39;</span>
+
+<span class="c1">#linewidth=1.0</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;m3--&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span><span class="n">markerfacecolor</span><span class="o">=</span><span class="s1">&#39;#ffffff&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;g2-&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;bo:&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165532044-087f4af6-1c72-43fc-8070-1c5d650ee333.png" /></p>
+</div>
+<div class="section" id="bar-plot">
+<h3><span class="section-number">4.5.6. </span>Bar Plot<a class="headerlink" href="#bar-plot" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Los graficos de barras nos permiten </span>
+<span class="c1">#graficar variables categoricas</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#Creamos una lista de Pises y de poblacion</span>
+<span class="n">country</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Colombia&#39;</span><span class="p">,</span><span class="s1">&#39;Usa&#39;</span><span class="p">,</span><span class="s1">&#39;España&#39;</span><span class="p">,</span><span class="s1">&#39;Alemania&#39;</span><span class="p">,</span> <span class="s1">&#39;Corea&#39;</span><span class="p">]</span>
+<span class="n">population</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1000</span><span class="p">,</span><span class="mi">800</span><span class="p">,</span><span class="mi">900</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">300</span><span class="p">]</span>
+
+<span class="c1">#En X van la variables categoricas</span>
+<span class="c1">#width=0.5 ancho de las barras</span>
+<span class="c1">#color=[&#39;#ffffff&#39;,&#39;r&#39;], icluso color por cada barra.</span>
+<span class="c1">#plt.xticks permite modificar etiquetas eje X y rotation</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">country</span><span class="p">,</span><span class="n">population</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#34ffff&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">),(</span><span class="s1">&#39;Colombia&#39;</span><span class="p">,</span><span class="s1">&#39;Usa&#39;</span><span class="p">,</span><span class="s1">&#39;España&#39;</span><span class="p">,</span><span class="s1">&#39;Alemania&#39;</span><span class="p">,</span> <span class="s1">&#39;Corea&#39;</span><span class="p">),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165535022-8882948c-5f62-4d32-8e52-1bd0657853c0.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Posicionar la barras horizontalmente</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">country</span><span class="p">,</span><span class="n">population</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165535138-28ef3588-d754-4b63-8294-1006cf284945.png" /></p>
+</div>
+<div class="section" id="crear-otro-tipo-de-graficas">
+<h3><span class="section-number">4.5.7. </span>Crear otro tipo de gráficas<a class="headerlink" href="#crear-otro-tipo-de-graficas" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1">#Creamos un array a partir de valores aleatorios</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array</span><span class="p">([</span><span class="mi">23</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span>
+       <span class="mi">12</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span>
+       <span class="mi">43</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>
+       <span class="mi">20</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">49</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span>
+       <span class="mi">19</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span>
+       <span class="mi">40</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span>  <span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Graficar la distribucion de los datos a partir</span>
+<span class="c1">#un hisgrama, donde podemos configurar los bins</span>
+
+<span class="c1">#histtype=&#39;step&#39; tipo linea</span>
+<span class="c1">#histtype=&#39;bar&#39; tipo barra</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">histtype</span><span class="o">=</span><span class="s1">&#39;step&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165766792-0f448f14-0b18-40cd-8e83-eff80d621a0e.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Boxplot, indica Rango Intercuartil</span>
+<span class="c1">#y los diferente quantiles 0.25 0.50 0.75</span>
+
+<span class="c1">#vert=False cambia de vertical a horizontal</span>
+<span class="c1">#patch_artist=True agrega color a la caja</span>
+<span class="c1">#notch=True enfoca mejor la media de la caja</span>
+<span class="c1">#showliers=True, Muestra outlyers con False los saca del diagrama</span>
+
+<span class="c1">#Añadimos outlyers a la distribucion:</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">,(</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">150</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">vert</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">patch_artist</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">notch</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">showfliers</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165766867-41aa20bf-4999-4f4a-88e6-5767b58d0d02.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Grafico de dispersion</span>
+<span class="c1">#Creamos una varible no importa su valor.</span>
+<span class="n">N</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="c1">#Definimos los valores de X, Y</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+
+<span class="c1">#Area indica la frecuencia con la que ocurre la relacion X,Y</span>
+<span class="n">area</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">))</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="c1">#Color indica la categoria a la que pertenece cada realacion X,Y</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+
+<span class="c1">#Graficamos la relacion y ademas indicamos añadimos mas informacion </span>
+<span class="c1">#indicando:</span>
+<span class="c1">#s=area, frecuencia de la relacion</span>
+<span class="c1">#c = colors, categoria a la que pertenece la relacion  </span>
+<span class="c1">#marker=&#39;o&#39;, estilo de forma, como poligono, estrella, etc..</span>
+<span class="c1">#alpha = 0.5, le da opacidad al grafico</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="n">area</span><span class="p">,</span><span class="n">c</span> <span class="o">=</span> <span class="n">colors</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165766987-840024ce-3095-414c-8b6c-878c7bcfa6bd.png" /></p>
+</div>
+<div class="section" id="id1">
+<h3><span class="section-number">4.5.8. </span>Seaborn<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Seaborn esta construido sobre matplotlib, hay que tener en cuenta que matpotlib esta optimizado para numpy, sin embargo, seaborn esta optimizado para pandas. Cada grafica resuelve diferentes tipos de problemas:</p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165772950-1aaa09ac-fb16-4634-b8f9-fece486cd137.png" /></p>
+</div>
+<div class="section" id="set">
+<h3><span class="section-number">4.5.9. </span>Set<a class="headerlink" href="#set" title="Permalink to this headline">¶</a></h3>
+<p>A traves de <code class="docutils literal notranslate"><span class="pre">set</span></code> podemos modificar varios paramentros en cuanto al estilo, tener en cuenta la documentacion: <a class="reference external" href="https://seaborn.pydata.org/generated/seaborn.set_theme.html#seaborn.set_theme">set_theme</a>, <a class="reference external" href="https://seaborn.pydata.org/generated/seaborn.color_palette.html#seaborn.color_palette">color_palett</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">],</span><span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1">#plt.show() funciona debido a que es la base de sns </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165774314-e09948b9-c749-452c-b002-cf039eb08c57.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;darkgrid&#39;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;muted&#39;</span><span class="p">,</span><span class="n">font</span><span class="o">=</span><span class="s1">&#39;Verdana&#39;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">],</span><span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="c1">#plt.show() funciona debido a que es la base de sns </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165775254-5692687e-2a5a-4a72-b8f5-18b12b718800.png" /></p>
+</div>
+<div class="section" id="parametros-mas-usados-con-seaborn">
+<h3><span class="section-number">4.5.10. </span>Parámetros más usados con Seaborn<a class="headerlink" href="#parametros-mas-usados-con-seaborn" title="Permalink to this headline">¶</a></h3>
+<p>Algunos <a class="reference external" href="https://github.com/mwaskom/seaborn-data">Data sources</a>, que podemos usar para experimentar.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Importamos Seaborn</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#Cargamos un dataset built-in sns</span>
+<span class="n">tips</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;tips&#39;</span><span class="p">)</span>
+
+<span class="c1">#Veremos displot mas adelante, a continuacion </span>
+<span class="c1">#tenemos un histograma de total_bill</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;total_bill&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165815365-8af6180d-73ff-4c6e-9e14-6d64ef4df802.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Este grafico muestra una relacion entre &#39;total_bill&#39; y &#39;tips&#39;</span>
+<span class="c1">#automaticamente crea un grafico alterno al histograma</span>
+<span class="c1">#usamos el arg &#39;hue&#39; para categorizar los datos por &#39;sex&#39;</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;total_bill&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;tip&#39;</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> 
+
+<span class="c1">#Aunque displot seleciona eligio el grafico automaticamente</span>
+<span class="c1">#tambien lo podemos hacer a traves de:</span>
+<span class="c1">#kind=&#39;kde&#39;, de densidad</span>
+
+<span class="c1">#A nivel de estilo uno de los mas usados son:</span>
+<span class="c1">#legend=True</span>
+<span class="c1">#palette=&#39;dark&#39;</span>
+<span class="c1">#alpha=0.25</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165815422-f45e0993-96c8-46d6-aff9-7197768ae66e.png" /></p>
+</div>
+<div class="section" id="distribuciones">
+<h3><span class="section-number">4.5.11. </span>Distribuciones<a class="headerlink" href="#distribuciones" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Opciones para realizar distribuciones numericas en sns</span>
+
+<span class="c1">#Importamos Seaborn</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#Cargamos un dataset built-in sns</span>
+<span class="n">tips</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;tips&#39;</span><span class="p">)</span>
+
+<span class="c1">#Asi ejecutamos un histograma donde podemos ver </span>
+<span class="c1">#la frecuencia de los &#39;tip&#39;, esta frecuencia puede ser</span>
+<span class="c1">#modificada usando los bins. </span>
+
+<span class="c1">#cumulative=True, permite que se vallan sumando las frecuencias</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;tip&#39;</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">cumulative</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165823815-90f2e4bc-06e0-4d27-8703-4f71cf6635ee.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Categorizamos el grafico a partir de hue=&#39;sex&#39;</span>
+
+<span class="c1">#Se puede graficar un estadistico especifico a partir de:</span>
+<span class="c1">#stat=&#39;probability&#39;, stat=&#39;frecuency&#39;, stat=&#39;percent&#39;</span>
+<span class="c1">#stat=&#39;density&#39;, stat=&#39;count&#39;-&gt; defaul</span>
+
+<span class="c1">#Indicamos como queremos presentar los datos</span>
+<span class="c1">#multiple=&#39;stack&#39;, multiple=&#39;layer&#39;,multiple=&#39;dodge&#39;,multiple=&#39;fill&#39;</span>
+<span class="c1">#element=&quot;step&quot;</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;tip&#39;</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">cumulative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span>
+<span class="p">,</span><span class="n">stat</span><span class="o">=</span><span class="s1">&#39;probability&#39;</span><span class="p">,</span> <span class="n">multiple</span><span class="o">=</span><span class="s1">&#39;dodge&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165823879-b024ffb5-0017-4fa0-b7f3-0783ecc58a38.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Grafico de densidad de tip, donde al parecer los</span>
+<span class="c1">#hombres dejn mas propina que las mujeres</span>
+
+<span class="c1">#Al igual que en el histograma podemos usar la propiedad</span>
+<span class="c1">#cumulative=True/False</span>
+<span class="c1">#shade=True, para sombrear el area bajo la curva</span>
+<span class="c1">#bs_adjust=1, ajusta la grafica de acuerdo a los ejes</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;tip&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="n">shade</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165823941-2ff2feed-11c5-4e80-bbd8-d47703ca8838.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Grafico escalonado que indica las proporciones o tasa de cambio</span>
+<span class="c1">#puede ser en base a a diferentes estadisticos </span>
+<span class="n">sns</span><span class="o">.</span><span class="n">ecdfplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;tip&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165824010-9f664e86-ff16-4407-9070-8c5bfd4e7e6d.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Displot se refiere a cualquier tipo de diagrama de distribucion.</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">displot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;tip&#39;</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="n">stat</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165824055-26dba82e-6e9a-48dc-937f-dfdc3ef41687.png" /></p>
+</div>
+<div class="section" id="categoricos">
+<h3><span class="section-number">4.5.12. </span>Categóricos<a class="headerlink" href="#categoricos" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Graficos de variables categoricas</span>
+<span class="c1">#Importamos Seaborn</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#Cargamos un dataset built-in sns como &#39;tips&#39;</span>
+<span class="n">tips</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;tips&#39;</span><span class="p">)</span>
+<span class="c1">#countplot es practicamente un hisplot/displot con </span>
+<span class="c1">#multiple=&#39;dodge&#39; o dodge=True</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;day&#39;</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165873358-00b2c0f8-3ea7-4eff-af1b-25aeabf539ae.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#stripplot requiere al menos:</span>
+<span class="c1">#x, una variable categorica</span>
+<span class="c1">#y, una distribucion numerica</span>
+<span class="c1">#hue, otra variable categorica</span>
+<span class="c1">#dodge, permite separar hue para que sea mas claro</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">stripplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;day&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;total_bill&#39;</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="n">dodge</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1">#En esta grafica vemos las distribucion de una variable numerica </span>
+<span class="c1">#respecto a una categorica como los dias</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165873372-e488ff13-c43b-4081-819b-209566964206.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#swarmplot es como stripplot solo que se ve mas claro la</span>
+<span class="c1">#consentracion, incluso tiene las mismas propiedades</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">swarmplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;day&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;total_bill&#39;</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="n">dodge</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165873401-7f09f068-cc4d-41a4-881b-6d7418865e72.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#El boxplot indica la distribucion numerica por cuantiles</span>
+<span class="c1">#podemos colocar dos grupos categoricos como se muestra:</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;day&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;total_bill&#39;</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="n">dodge</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165873422-af124872-e330-4e7c-8292-447e0ffe80ca.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#En este grafico se sobreponen un swarmplot y un boxplot</span>
+<span class="c1">#lo cual es interesante para relacionar cuantiles y consetracion.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">swarmplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;day&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;total_bill&#39;</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span> 
+<span class="n">dodge</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;&gt;&#39;</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;day&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;total_bill&#39;</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="n">dodge</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165873449-94a62b83-694e-440c-8e80-430d18e85266.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#El violin es similar al boxplot, pero en vez de cuantiles, indica</span>
+<span class="c1">#la consentracion de los datos es como swarmplot pero delineado .</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;day&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;total_bill&#39;</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="n">dodge</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165873481-8c7aa045-7b48-4e87-bb58-cd052adac6da.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#La propiedad &#39;split&#39; permite contrarestar la distribucion </span>
+<span class="c1">#de los datos a nivel de consentracion entre nuestra </span>
+<span class="c1">#variable categorica &#39;sex&#39;</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">violinplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;day&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;total_bill&#39;</span>
+<span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span><span class="n">dodge</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">split</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165873501-3fc423e2-1a60-48fd-a838-33550fa67dc6.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Categorical plot es una opcion universal como displot. 😊👽</span>
+<span class="c1">#solo cambiando kind=&#39;box&#39;, kind=&#39;violin&#39;, etc..</span>
+<span class="c1">#col, es una propiedad de catplot que nos permite dividir la grafica en dos</span>
+<span class="c1">#graficas de forma categorica. </span>
+<span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;day&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;total_bill&#39;</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span>
+            <span class="n">dodge</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;box&#39;</span><span class="p">,</span><span class="n">col</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165873531-544c4f24-9a48-4e69-bfc9-a2e29766a02d.png" /></p>
+</div>
+<div class="section" id="archivos-de-la-clase">
+<h3><span class="section-number">4.5.13. </span>Archivos de la clase<a class="headerlink" href="#archivos-de-la-clase" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Graficos de relacion entre variables como scatterplot</span>
+
+<span class="c1">#Importamos Seaborn</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#Cargamos un dataset built-in sns como &#39;tips&#39;</span>
+<span class="n">tips</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;tips&#39;</span><span class="p">)</span>
+
+<span class="c1">#scatterplot permite ver si eziste alguna asociacion entre variables</span>
+<span class="c1">#con style, podemos agregar otra categoria ademas de hue</span>
+<span class="c1">#size=&#39;size&#39;,podemos agregar otra categoria ademas de hue </span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;total_bill&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;tip&#39;</span>
+<span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="s1">&#39;size&#39;</span><span class="p">)</span>
+
+<span class="c1">#Usando legend posicionamos la legenda</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.15</span><span class="p">,</span><span class="mf">0.5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165877825-520a52e6-8116-4ad2-9472-d18fd7806010.png" />\</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Crear un dicionario para la propiedad marker</span>
+<span class="c1">#donde queremos que la categoria time tenga diferentes</span>
+<span class="c1">#estilos de forma:</span>
+
+<span class="n">markers</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Lunch&#39;</span><span class="p">:</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="s1">&#39;Dinner&#39;</span><span class="p">:</span><span class="s1">&#39;&gt;&#39;</span><span class="p">}</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;total_bill&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;tip&#39;</span>
+<span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;day&#39;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="s1">&#39;size&#39;</span><span class="p">,</span><span class="n">markers</span><span class="o">=</span><span class="n">markers</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.15</span><span class="p">,</span><span class="mf">0.5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165877849-63090b7b-b655-4265-aa66-a1a3ae9c1d08.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Lineplot es como un scatterplot pero unido con lineas</span>
+<span class="c1">#como podemos ver es preferible el scatterplot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;total_bill&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;tip&#39;</span>
+<span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;day&#39;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="s1">&#39;size&#39;</span><span class="p">,</span><span class="n">markers</span><span class="o">=</span><span class="n">markers</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165877913-d0ebbe6d-6a6f-40a5-a090-7392eade6804.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Relational plot es una opcion universal como displot. 😊👽</span>
+<span class="c1">#solo cambiando kind=&#39;scatter&#39;, kind=&#39;line&#39;, etc..</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">relplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;total_bill&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;tip&#39;</span>
+<span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;day&#39;</span><span class="p">,</span><span class="n">style</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="s1">&#39;size&#39;</span><span class="p">,</span><span class="n">markers</span><span class="o">=</span><span class="n">markers</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165877962-5484c373-841f-4fee-b84e-4aaa24aa878e.png" /></p>
+</div>
+<div class="section" id="jointplot-y-pairplot">
+<h3><span class="section-number">4.5.14. </span>Jointplot y Pairplot<a class="headerlink" href="#jointplot-y-pairplot" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Importamos Seaborn</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#Cargamos un dataset built-in sns como &#39;tips&#39;</span>
+<span class="n">tips</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;tips&#39;</span><span class="p">)</span>
+
+<span class="c1">#jointplot es un grafico muy util para identificar tanto la </span>
+<span class="c1">#relacion entre variables como el histograma de cada una de ellas</span>
+<span class="c1">#algo muy interesante de jointplot este podemos utilizar</span>
+<span class="c1">#kind=&#39;hist&#39;,kind= &#39;kde&#39;, etc</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;total_bill&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;tip&#39;</span>
+<span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165880300-fef730c2-3bf5-4a5d-a73d-b69ae7664bd5.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Usando las propiedades maginal_ticks=True,</span>
+<span class="c1">#margina_kws=dict(bins=25, fill=False,multiple=&#39;dodge&#39; podemos</span>
+<span class="c1">#modificar el estilo de los graficos marginales sin afectar el </span>
+<span class="c1">#grafico principal y asi agregar mas contexto</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">jointplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;total_bill&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;tip&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span>
+<span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span><span class="n">marginal_ticks</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">marginal_kws</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">multiple</span><span class="o">=</span><span class="s1">&#39;dodge&#39;</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165880361-4bcedbb3-5542-4946-b440-aaab119bdbc5.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Pairplot permite visulizar relaciones numericas</span>
+<span class="c1">#automaticamente identifica las mismas en nuestro dataset</span>
+
+<span class="c1">#La propiedad &#39;corner=True&#39; solo muestra la mitad de los graficos </span>
+<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">tips</span><span class="p">,</span><span class="n">hue</span><span class="o">=</span><span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;hist&#39;</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/165880437-e8693caf-0ece-4b58-9531-b92eebbfe2f8.png" /></p>
+</div>
+<div class="section" id="heatmap">
+<h3><span class="section-number">4.5.15. </span>Heatmap<a class="headerlink" href="#heatmap" title="Permalink to this headline">¶</a></h3>
+<p>Mapas de colores que podemos trabajar con seaborn, <a class="reference external" href="https://seaborn.pydata.org/generated/seaborn.heatmap.html">heatmap</a></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Heatmap, es util al graficar datos en una estructura matricial.</span>
+
+<span class="c1">#Importamos Seaborn</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1">#Cargamos un dataset built-in sns como &#39;tips&#39;</span>
+<span class="n">tips</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;tips&#39;</span><span class="p">)</span>
+
+<span class="c1">#A pertir de corr() optenemos la correlacion </span>
+<span class="c1">#entre los valores numericos de tips asi tenemos un tipo de matriz</span>
+<span class="n">tips</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/166060278-76cb4c5d-a4b0-426d-91ec-be9abb6010bf.png" /></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Visualmente heatmap puede ser muy util para ver la correlacion </span>
+<span class="c1">#entre variables</span>
+
+<span class="c1">#annot=True, indica el valor numerico de la correlacion</span>
+<span class="c1">#cmap=&#39;coolwarm&#39;, color map, opciones de colores</span>
+<span class="c1">#linewidth=5, lineas intermedias</span>
+<span class="c1">#linecolor=&#39;black&#39;, cambia el color de las lineas intermedias </span>
+<span class="c1">#vmin=0,vmax=1, modifica la escala de los valores</span>
+<span class="c1">#cbar=True, Valor default para mostrar la barra de escala</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">tips</span><span class="o">.</span><span class="n">corr</span><span class="p">(),</span><span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;coolwarm&#39;</span><span class="p">,</span>
+            <span class="n">linewidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">linecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">vmin</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">cbar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><img alt="image" src="https://user-images.githubusercontent.com/60556632/166060863-190ca7e1-feaa-41ec-be6d-50e0c650212c.png" /></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="manipulacion.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Numpy &amp; Pandas 🐼</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="entorno.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Cookiecutters</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By DanielNMuner<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
