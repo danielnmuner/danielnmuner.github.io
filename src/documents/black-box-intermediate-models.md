@@ -16,34 +16,34 @@ When migrating Talend ETL jobs to Snowflake, the fundamental challenge isn't rew
 ### Airflow Orchestration with Metadata Flow
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#3498db','primaryTextColor':'#ffffff','primaryBorderColor':'#3498db','lineColor':'#3498db','secondaryColor':'#3498db','tertiaryColor':'#3498db','background':'#ffffff','mainBkg':'#ffffff','secondBkg':'#ffffff','tertiaryBkg':'#ffffff'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#3498db','primaryTextColor':'#ffffff','primaryBorderColor':'#3498db','lineColor':'#3498db','secondaryColor':'#3498db','tertiaryColor':'#3498db','background':'#ffffff','mainBkg':'#ffffff','secondBkg':'#ffffff','tertiaryBkg':'#ffffff','fontFamily':'Poppins, sans-serif'}}}%%
 flowchart TB
-    subgraph AIRFLOW[" "]
+    subgraph AIRFLOW["Airflow Tasks"]
         direction TB
-        T1["Task 1<br/>Parse CTEs<br/>sqlglot AST"]
-        T2["Task 2<br/>Create Registry<br/>EXPLAIN_PLAN_JSON"]
-        T3["Task 3<br/>Materialize VIEWs<br/>CREATE OR REPLACE"]
-        T4["Task 4<br/>Extract Metrics<br/>GET_OPERATOR_STATS"]
-        T5["Task 5<br/>Validate Schema<br/>Pandera"]
-        T6["Task 6<br/>Reconcile Data<br/>DataFrame.compare"]
+        T1["Parse CTEs<br/>Extract Dependencies with sqlglot"]
+        T2["Create Execution Plan Registry<br/>Baseline with EXPLAIN_PLAN_JSON"]
+        T3["Materialize Views<br/>CREATE OR REPLACE per CTE"]
+        T4["Extract Operator Metrics<br/>Trace with GET_OPERATOR_STATS"]
+        T5["Validate Schemas<br/>Enforce Constraints with Pandera"]
+        T6["Reconcile Data<br/>Row-Level Diff with Pandas"]
     end
     
-    subgraph XCOM[" "]
+    subgraph XCOM["XCom Metadata"]
         direction TB
-        X1["cte_order"]
-        X2["plan_registry"]
-        X3["created_views"]
-        X4["operator_stats"]
-        X5["schema_report"]
-        X6["final_report"]
+        X1["CTE Execution Order"]
+        X2["Plan Registry Table"]
+        X3["Created View Names"]
+        X4["Operator Statistics"]
+        X5["Schema Validation Report"]
+        X6["Final Reconciliation Report"]
     end
     
-    subgraph STATS[" "]
+    subgraph STATS["Persisted Stats Documents"]
         direction TB
-        S1["REGISTRY<br/>EXPLAIN_PLANS"]
-        S2["STATS<br/>OPERATOR_METRICS"]
-        S3["STATS<br/>SCHEMA_VALIDATIONS"]
-        S4["STATS<br/>RECONCILIATION_REPORTS"]
+        S1["Execution Plan Baselines<br/>REGISTRY.EXPLAIN_PLANS"]
+        S2["Operator Metrics<br/>STATS.OPERATOR_METRICS"]
+        S3["Schema Validations<br/>STATS.SCHEMA_VALIDATIONS"]
+        S4["Reconciliation Reports<br/>STATS.RECONCILIATION_REPORTS"]
     end
     
     T1 e1@--> X1
@@ -93,26 +93,26 @@ flowchart TB
 ### Data Flow Across Medallion Layers
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#3498db','primaryTextColor':'#ffffff','primaryBorderColor':'#3498db','lineColor':'#3498db','secondaryColor':'#3498db','tertiaryColor':'#3498db','background':'#ffffff','mainBkg':'#ffffff','secondBkg':'#ffffff','tertiaryBkg':'#ffffff'}}}%%
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#3498db','primaryTextColor':'#ffffff','primaryBorderColor':'#3498db','lineColor':'#3498db','secondaryColor':'#3498db','tertiaryColor':'#3498db','background':'#ffffff','mainBkg':'#ffffff','secondBkg':'#ffffff','tertiaryBkg':'#ffffff','fontFamily':'Poppins, sans-serif'}}}%%
 flowchart LR
-    subgraph LANDING[" "]
+    subgraph LANDING["Landing Layer: Raw Sources"]
         direction TB
-        L1["talend_output.csv"]
-        L2["source_table_1"]
-        L3["source_table_2"]
+        L1["Talend Output CSV"]
+        L2["Source Table 1"]
+        L3["Source Table 2"]
     end
     
-    subgraph INT_VAL[" "]
+    subgraph INT_VAL["Intermediate Layer: Validation Views"]
         direction TB
-        I1["VW_cte_filter"]
-        I2["VW_cte_enrich"]
-        I3["VW_cte_aggregate"]
-        I4["VW_cte_final"]
+        I1["Filter View"]
+        I2["Enrichment View"]
+        I3["Aggregation View"]
+        I4["Final Transformation View"]
     end
     
-    subgraph DWH_LAYER[" "]
+    subgraph DWH_LAYER["DWH Validated Tb"]
         direction TB
-        D1["final_validated_table"]
+        D1["Final Validated Table"]
     end
     
     L1 e1@--> I1
