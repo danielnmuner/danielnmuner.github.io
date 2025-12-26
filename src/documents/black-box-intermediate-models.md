@@ -11,35 +11,127 @@ When migrating Talend ETL jobs to Snowflake, the fundamental challenge isn't rew
 
 ---
 
-## Architecture: Isolation + Observability + Audit Trail
+## Architecture Overview
+
+### Airflow Orchestration with Metadata Flow
+
+```mermaid
+%%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#3498db','primaryTextColor':'#ffffff','primaryBorderColor':'#3498db','lineColor':'#3498db','secondaryColor':'#3498db','tertiaryColor':'#3498db','background':'#ffffff','mainBkg':'#ffffff','secondBkg':'#ffffff','tertiaryBkg':'#ffffff'}}}%%
+flowchart TB
+    subgraph AIRFLOW[" "]
+        direction TB
+        T1["Task 1<br/>Parse CTEs<br/>sqlglot AST"]
+        T2["Task 2<br/>Create Registry<br/>EXPLAIN_PLAN_JSON"]
+        T3["Task 3<br/>Materialize VIEWs<br/>CREATE OR REPLACE"]
+        T4["Task 4<br/>Extract Metrics<br/>GET_OPERATOR_STATS"]
+        T5["Task 5<br/>Validate Schema<br/>Pandera"]
+        T6["Task 6<br/>Reconcile Data<br/>DataFrame.compare"]
+    end
+    
+    subgraph XCOM[" "]
+        direction TB
+        X1["cte_order"]
+        X2["plan_registry"]
+        X3["created_views"]
+        X4["operator_stats"]
+        X5["schema_report"]
+        X6["final_report"]
+    end
+    
+    subgraph STATS[" "]
+        direction TB
+        S1["REGISTRY<br/>EXPLAIN_PLANS"]
+        S2["STATS<br/>OPERATOR_METRICS"]
+        S3["STATS<br/>SCHEMA_VALIDATIONS"]
+        S4["STATS<br/>RECONCILIATION_REPORTS"]
+    end
+    
+    T1 e1@--> X1
+    X1 e2@--> T2
+    T2 e3@--> X2
+    X2 e4@--> T3
+    T3 e5@--> X3
+    X3 e6@--> T4
+    T4 e7@--> X4
+    X4 e8@--> T5
+    T5 e9@--> X5
+    X5 e10@--> T6
+    T6 e11@--> X6
+    
+    T2 e12@--> S1
+    T4 e13@--> S2
+    T5 e14@--> S3
+    T6 e15@--> S4
+
+    classDef taskStyle fill:#3498db,stroke:#3498db,stroke-width:2px,color:#ffffff,rx:10,ry:10
+    classDef xcomStyle fill:#009688,stroke:#009688,stroke-width:2px,color:#ffffff,rx:10,ry:10
+    classDef statsStyle fill:#e91e63,stroke:#e91e63,stroke-width:2px,color:#ffffff,rx:10,ry:10
+    classDef groupStyle fill:none,stroke:#cccccc,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
+    
+    class T1,T2,T3,T4,T5,T6 taskStyle
+    class X1,X2,X3,X4,X5,X6 xcomStyle
+    class S1,S2,S3,S4 statsStyle
+    class AIRFLOW,XCOM,STATS groupStyle
+    
+    e1@{ animate: true }
+    e2@{ animate: true }
+    e3@{ animate: true }
+    e4@{ animate: true }
+    e5@{ animate: true }
+    e6@{ animate: true }
+    e7@{ animate: true }
+    e8@{ animate: true }
+    e9@{ animate: true }
+    e10@{ animate: true }
+    e11@{ animate: true }
+    e12@{ animate: true }
+    e13@{ animate: true }
+    e14@{ animate: true }
+    e15@{ animate: true }
+```
+
+### Data Flow Across Medallion Layers
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': {'primaryColor':'#3498db','primaryTextColor':'#ffffff','primaryBorderColor':'#3498db','lineColor':'#3498db','secondaryColor':'#3498db','tertiaryColor':'#3498db','background':'#ffffff','mainBkg':'#ffffff','secondBkg':'#ffffff','tertiaryBkg':'#ffffff'}}}%%
 flowchart LR
-    INPUT("SQL with CTEs")
-    P1("sqlglot DAG")
-    P1B("EXPLAIN_PLAN_JSON Registry")
-    P2("CREATE VIEWs")
-    P3("GET_OPERATOR_STATS")
-    P4("Pandera Validation")
-    P5("DataFrame.compare")
-    OUTPUT("PASS/FAIL + Audit")
+    subgraph LANDING[" "]
+        direction TB
+        L1["talend_output.csv"]
+        L2["source_table_1"]
+        L3["source_table_2"]
+    end
     
-    INPUT e1@--> P1
-    P1 e2@--> P1B
-    P1B e3@--> P2
-    P2 e4@--> P3
-    P3 e5@--> P4
-    P4 e6@--> P5
-    P5 e7@--> OUTPUT
+    subgraph INT_VAL[" "]
+        direction TB
+        I1["VW_cte_filter"]
+        I2["VW_cte_enrich"]
+        I3["VW_cte_aggregate"]
+        I4["VW_cte_final"]
+    end
+    
+    subgraph DWH_LAYER[" "]
+        direction TB
+        D1["final_validated_table"]
+    end
+    
+    L1 e1@--> I1
+    L2 e2@--> I1
+    L3 e3@--> I1
+    I1 e4@--> I2
+    I2 e5@--> I3
+    I3 e6@--> I4
+    I4 e7@--> D1
 
-    classDef flowStyle fill:#3498db,stroke:#3498db,stroke-width:2px,color:#ffffff,rx:10,ry:10
-    classDef ioStyle fill:#009688,stroke:#009688,stroke-width:2px,color:#ffffff,rx:10,ry:10
-    classDef registryStyle fill:#e91e63,stroke:#e91e63,stroke-width:2px,color:#ffffff,rx:10,ry:10
+    classDef landingStyle fill:#3498db,stroke:#3498db,stroke-width:2px,color:#ffffff,rx:10,ry:10
+    classDef intStyle fill:#009688,stroke:#009688,stroke-width:2px,color:#ffffff,rx:10,ry:10
+    classDef dwhStyle fill:#e91e63,stroke:#e91e63,stroke-width:2px,color:#ffffff,rx:10,ry:10
+    classDef groupStyle fill:none,stroke:#cccccc,stroke-width:2px,stroke-dasharray: 5 5,rx:10,ry:10
     
-    class P1,P2,P3,P4,P5 flowStyle
-    class INPUT,OUTPUT ioStyle
-    class P1B registryStyle
+    class L1,L2,L3 landingStyle
+    class I1,I2,I3,I4 intStyle
+    class D1 dwhStyle
+    class LANDING,INT_VAL,DWH_LAYER groupStyle
     
     e1@{ animate: true }
     e2@{ animate: true }
@@ -105,7 +197,7 @@ flowchart LR
 
 **How:** Receive VIEW list from previous Airflow task: `view_names = ti.xcom_pull(key='created_views')`. For each VIEW, execute `SELECT * FROM INT_VALIDATION.{view_name}` and capture `cursor.sfqid` (Snowflake query ID). Query `SELECT * FROM TABLE(GET_QUERY_OPERATOR_STATS('{query_id}'))` to retrieve metrics for each operator (JOIN, FILTER, AGGREGATE). Extract `INPUT_ROWS`, `OUTPUT_ROWS`, `execution_time_ms` per operator. Calculate row delta: `(INPUT_ROWS - OUTPUT_ROWS) / INPUT_ROWS`. Build stats document: `{"view": "VW_filter", "operators": [{"type": "JOIN", "input": 1000, "output": 500, "loss_pct": 50}]}`. Write stats to JSON file or table: `STATS.OPERATOR_METRICS`.
 
-**Output:** Stats document per VIEW with operator-level metrics. Passed to next Airflow task: `ti.xcom_push(key='operator_stats', value=stats_file_path)`. Used for alerting (row loss >50%) and lineage mapping.
+**Output:** Stats document per VIEW with operator-level metrics. Passed to next Airflow task: `ti.xcom_push(key='operator_stats', value=stats_file_path)`. Used for lineage mapping and downstream analysis.
 
 ---
 
@@ -127,7 +219,7 @@ flowchart LR
 
 **How:** Receive schema report from previous Airflow task: `schema_report = ti.xcom_pull(key='schema_report')`. If schema validation FAILED, skip reconciliation—no point comparing values if structure is broken. Load Talend reference: `df_expected = pd.read_csv('talend_output.csv')`. Load Snowflake final VIEW: `df_actual = cursor.fetch_pandas_all()`. Compare column sets: `set(df_expected.columns) == set(df_actual.columns)`. Compare row counts: `len(df_expected) == len(df_actual)`. Row-level diff: `diff = df_expected.compare(df_actual, keep_shape=True)`. Extract mismatches: `diff.index.tolist()` and `diff.to_dict('records')`. Build final report: `{"status": "PASS", "row_count_delta": 0, "column_mismatches": [], "value_diffs": []}`. Write to JSON file or table: `STATS.RECONCILIATION_REPORTS`.
 
-**Output:** Final validation report with status (PASS/FAIL), row count delta, column mismatches, and sample diffs (first 5 rows). Passed to final Airflow task: `ti.xcom_push(key='final_report', value=report_file_path)`. Triggers alerts if FAIL.
+**Output:** Final validation report with status (PASS/FAIL), row count delta, column mismatches, and sample diffs (first 5 rows). Passed to final Airflow task: `ti.xcom_push(key='final_report', value=report_file_path)`.
 
 ---
 
@@ -140,7 +232,7 @@ flowchart LR
 3. **create_views_task:** Runs Phase 3. Pulls `plan_registry`. Pushes `created_views` to XCom.
 4. **extract_stats_task:** Runs Phase 4. Pulls `created_views`. Pushes `operator_stats` to XCom.
 5. **validate_schema_task:** Runs Phase 5. Pulls `operator_stats`. Pushes `schema_report` to XCom.
-6. **reconcile_data_task:** Runs Phase 6. Pulls `schema_report`. Pushes `final_report` to XCom. Triggers alerts.
+6. **reconcile_data_task:** Runs Phase 6. Pulls `schema_report`. Pushes `final_report` to XCom.
 
 **Stats Documents Generated:**
 - `REGISTRY.EXPLAIN_PLANS`: Execution plan baselines with timestamps
@@ -148,24 +240,17 @@ flowchart LR
 - `STATS.SCHEMA_VALIDATIONS`: Per-VIEW schema validation reports
 - `STATS.RECONCILIATION_REPORTS`: Final row-level diff reports
 
-**Why Stats Between Tasks:** Each Airflow task is stateless. Stats documents persist artifacts across task boundaries. Operator stats from Phase 4 inform alerting in Phase 5. Schema reports from Phase 5 gate Phase 6 execution. Final report triggers downstream actions (alerts, notifications, approvals).
+**Why Stats Between Tasks:** Each Airflow task is stateless. Stats documents persist artifacts across task boundaries. Operator stats from Phase 4 enable downstream analysis. Schema reports from Phase 5 gate Phase 6 execution. Final report provides validation evidence for migration approval.
 
 ---
 
-## Observability: Metrics, Alerts, Audit
+## Observability and Audit
 
 **Metrics Captured:**
 - **CTE-level:** VIEW creation timestamp, row count per VIEW, execution time
 - **Operator-level:** INPUT_ROWS, OUTPUT_ROWS, execution_time_ms per JOIN/FILTER/AGGREGATE (stored in STATS.OPERATOR_METRICS)
 - **Schema-level:** Type mismatches, constraint violations, null counts (stored in STATS.SCHEMA_VALIDATIONS)
 - **Reconciliation-level:** Row count delta, column mismatches, value diffs (stored in STATS.RECONCILIATION_REPORTS)
-
-**Alerting Triggers:**
-- Row loss >50% in any operator → Alert: "Data loss detected in VW_filter JOIN operator"
-- Schema validation FAIL → Alert: "Type mismatch in VW_enrich: order_id expected INT, got VARCHAR"
-- Column set mismatch → Alert: "Missing columns in Snowflake: [region, status]"
-- Row count delta >0 → Alert: "Row count mismatch: expected 1000, got 950"
-- Value comparison FAIL → Alert: "Value diffs detected in 25 rows"
 
 **Audit Trail:**
 - All query IDs logged with timestamps in STATS.OPERATOR_METRICS
