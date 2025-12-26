@@ -8,7 +8,7 @@ import './styles/index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <FontProvider>
-      <BrowserRouter basename="/architecturesdata">
+      <BrowserRouter basename={import.meta.env.MODE === 'production' ? '/' : '/architecturesdata'}>
         <App />
       </BrowserRouter>
     </FontProvider>

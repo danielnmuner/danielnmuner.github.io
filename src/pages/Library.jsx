@@ -19,7 +19,7 @@ const Library = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ 
-            backgroundImage: 'url(/architecturesdata/library-header.jpg)',
+            backgroundImage: `url(${import.meta.env.BASE_URL}library-header.jpg)`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
